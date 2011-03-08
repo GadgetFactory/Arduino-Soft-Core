@@ -1,0 +1,696 @@
+--************************************************************************************************
+-- Top entity for AVR microcontroller (for synthesis) with JTAG OCD
+-- SMBus is added
+-- Version 0.3
+-- Designed by Ruslan Lepetenok 
+-- Modified 17.06.2005
+--************************************************************************************************
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+use WORK.AVRuCPackage.all;
+use WORK.AVR_uC_CompPack.all;
+
+use WORK.SynthCtrlPack.all; -- Synthesis control
+
+-- Only for Synplicity
+library altera;
+use altera.maxplus2.all;
+
+entity top_avr_core_v6 is port(
+                               nrst   : in    std_logic;
+                               clk    : in    std_logic;
+                               porta  : inout std_logic_vector(7 downto 0);
+                               portb  : inout std_logic_vector(7 downto 0);
+	                           -- UART 
+	                           rxd    : in    std_logic;
+	                           txd    : out   std_logic;
+							   -- External interrupts
+							   INTx   : in    std_logic_vector(7 downto 0); 
+							   -- JTAG related signals
+	                           TMS    : in    std_logic;
+                               TCK	  : in    std_logic;
+                               TDI    : in    std_logic;
+                               TDO    : out   std_logic;
+	                           TRSTn  : in    std_logic; -- Optional JTAG input
+							   -- SMBus Master/Slave
+							   sda    : inout std_logic;
+                               scl    : inout std_logic;
+                               msda   : inout std_logic;
+                               mscl   : inout std_logic
+						       );
+
+end top_avr_core_v6;
+
+architecture Struct of top_avr_core_v6 is
+
+-- ############################## Signals connected directly to the core ##########################################
+
+signal core_cpuwait  : std_logic;                    
+
+-- Program memory
+signal core_pc   : std_logic_vector (15 downto 0); -- PROM address
+signal core_inst : std_logic_vector (15 downto 0); -- PROM data
+
+-- I/O registers
+signal core_adr  : std_logic_vector (5 downto 0);
+signal core_iore : std_logic;                    
+signal core_iowe : std_logic;
+
+-- Data memery
+signal core_ramadr : std_logic_vector (15 downto 0);
+signal core_ramre  : std_logic;
+signal core_ramwe  : std_logic;
+
+signal core_dbusin   : std_logic_vector (7 downto 0);
+signal core_dbusout  : std_logic_vector (7 downto 0);
+
+-- Interrupts
+signal core_irqlines : std_logic_vector(22 downto 0);
+signal core_irqack   : std_logic;
+signal core_irqackad : std_logic_vector(4 downto 0);
+
+-- ###############################################################################################################
+
+-- ############################## Signals connected directly to the SRAM controller ###############################
+
+signal ram_din       : std_logic_vector(7 downto 0);
+signal ram_dout      : std_logic_vector(7 downto 0);
+
+-- ###############################################################################################################
+
+
+-- ############################## Signals connected directly to the I/O registers ################################
+-- PortA
+signal porta_dbusout : std_logic_vector (7 downto 0);
+signal porta_out_en  : std_logic;
+
+-- PortB
+signal portb_dbusout : std_logic_vector (7 downto 0);
+signal portb_out_en  : std_logic;
+
+-- Timer/Counter
+signal tc_dbusout    : std_logic_vector (7 downto 0);
+signal tc_out_en     : std_logic;
+
+-- UART
+signal uart_dbusout  : std_logic_vector (7 downto 0);
+signal uart_out_en   : std_logic;
+
+signal uart_tx_en    : std_logic;
+signal uart_rx_en    : std_logic;
+
+-- ###############################################################################################################
+
+
+-- ####################### Signals connected directly to the external multiplexer ################################
+signal   io_port_out     : ext_mux_din_type;
+signal   io_port_out_en  : ext_mux_en_type;
+signal   ind_irq_ack     : std_logic_vector(core_irqlines'range);
+-- ###############################################################################################################
+
+-- ####################### Signals connected directly to the SRAM controller ################################
+signal   SRAMDataOut     : std_logic_vector(7 downto 0);
+-- ###############################################################################################################
+
+-- ################################## Reset signals #############################################
+signal nrst_cp2        : std_logic;
+signal nrst_cp64m      : std_logic;
+-- ##############################################################################################
+
+-- Port signals
+signal PortAReg : std_logic_vector(porta'range);
+signal DDRAReg  : std_logic_vector(porta'range);
+
+signal PortBReg : std_logic_vector(portb'range);
+signal DDRBReg  : std_logic_vector(portb'range);
+
+-- Added for Synopsys compatibility
+signal SBitZero   : std_logic;
+signal SBitOne    : std_logic;
+
+-- Sleep support
+signal core_cp2  : std_logic; -- Global clock signal after gating(and global primitive)
+signal sleep_en  : std_logic;
+
+signal sleepi   : std_logic;
+signal irqok    : std_logic;
+signal globint  : std_logic;
+
+signal nrst_clksw : std_logic; -- Separate reset for clock gating module 
+
+-- Watchdog related signals
+signal wdtmout 	  : std_logic; -- Watchdog overflow
+signal core_wdri  : std_logic; -- Watchdog clear
+
+-- **********************  JTAG and memory **********************************************
+-- PM address,data and control
+signal pm_adr         : std_logic_vector(core_pc'range);
+signal pm_h_we        : std_logic;
+signal pm_l_we        : std_logic;
+signal pm_din         : std_logic_vector(core_inst'range);
+signal pm_din_tmp     : std_logic_vector(core_inst'range); -- Data to PM 
+
+signal pm_dout        : std_logic_vector(core_inst'range);
+
+signal ramdata_in_tmp : std_logic_vector(ram_din'range); -- Data input of DRAM
+
+signal pm_adr_tmp     : std_logic_vector(core_pc'range);
+
+signal TDO_Out        : std_logic;
+signal TDO_OE         : std_logic;
+
+signal JTAG_Rst       : std_logic;
+
+-- **********************  JTAG and memory **********************************************
+
+signal nrst_cp2_tmp     : std_logic;
+signal nrst_cp64m_tmp   : std_logic;
+signal core_cp2_tmp     : std_logic;
+
+
+signal cp2en            : std_logic;
+signal valid_instr      : std_logic;
+signal insert_nop       : std_logic;		  
+signal block_irq        : std_logic;		  
+signal change_flow      : std_logic;		  
+
+signal tmr_cp2en        : std_logic;		  
+signal stopped_mode      : std_logic;
+signal tmr_running      : std_logic; 
+
+signal wdr_en           : std_logic;		  
+
+signal jtag_out_en      : std_logic;
+signal jtag_dbusout     : std_logic_vector(7 downto 0);
+
+signal sleep_mode       : std_logic; 
+signal ctrlx            : std_logic; 
+
+-- Inverted write enable signals
+--signal n_pm_h_we        : std_logic;
+--signal n_pm_l_we        : std_logic;
+--signal n_core_ramwe     : std_logic;
+
+-- "EEPROM" related signals
+signal EEPrgSel : std_logic; 
+signal EEAdr    : std_logic_vector(11 downto 0);
+signal EEWrData : std_logic_vector(7 downto 0);
+signal EERdData : std_logic_vector(7 downto 0);
+signal EEWr     : std_logic; 
+
+-- SMBus related signals
+signal smbui_dbusout : std_logic_vector(7 downto 0);
+signal smbui_out_en  : std_logic;
+ 
+-- SMBus slave
+signal sdaout  : std_logic; 
+signal sdaen   : std_logic;  
+signal sclout  : std_logic; 
+signal sclen   : std_logic;  
+
+-- SMBus master
+signal msdaout : std_logic;
+signal msdaen  : std_logic; 
+signal msclout : std_logic;
+signal msclen  : std_logic; 
+
+
+begin
+
+-- Added for Synopsys compatibility
+SBitZero <= '0';
+SBitOne  <= '1';
+-- Added for Synopsys compatibility	
+	
+AVR_Core_Inst:component AVR_Core port map(
+                                          --Clock and reset
+                                          cp2      => core_cp2,
+										  cp2en    => cp2en,
+                                          ireset   => nrst_cp2,
+										  -- JTAG OCD support
+					                      valid_instr => valid_instr,
+						                  insert_nop  => insert_nop,
+						                  block_irq   => block_irq,
+						                  change_flow => change_flow,
+				                          -- Program Memory
+                                          pc       => core_pc,
+                                          inst     => core_inst,
+										  -- I/O control
+                                          adr      => core_adr,
+                                          iore     => core_iore,
+                                          iowe     => core_iowe,
+					                      -- Data memory control
+                                          ramadr   => core_ramadr,
+                                          ramre    => core_ramre,
+                                          ramwe    => core_ramwe,
+                                          cpuwait  => core_cpuwait,
+                      					  -- Data paths
+                                          dbusin   => core_dbusin,
+                                          dbusout  => core_dbusout,
+			                              -- Interrupts
+                                          irqlines => core_irqlines, 
+                                          irqack   => core_irqack,
+                                          irqackad => core_irqackad, 
+										  --Sleep Control
+                                          sleepi   => sleepi,
+                                          irqok	   => irqok,
+                                          globint  => globint,
+                                          --Watchdog
+                                          wdri	   => core_wdri);
+										  
+-- cpuwait
+core_cpuwait <= '0';										  
+
+RAM_Data_Register:component RAMDataReg port map(	                   
+               ireset      => nrst_cp2,
+               cp2	       => clk,
+               cpuwait     => core_cpuwait,
+			   RAMDataIn   => core_dbusout,
+			   RAMDataOut  => ram_din
+	                     );
+
+
+
+EXT_MUX:component external_mux port map(
+		  ramre              => core_ramre,		  -- ramre output of the core
+		  dbus_out           => core_dbusin,       -- Data input of the core 
+		  ram_data_out       => ram_dout,          -- Data output of the RAM
+		  io_port_bus        => io_port_out,       -- Data outputs of the I/O
+		  io_port_en_bus     => io_port_out_en,    -- Out enable outputs of I/O
+		  irqack             => core_irqack,		  
+		  irqackad			 => core_irqackad,
+		  ind_irq_ack		 =>	ind_irq_ack		  -- Individual interrupt acknolege for the peripheral
+                                            );
+
+
+-- ******************  PORTA **************************				
+PORTA_Impl:if CImplPORTA generate
+PORTA_COMP:component pport  
+	generic map(PPortNum => 0)
+	port map(
+	                   -- AVR Control
+               ireset     => nrst_cp2,
+               cp2	      => clk, 
+               adr        => core_adr,
+               dbus_in    => core_dbusout,
+               dbus_out   => porta_dbusout,
+               iore       => core_iore,
+               iowe       => core_iowe,
+               out_en     => porta_out_en,
+			            -- External connection
+			   portx      => PortAReg,
+			   ddrx       => DDRAReg,
+			   pinx       => porta);
+
+-- PORTA connection to the external multiplexer
+io_port_out(0) <= porta_dbusout;
+io_port_out_en(0) <= porta_out_en;
+
+-- Tri-state control for PORTA
+PortAZCtrl:for i in porta'range generate
+porta(i) <= PortAReg(i) when DDRAReg(i)='1' else 'Z'; 	
+end generate;
+
+end generate;
+
+PORTA_Not_Impl:if not CImplPORTA generate
+ porta <= (others => 'Z');	
+end generate; 
+
+-- ******************  PORTB **************************		
+PORTB_Impl:if CImplPORTB generate
+PORTB_COMP:component pport 
+	generic map (PPortNum => 1)
+	port map(
+	                   -- AVR Control
+               ireset     => nrst_cp2,
+               cp2	      => clk, 
+               adr        => core_adr,
+               dbus_in    => core_dbusout,
+               dbus_out   => portb_dbusout,
+               iore       => core_iore,
+               iowe       => core_iowe,
+               out_en     => portb_out_en,
+			            -- External connection
+			   portx      => PortBReg,
+			   ddrx       => DDRBReg,
+			   pinx       => portb);
+
+-- PORTB connection to the external multiplexer
+io_port_out(1) <= portb_dbusout;
+io_port_out_en(1) <= portb_out_en;
+
+-- Tri-state control for PORTB
+PortBZCtrl:for i in portb'range generate
+portb(i) <= PortBReg(i) when DDRBReg(i)='1' else 'Z'; 	
+end generate;
+
+end generate;
+
+PORTB_Not_Impl:if not CImplPORTB generate
+ portb <= (others => 'Z');	
+end generate; 
+	
+-- ************************************************
+
+-- Unused IRQ lines
+core_irqlines(7 downto 0) <= ( others => '0');
+core_irqlines(13 downto 10) <= ( others => '0');
+core_irqlines(21) <= '0';
+-- ************************
+
+-- Unused out_en
+io_port_out_en(6 to 15) <= (others => '0');
+
+-- UART
+UARTImplemented:if CImplUART generate
+
+UART_Iinst:component uart port map(
+	                               -- AVR Control
+                                   ireset     => nrst_cp2,
+                                   cp2	      => clk,
+                                   adr        => core_adr,
+                                   dbus_in    => core_dbusout,
+                                   dbus_out   => uart_dbusout, 
+                                   iore       => core_iore,
+                                   iowe       => core_iowe,
+                                   out_en     => uart_out_en,
+                                   --UART
+                                   rxd        => rxd,
+                                   rx_en      => uart_rx_en,
+                                   txd        => txd,
+                                   tx_en      => uart_tx_en,
+                                   --IRQ
+                                   txcirq     => core_irqlines(19), -- UART TX Comleet Handler ($0028)
+                                   txc_irqack => ind_irq_ack(19),
+                                   udreirq    => core_irqlines(18),	-- UART Empty ($0026)
+			                       rxcirq     => core_irqlines(17)  -- UART RX Comleet Handler ($0024)
+                                   );
+
+-- UART connection to the external multiplexer							  
+io_port_out(2)    <= uart_dbusout;
+io_port_out_en(2) <= uart_out_en;
+
+end generate;
+
+UARTNotImplemented:if not CImplUART generate
+ txd <= 'Z';
+ uart_rx_en <= '0';
+ uart_tx_en <= '0';
+end generate;
+
+--****************** Timer/Counter **************************
+TmrCnt_Impl:if CImplTmrCnt generate
+TmrCnt_Inst:component Timer_Counter port map(
+	           -- AVR Control
+               ireset     => nrst_cp2,
+               cp2	      => clk,
+			   cp2en	  => cp2en,
+			   tmr_cp2en  => tmr_cp2en,
+			   stopped_mode   => stopped_mode,
+			   tmr_running    => tmr_running,
+               adr        => core_adr,
+               dbus_in    => core_dbusout,
+               dbus_out   => tc_dbusout, 
+               iore       => core_iore,
+               iowe       => core_iowe,
+               out_en     => tc_out_en,
+			   -- External inputs/outputs
+               EXT1           => SBitZero,
+               EXT2           => SBitZero,
+			   OC0_PWM0       => open,
+			   OC1A_PWM1A     => open,
+			   OC1B_PWM1B     => open,
+			   OC2_PWM2       => open,
+			   -- Interrupt related signals
+               TC0OvfIRQ      => core_irqlines(15),  -- Timer/Counter0 overflow ($0020)
+			   TC0OvfIRQ_Ack  => ind_irq_ack(15),
+			   TC0CmpIRQ      => core_irqlines(14),  -- Timer/Counter0 Compare Match ($001E)
+			   TC0CmpIRQ_Ack  => ind_irq_ack(14),
+			   TC2OvfIRQ      => core_irqlines(9),	-- Timer/Counter2 overflow ($0014)
+			   TC2OvfIRQ_Ack  => ind_irq_ack(9),
+			   TC2CmpIRQ      => core_irqlines(8),	-- Timer/Counter2 Compare Match ($0012)
+			   TC2CmpIRQ_Ack  => ind_irq_ack(8),
+			   TC1OvfIRQ      => open,
+			   TC1OvfIRQ_Ack  => SBitZero,
+			   TC1CmpAIRQ     => open,
+			   TC1CmpAIRQ_Ack => SBitZero,
+			   TC1CmpBIRQ     => open,
+			   TC1CmpBIRQ_Ack => SBitZero,
+			   TC1ICIRQ       => open,
+			   TC1ICIRQ_Ack   => SBitZero);
+
+-- Timer/Counter connection to the external multiplexer							  
+io_port_out(4)    <= tc_dbusout;
+io_port_out_en(4) <= tc_out_en;
+end generate;
+
+-- Watchdog is not implemented
+wdtmout <= '0';
+
+
+-- Reset generator						 
+ResetGenerator_Inst:component ResetGenerator port map(
+	                            -- Clock inputs
+								cp2	       => clk,
+								cp64m	   => SBitZero,
+								-- Reset inputs
+	                            nrst       => nrst,
+								npwrrst    => SBitOne,
+								wdovf      => wdtmout,
+			                    jtagrst    => JTAG_Rst,
+      							-- Reset outputs
+					            nrst_cp2   => nrst_cp2_tmp,
+			                    nrst_cp64m => nrst_cp64m_tmp,
+								nrst_clksw => nrst_clksw
+								);
+
+								
+GlobalResets:if CUseAltera generate
+begin
+ GLOBAL_nrst_cp2_Inst:component GLOBAL port map (A_IN=> nrst_cp2_tmp, A_OUT=> nrst_cp2);
+end generate;			
+
+
+NoGlobalResets:if not CUseAltera generate
+begin
+ nrst_cp2   <= nrst_cp2_tmp;
+end generate;				
+
+
+NoGlobaClock:if not CUseAltera generate
+begin
+ core_cp2 <= core_cp2_tmp;
+end generate;										   
+						   
+						   
+ClockGatingDis:if not CImplClockSw generate
+  core_cp2 <= clk;
+end generate;
+
+-- **********************  JTAG and memory **********************************************
+	
+	
+InsertLCELLs:if CUseAltera generate
+begin
+ -- Only for Synplify
+  LCELL_DM:for i in ram_din'range generate
+   begin
+    LCELL_DM_Inst:component LCELL port map (A_IN=> ram_din(i), A_OUT=> ramdata_in_tmp(i));
+  end generate;			
+
+end generate;										  
+
+NoInsertLCELLs:if not CUseAltera generate
+begin
+ pm_din_tmp <= pm_din;
+ ramdata_in_tmp <= ram_din;
+end generate;						
+
+					   
+-- Data memory(8-bit)					   
+DRAM_Inst:component DataRAM generic map(RAMSize => CDRAMSize)
+	              port map(
+                        cp2     => clk,
+  	                    address => core_ramadr(LOG2(CDRAMSize)-1 downto 0),
+                        ramwe   => core_ramwe,
+		                din     => ramdata_in_tmp,
+		                dout    => ram_dout
+					   );						   
+
+PMForSimulation:if not CPMSynth generate					   
+	   
+LCELL_PM:for i in 7 downto 0 generate
+begin
+ LCELL_PM_Inst:component LCELL port map (A_IN=> pm_adr(i), A_OUT=> pm_adr_tmp(i));
+end generate;
+
+pm_adr_tmp(15 downto 8) <= (others => '0');
+
+prom_Inst:component prom port map(
+                                  address_in => pm_adr_tmp,
+                                  data_out   => pm_dout
+								  );
+end generate;
+								  
+
+PMForSynthesis:if CPMSynth generate
+ 
+LCELL_PM:for i in pm_adr_tmp'range generate
+begin
+ LCELL_PM_Inst:component LCELL port map (A_IN=> pm_adr(i), A_OUT=> pm_adr_tmp(i));
+end generate;						   
+
+PMH_Inst:component DataRAM generic map(RAMSize => CPRAMSize/2)
+	              port map(
+                        cp2     => clk,
+  	                    address => pm_adr_tmp(LOG2(CPRAMSize/2)-1 downto 0),
+                        ramwe   => pm_h_we,
+		                din     => pm_din(15 downto 8),
+		                dout    => pm_dout(15 downto 8)
+					   );						   
+
+PML_Inst:component DataRAM generic map(RAMSize => CPRAMSize/2)
+	              port map(
+                        cp2     => clk,
+  	                    address => pm_adr_tmp(LOG2(CPRAMSize/2)-1 downto 0),
+                        ramwe   => pm_l_we,
+		                din     => pm_din(7 downto 0),
+		                dout    => pm_dout(7 downto 0)
+					   );						   
+end generate;					   
+					   
+-- **********************  JTAG and memory **********************************************
+
+-- Sleep mode is not implemented
+sleep_mode <= '0';
+
+
+JTAGOCDPrgTop_Inst:component JTAGOCDPrgTop port map(
+	                      -- AVR Control
+                          ireset       => nrst_cp2,
+                          cp2	       => core_cp2,
+                          adr          => core_adr,
+						  ramadr       => core_ramadr,
+						  ramre        => core_ramre,
+						  ramwe        => core_ramwe,
+						  dbus_in      => core_dbusout,
+                          dbus_out     => jtag_dbusout,
+                          iore         => core_iore,
+                          iowe         => core_iowe,
+                          out_en       => jtag_out_en,
+					      -- Core control signals(!!!TBD!!! WDR - disable)
+						  cp2en        => cp2en,
+						  valid_instr  => valid_instr,
+						  insert_nop   => insert_nop,
+						  block_irq    => block_irq,
+						  change_flow  => change_flow,
+						  tmr_cp2en    => tmr_cp2en,
+						  stopped_mode => stopped_mode,
+						  tmr_running  => tmr_running,
+						  wdr_en       => wdr_en,
+						  sleep_mode   => sleep_mode,
+						  ctrlx        => ctrlx,
+						  -- JTAG related inputs/outputs
+						  TRSTn        => TRSTn, -- Optional
+	                      TMS          => TMS,
+                          TCK	       => TCK,
+                          TDI          => TDI,
+                          TDO          => TDO_Out,
+						  TDO_OE       => TDO_OE,
+						  -- INTERNAL SCAN CHAIN
+						  PC           => core_pc,
+						  Inst         => core_inst,
+						  -- To the PM("Flash")
+						  pm_adr       => pm_adr,
+						  pm_h_we      => pm_h_we,
+						  pm_l_we      => pm_l_we,
+						  pm_dout      => pm_dout,
+						  pm_din       => pm_din,
+						  -- To the "EEPROM" 
+						  EEPrgSel     => EEPrgSel,
+						  EEAdr        => EEAdr,
+						  EEWrData     => EEWrData,
+						  EERdData     => EERdData,
+						  EEWr         => EEWr,
+						  -- CPU reset
+						  jtag_rst     => JTAG_Rst
+                          );
+
+-- JTAG OCD module connection to the external multiplexer
+io_port_out(3) <= jtag_dbusout;
+io_port_out_en(3) <= jtag_out_en;						  
+						  
+TDO <= TDO_Out when TDO_OE='1' else 'Z'; 						  
+
+-- **********************  SMBus **********************************************
+
+SMBusImplemented:if CImplSMBusMod generate
+
+SMBusMod_Inst:component SMBusMod port map(
+	           -- AVR Control
+               ireset       => nrst_cp2,
+               cp2	        => clk,
+               adr          => core_adr,
+               dbus_in      => core_dbusout,
+               dbus_out     => smbui_dbusout, 
+               iore         => core_iore,
+               iowe         => core_iowe,
+               out_en       => smbui_out_en,
+               -- Slave IRQ
+               twiirq       => core_irqlines(16),
+               -- Master IRQ
+			   msmbirq      => core_irqlines(20), -- $002A ADC
+			   -- "Off state" timer IRQ
+               offstirq     => core_irqlines(22), -- $002E Analog comparator
+               offstirq_ack => ind_irq_ack(22),
+			   -- TRI control and data for the slave channel
+			   sdain	    => sda,
+			   sdaout	    => sdaout,
+			   sdaen        => sdaen,
+			   sclin	    => scl,
+			   sclout	    => sclout,
+			   sclen        => sclen,
+			   -- TRI control and data for the master channel
+			   msdain	    => msda,
+			   msdaout	    => msdaout,
+			   msdaen       => msdaen,
+			   msclin	    => mscl,
+			   msclout	    => msclout,
+			   msclen       => msclen
+			   );
+
+			   
+-- SMBus connection(for the slave)
+sda <= sdaout when sdaen='1' else 'Z';
+scl <= sclout when sclen='1' else 'Z';
+
+-- SMBus connection(for the master)
+msda <= msdaout when msdaen='1' else 'Z';
+mscl <= msclout when msclen='1' else 'Z';	
+	
+-- SMBus connection to the external multiplexer							  
+io_port_out(5)    <= smbui_dbusout;
+io_port_out_en(5) <= smbui_out_en;
+end generate;
+
+SMBusNotImplemented:if not CImplSMBusMod generate
+ sda <= 'Z';
+ scl <= 'Z';
+ msda <= 'Z';
+ mscl <= 'Z';
+ -- !!!TBD!!!
+ smbui_dbusout <= (others => '0');
+ smbui_out_en <= '0';
+ core_irqlines(16) <= '0';
+ core_irqlines(20) <= '0';
+ core_irqlines(22) <= '0';
+end generate;
+
+-- **********************  SMBus **********************************************
+	
+	
+	
+end Struct;

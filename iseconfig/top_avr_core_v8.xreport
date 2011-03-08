@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<report-views version="1.7" >
+ <header>
+  <DateModified>2011-03-08T13:09:19</DateModified>
+  <ModuleName>top_avr_core_v8</ModuleName>
+  <SummaryTimeStamp>2011-03-08T12:41:36</SummaryTimeStamp>
+  <DateInitialized>2009-11-06T11:47:00</DateInitialized>
+  <ImplementationReportsDirectory>C:/dbdev/My Dropbox/GadgetFactory/AVR8/package/avr8_v1.0/avr8/trunk\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/dbdev/My Dropbox/GadgetFactory/AVR8/package/avr8_v1.0/avr8/trunk/iseconfig/top_avr_core_v8.xreport</SavedFilePath>
+  <EnableMessageFiltering>false</EnableMessageFiltering>
+ </header>
+ <body>
+  <viewgroup label="Design Overview" >
+   <view inputState="Unknown" program="implementation" ShowPartitionData="false" type="FPGASummary" file="top_avr_core_v8_summary.html" label="Summary" >
+    <toc-item title="Design Overview" target="Design Overview" />
+    <toc-item title="Design Utilization Summary" target="Design Utilization Summary" />
+    <toc-item title="Performance Summary" target="Performance Summary" />
+    <toc-item title="Failing Constraints" target="Failing Constraints" />
+    <toc-item title="Detailed Reports" target="Detailed Reports" />
+   </view>
+   <view inputState="Unknown" program="implementation" contextTags="FPGA_ONLY,EDK_OFF" hidden="true" type="HTML" file="top_avr_core_v8_partitions.html" label="Partition Report" >
+    <toc-item title="Detailed Reports" target="Detailed Reports" />
+   </view>
+   <view inputState="Translated" program="map" locator="MAP_IOB_TABLE" contextTags="FPGA_ONLY" type="IOBProperties" file="top_avr_core_v8_map.xrpt" label="IOB Properties" />
+   <view inputState="Translated" program="map" contextTags="FPGA_ONLY" hidden="true" type="Control_Sets" file="top_avr_core_v8_map.xrpt" label="Control Set Information" />
+   <view inputState="Translated" program="map" locator="MAP_MODULE_HIERARCHY" contextTags="FPGA_ONLY" type="Module_Utilization" file="top_avr_core_v8_map.xrpt" label="Module Level Utilization" />
+   <view inputState="Mapped" program="par" locator="CONSTRAINT_TABLE" contextTags="FPGA_ONLY" type="ConstraintsData" file="top_avr_core_v8.ptwx" label="Timing Constraints" translator="ptwxToTableXML.xslt" />
+   <view inputState="Mapped" program="par" locator="PAR_PINOUT_BY_PIN_NUMBER" contextTags="FPGA_ONLY" type="PinoutData" file="top_avr_core_v8_par.xrpt" label="Pinout Report" />
+   <view inputState="Mapped" program="par" locator="PAR_CLOCK_TABLE" contextTags="FPGA_ONLY" type="ClocksData" file="top_avr_core_v8_par.xrpt" label="Clock Report" />
+   <view inputState="Mapped" program="par" contextTags="FPGA_ONLY,EDK_OFF" type="Timing_Analyzer" file="top_avr_core_v8.twx" label="Static Timing" />
+   <view inputState="Translated" program="cpldfit" contextTags="CPLD_ONLY,EDK_OFF" hidden="true" type="EXTERNAL_HTML" file="top_avr_core_v8_html/fit/report.htm" label="CPLD Fitter Report" />
+   <view inputState="Fitted" program="taengine" contextTags="CPLD_ONLY,EDK_OFF" hidden="true" type="EXTERNAL_HTML" file="top_avr_core_v8_html/tim/report.htm" label="CPLD Timing Report" />
+  </viewgroup>
+  <viewgroup label="XPS Errors and Warnings" >
+   <view program="platgen" contextTags="EDK_ON" hidden="true" type="MessageList" hideColumns="Filtered" file="_xmsgs/platgen.xmsgs" label="Platgen Messages" />
+   <view program="libgen" contextTags="EDK_ON" hidden="true" type="MessageList" hideColumns="Filtered" file="_xmsgs/libgen.xmsgs" label="Libgen Messages" />
+   <view program="simgen" contextTags="EDK_ON" hidden="true" type="MessageList" hideColumns="Filtered" file="_xmsgs/simgen.xmsgs" label="Simgen Messages" />
+   <view program="bitinit" contextTags="EDK_ON" hidden="true" type="MessageList" hideColumns="Filtered" file="_xmsgs/bitinit.xmsgs" label="BitInit Messages" />
+  </viewgroup>
+  <viewgroup label="XPS Reports" >
+   <view inputState="PreSynthesized" program="platgen" contextTags="EDK_ON" hidden="true" type="Secondary_Report" file="../platgen.log" label="Platgen Log File" />
+   <view inputState="PreSynthesized" program="libgen" contextTags="EDK_ON" hidden="true" type="Secondary_Report" file="../libgen.log" label="Libgen Log File" />
+   <view inputState="PreSynthesized" program="simgen" contextTags="EDK_ON" hidden="true" type="Secondary_Report" file="../simgen.log" label="Simgen Log File" />
+   <view inputState="PreSynthesized" program="bitinit" contextTags="EDK_ON" hidden="true" type="Secondary_Report" file="../bitinit.log" label="BitInit Log File" />
+  </viewgroup>
+  <viewgroup label="Errors and Warnings" >
+   <view inputState="Unknown" program="pn" WrapMessages="true" contextTags="EDK_OFF" type="MessageList" hideColumns="Filtered, New" file="_xmsgs/pn_parser.xmsgs" label="Parser Messages" />
+   <view program="xst" contextTags="XST_ONLY,EDK_OFF" hidden="false" type="MessageList" hideColumns="Filtered" file="_xmsgs/xst.xmsgs" label="Synthesis Messages" />
+   <view inputState="Synthesized" program="ngdbuild" type="MessageList" hideColumns="Filtered" file="_xmsgs/ngdbuild.xmsgs" label="Translation Messages" />
+   <view inputState="Translated" program="map" contextTags="FPGA_ONLY" type="MessageList" hideColumns="Filtered" file="_xmsgs/map.xmsgs" label="Map Messages" />
+   <view inputState="Mapped" program="par" contextTags="FPGA_ONLY" type="MessageList" hideColumns="Filtered" file="_xmsgs/par.xmsgs" label="Place and Route Messages" />
+   <view inputState="Routed" program="trce" contextTags="FPGA_ONLY" type="MessageList" hideColumns="Filtered" file="_xmsgs/trce.xmsgs" label="Timing Messages" />
+   <view inputState="Routed" program="xpwr" contextTags="EDK_OFF" hidden="true" type="MessageList" hideColumns="Filtered" file="_xmsgs/xpwr.xmsgs" label="Power Messages" />
+   <view inputState="Routed" program="bitgen" contextTags="FPGA_ONLY" type="MessageList" hideColumns="Filtered" file="_xmsgs/bitgen.xmsgs" label="Bitgen Messages" />
+   <view inputState="Translated" program="cpldfit" contextTags="CPLD_ONLY,EDK_OFF" hidden="true" type="MessageList" hideColumns="Filtered" file="_xmsgs/cpldfit.xmsgs" label="Fitter Messages" />
+   <view inputState="Current" program="implementation" fileList="_xmsgs/xst.xmsgs,_xmsgs/ngdbuild.xmsgs,_xmsgs/map.xmsgs,_xmsgs/par.xmsgs,_xmsgs/trce.xmsgs,_xmsgs/xpwr.xmsgs,_xmsgs/bitgen.xmsgs" contextTags="FPGA_ONLY" type="MessageList" hideColumns="Filtered" file="_xmsgs/*.xmsgs" label="All Current Messages" />
+   <view inputState="Current" program="fitting" fileList="_xmsgs/xst.xmsgs,_xmsgs/ngdbuild.xmsgs,_xmsgs/cpldfit.xmsgs,_xmsgs/xpwr.xmsgs" contextTags="CPLD_ONLY,EDK_OFF" hidden="true" type="CPLD_MessageList" hideColumns="Filtered" file="_xmsgs/*.xmsgs" label="All Current Messages (CPLD)" />
+  </viewgroup>
+  <viewgroup label="Detailed Reports" >
+   <view program="xst" contextTags="XST_ONLY,EDK_OFF" hidden="false" type="Report" file="top_avr_core_v8.syr" label="Synthesis Report" >
+    <toc-item title="Top of Report" target="Release" />
+    <toc-item title="Synthesis Options Summary" target="   Synthesis Options Summary   " />
+    <toc-item title="HDL Compilation" target="   HDL Compilation   " />
+    <toc-item title="Design Hierarchy Analysis" target="   Design Hierarchy Analysis   " />
+    <toc-item title="HDL Analysis" target="   HDL Analysis   " />
+    <toc-item title="HDL Synthesis" target="   HDL Synthesis   " />
+    <toc-item title="Advanced HDL Synthesis" target="   Advanced HDL Synthesis   " />
+    <toc-item title="Low Level Synthesis" target="   Low Level Synthesis   " />
+    <toc-item title="Partition Report" target="   Partition Report     " />
+    <toc-item title="Final Report" target="   Final Report   " />
+   </view>
+   <view program="synplify" contextTags="SYNPLIFY_ONLY,EDK_OFF" hidden="true" type="Report" file="top_avr_core_v8.srr" label="Synplify Report" />
+   <view program="precision" contextTags="PRECISION_ONLY,EDK_OFF" hidden="true" type="Report" file="top_avr_core_v8.prec_log" label="Precision Report" />
+   <view inputState="Synthesized" program="ngdbuild" type="Report" file="top_avr_core_v8.bld" label="Translation Report" >
+    <toc-item title="Top of Report" target="Release" />
+    <toc-item title="Command Line" target="Command Line:" />
+    <toc-item title="Partition Status" target="Partition Implementation Status" />
+    <toc-item title="Final Summary" target="NGDBUILD Design Results Summary:" />
+   </view>
+   <view inputState="Translated" program="map" contextTags="FPGA_ONLY" type="Report" file="top_avr_core_v8_map.mrp" label="Map Report" >
+    <toc-item title="Top of Report" target="Release" />
+    <toc-item title="Section 1: Errors" target="Section 1 - " />
+    <toc-item title="Section 2: Warnings" target="Section 2 - " />
+    <toc-item title="Section 3: Infos" target="Section 3 - " />
+    <toc-item title="Section 4: Removed Logic Summary" target="Section 4 - " />
+    <toc-item title="Section 5: Removed Logic" target="Section 5 - " />
+    <toc-item title="Section 6: IOB Properties" target="Section 6 - " />
+    <toc-item title="Section 7: RPMs" target="Section 7 - " />
+    <toc-item title="Section 8: Guide Report" target="Section 8 - " />
+    <toc-item title="Section 9: Area Group and Partition Summary" target="Section 9 - " />
+    <toc-item title="Section 10: Modular Design Summary" target="Section 10 - " />
+    <toc-item title="Section 11: Timing Report" target="Section 11 - " />
+    <toc-item title="Section 12: Configuration String Details" target="Section 12 - " />
+    <toc-item title="Section 13: Control Set Information" target="Section 13 - " />
+    <toc-item title="Section 14: Utilization by Hierarchy" target="Section 14 - " />
+   </view>
+   <view inputState="Mapped" program="par" contextTags="FPGA_ONLY" type="Report" file="top_avr_core_v8.par" label="Place and Route Report" >
+    <toc-item title="Top of Report" target="Release" />
+    <toc-item title="Device Utilization" target="Device Utilization Summary:" />
+    <toc-item title="Router Information" target="Starting Router" />
+    <toc-item title="Partition Status" target="Partition Implementation Status" />
+    <toc-item title="Clock Report" target="Generating Clock Report" />
+    <toc-item title="Timing Results" target="Timing Score:" />
+    <toc-item title="Final Summary" target="Peak Memory Usage:" />
+   </view>
+   <view inputState="Routed" program="trce" contextTags="FPGA_ONLY" type="Report" file="top_avr_core_v8.twr" label="Post-PAR Static Timing Report" >
+    <toc-item title="Top of Report" target="Release" />
+    <toc-item title="Data Sheet Report" target="Data Sheet" />
+    <toc-item title="Timing Summary" target="Timing summary:" />
+   </view>
+   <view inputState="Translated" program="cpldfit" contextTags="CPLD_ONLY,EDK_OFF" hidden="true" type="Report" file="top_avr_core_v8.rpt" label="CPLD Fitter Report (Text)" >
+    <toc-item title="Top of Report" target="cpldfit:" />
+    <toc-item title="Resources Summary" target="**  Mapped Resource Summary  **" />
+    <toc-item title="Pin Resources" target="** Pin Resources **" />
+    <toc-item title="Global Resources" target="** Global Control Resources **" />
+   </view>
+   <view inputState="Fitted" program="taengine" contextTags="CPLD_ONLY,EDK_OFF" hidden="true" type="Report" file="top_avr_core_v8.tim" label="CPLD Timing Report (Text)" >
+    <toc-item title="Top of Report" target="Performance Summary Report" />
+    <toc-item title="Performance Summary" target="Performance Summary:" />
+   </view>
+   <view inputState="Routed" program="xpwr" contextTags="EDK_OFF" type="Report" file="top_avr_core_v8.pwr" label="Power Report" >
+    <toc-item title="Top of Report" target="Release" />
+    <toc-item title="Power summary" target="Power summary" />
+    <toc-item title="Thermal summary" target="Thermal summary" />
+   </view>
+   <view inputState="Routed" program="bitgen" contextTags="FPGA_ONLY" type="Report" file="top_avr_core_v8.bgn" label="Bitgen Report" >
+    <toc-item title="Top of Report" target="Release" />
+    <toc-item title="Bitgen Options" target="Summary of Bitgen Options:" />
+    <toc-item title="Final Summary" target="DRC detected" />
+   </view>
+  </viewgroup>
+  <viewgroup label="Secondary Reports" >
+   <view inputState="PreSynthesized" program="isim" hidden="if_missing" type="Secondary_Report" file="isim.log" label="ISIM Simulator Log" />
+   <view inputState="Synthesized" program="netgen" hidden="if_missing" type="Secondary_Report" file="netgen/synthesis/top_avr_core_v8_synthesis.nlf" label="Post-Synthesis Simulation Model Report" >
+    <toc-item title="Top of Report" target="Release" />
+   </view>
+   <view inputState="Translated" program="netgen" hidden="if_missing" type="Secondary_Report" file="netgen/translate/top_avr_core_v8_translate.nlf" label="Post-Translate Simulation Model Report" >
+    <toc-item title="Top of Report" target="Release" />
+   </view>
+   <view inputState="Translated" program="netgen" hidden="if_missing" type="Secondary_Report" file="top_avr_core_v8_tran_fecn.nlf" label="Post-Translate Formality Netlist Report" />
+   <view inputState="Translated" program="map" contextTags="FPGA_ONLY" hidden="true" type="Secondary_Report" file="top_avr_core_v8_map.map" label="Map Log File" >
+    <toc-item title="Top of Report" target="Release" />
+    <toc-item title="Design Information" target="Design Information" />
+    <toc-item title="Design Summary" target="Design Summary" />
+   </view>
+   <view inputState="Routed" program="smartxplorer" contextTags="FPGA_ONLY" hidden="if_missing" type="Secondary_Report" file="smartxplorer_results/smartxplorer.txt" label="SmartXplorer Report" />
+   <view inputState="Mapped" program="trce" contextTags="FPGA_ONLY" hidden="if_missing" type="Secondary_Report" file="top_avr_core_v8_preroute.twr" label="Post-Map Static Timing Report" />
+   <view inputState="Mapped" program="netgen" hidden="if_missing" type="Secondary_Report" file="netgen/map/top_avr_core_v8_map.nlf" label="Post-Map Simulation Model Report" />
+   <view inputState="Mapped" program="map" contextTags="FPGA_ONLY" hidden="if_missing" type="Secondary_Report" file="top_avr_core_v8_map.psr" label="Physical Synthesis Report" />
+   <view inputState="Mapped" program="par" contextTags="FPGA_ONLY" hidden="true" type="Pad_Report" file="top_avr_core_v8_pad.txt" label="Pad Report" >
+    <toc-item title="Top of Report" target="Release" />
+   </view>
+   <view inputState="Mapped" program="par" contextTags="FPGA_ONLY" hidden="true" type="Secondary_Report" file="top_avr_core_v8.unroutes" label="Unroutes Report" >
+    <toc-item title="Top of Report" target="Release" />
+   </view>
+   <view inputState="Mapped" program="par" contextTags="FPGA_ONLY" hidden="if_missing" type="Secondary_Report" file="top_avr_core_v8.grf" label="Guide Results Report" />
+   <view inputState="Routed" program="par" contextTags="FPGA_ONLY" hidden="if_missing" type="Secondary_Report" file="top_avr_core_v8.dly" label="Asynchronous Delay Report" />
+   <view inputState="Routed" program="par" contextTags="FPGA_ONLY" hidden="if_missing" type="Secondary_Report" file="top_avr_core_v8.clk_rgn" label="Clock Region Report" />
+   <view inputState="Routed" program="netgen" hidden="if_missing" type="Secondary_Report" file="top_avr_core_v8_par_fecn.nlf" label="Post-Place and Route Formality Netlist Report" />
+   <view inputState="Routed" program="netgen" contextTags="FPGA_ONLY" hidden="if_missing" type="Secondary_Report" file="netgen/par/top_avr_core_v8_timesim.nlf" label="Post-Place and Route Simulation Model Report" />
+   <view inputState="Routed" program="netgen" hidden="if_missing" type="Secondary_Report" file="top_avr_core_v8_sta.nlf" label="Primetime Netlist Report" >
+    <toc-item title="Top of Report" target="Release" />
+   </view>
+   <view inputState="Routed" program="ibiswriter" hidden="if_missing" type="Secondary_Report" file="top_avr_core_v8.ibs" label="IBIS Model" >
+    <toc-item title="Top of Report" target="IBIS Models for" />
+    <toc-item title="Component" target="Component " />
+   </view>
+   <view inputState="Routed" program="pin2ucf" contextTags="FPGA_ONLY" hidden="if_missing" type="Secondary_Report" file="top_avr_core_v8.lck" label="Back-annotate Pin Report" >
+    <toc-item title="Top of Report" target="pin2ucf Report File" />
+    <toc-item title="Constraint Conflicts Information" target="Constraint Conflicts Information" />
+   </view>
+   <view inputState="Routed" program="pin2ucf" contextTags="FPGA_ONLY" hidden="if_missing" type="Secondary_Report" file="top_avr_core_v8.lpc" label="Locked Pin Constraints" >
+    <toc-item title="Top of Report" target="top.lpc" />
+    <toc-item title="Newly Added Constraints" target="The following constraints were newly added" />
+   </view>
+   <view inputState="Translated" program="netgen" contextTags="CPLD_ONLY,EDK_OFF" hidden="if_missing" type="Secondary_Report" file="netgen/fit/top_avr_core_v8_timesim.nlf" label="Post-Fit Simulation Model Report" />
+   <view inputState="Routed" program="bitgen" contextTags="FPGA_ONLY" hidden="if_missing" type="HTML" file="usage_statistics_webtalk.html" label="WebTalk Report" />
+   <view inputState="Routed" program="bitgen" contextTags="FPGA_ONLY" hidden="if_missing" type="Secondary_Report" file="webtalk.log" label="WebTalk Log File" />
+  </viewgroup>
+ </body>
+</report-views>

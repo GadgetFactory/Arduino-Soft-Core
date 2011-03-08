@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\dbdev\My Dropbox\GadgetFactory\AVR8\package\avr8_v1.0\avr8\trunk\Papilio_AVR8.ncd
-OUTFILE=C:\dbdev\My Dropbox\GadgetFactory\AVR8\package\avr8_v1.0\avr8\trunk\Papilio_AVR8.bit
+INFILE=C:\dbdev\My Dropbox\GadgetFactory\Arduino-Soft-Core\Papilio_AVR8.ncd
+OUTFILE=C:\dbdev\My Dropbox\GadgetFactory\Arduino-Soft-Core\Papilio_AVR8.bit
 FAMILY=Spartan3E
 PART=xc3s250e-4vq100
-WORKINGDIR=C:\dbdev\My Dropbox\GadgetFactory\AVR8\package\avr8_v1.0\avr8\trunk
+WORKINGDIR=C:\dbdev\My Dropbox\GadgetFactory\Arduino-Soft-Core
 LICENSE=WebPack
 USER_INFO=0_0_333

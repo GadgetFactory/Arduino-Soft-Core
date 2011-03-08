@@ -11,16 +11,6 @@ use IEEE.std_logic_arith.all;
 
 package SynthCtrlPack is							
 
--- Peripherals
-constant CImplTmrCnt          : boolean := TRUE;
-constant CImplPORTA           : boolean := TRUE;
-constant CImplPORTB           : boolean := TRUE;
-constant CImplPORTC           : boolean := TRUE;
-constant CImplPORTD           : boolean := TRUE;
-constant CImplPORTE           : boolean := TRUE;
-constant CImplPORTF           : boolean := TRUE;
-constant CImplUART            : boolean := TRUE;
-
 -- Reset generator
 constant CSecondClockUsed     : boolean := FALSE;
 

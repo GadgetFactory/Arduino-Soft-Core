@@ -1,0 +1,11 @@
+Release 12.2 Drc M.63c (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Tue Mar 08 15:59:22 2011
+
+drc -z Papilio_AVR8.ncd Papilio_AVR8.pcf
+
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp
+   Inst_DCM32to16/DCM_SP_INST, consult the device Interactive Data Sheet.
+DRC detected 0 errors and 0 warnings.

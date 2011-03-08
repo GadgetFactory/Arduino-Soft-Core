@@ -52,6 +52,17 @@ PORT(
 	);
 END COMPONENT;
 
+-- Use these setting to control which peripherals you want to include with your custom AVR8 implementation.
+constant CImplTmrCnt          : boolean := TRUE;
+constant CImplPORTA           : boolean := TRUE;
+constant CImplPORTB           : boolean := TRUE;
+constant CImplPORTC           : boolean := TRUE;
+constant CImplPORTD           : boolean := TRUE;
+constant CImplPORTE           : boolean := TRUE;
+constant CImplPORTF           : boolean := TRUE;
+constant CImplUART            : boolean := TRUE;
+
+
 -- ############################## Signals connected directly to the core ##########################################
 
 signal core_cpuwait  : std_logic;                    

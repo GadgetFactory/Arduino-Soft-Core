@@ -70,3 +70,12 @@ NET "portf<7>" LOC = "P17" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#
 ## RS232
 NET "rxd"  LOC = "P88" | IOSTANDARD = LVCMOS25 ;
 NET "txd"  LOC = "P90" | IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = SLOW ;
+
+## Prohibit the automatic placement of pins that are connected to VCC or GND for configuration.
+CONFIG PROHIBIT=P99 ;		#HSWAP
+CONFIG PROHIBIT=P43 ;		#M0
+CONFIG PROHIBIT=P42 ;		#M1
+CONFIG PROHIBIT=P39 ;		#M2
+CONFIG PROHIBIT=P49 ;		#VS0
+CONFIG PROHIBIT=P48 ;		#VS1
+CONFIG PROHIBIT=P47 ;		#VS2

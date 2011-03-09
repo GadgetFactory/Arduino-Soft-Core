@@ -17,13 +17,13 @@
          <ClosedNode>/top_avr_core_v8 - Struct</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Papilio_AVR8 - Struct (C:/dbdev/My Dropbox/GadgetFactory/AVR8/package/avr8_v1.0/avr8/trunk/uC/Papilio_AVR8.vhd)</SelectedItem>
+         <SelectedItem>Papilio_AVR8 - Struct (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/uC/Papilio_AVR8.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000218000000020000000000000000000000000000000064ffffffff000000810000000000000002000002180000000100000000000000000000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Papilio_AVR8 - Struct (C:/dbdev/My Dropbox/GadgetFactory/AVR8/package/avr8_v1.0/avr8/trunk/uC/Papilio_AVR8.vhd)</CurrentItem>
+      <CurrentItem>Papilio_AVR8 - Struct (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/uC/Papilio_AVR8.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>

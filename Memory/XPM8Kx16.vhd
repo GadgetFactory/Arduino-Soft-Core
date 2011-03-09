@@ -10,6 +10,8 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all;
 
+use WORK.SynthCtrlPack.all; -- Synthesis control
+
 -- For Synplicity Synplify
 --library virtexe;
 --use	virtexe.components.all; 
@@ -21,7 +23,7 @@ use unisim.vcomponents.all;
 entity XPM8Kx16 is port(
 	                  cp2     : in  std_logic;
 					  ce      : in  std_logic; 
-	                  address : in  std_logic_vector(12 downto 0); 
+	                  address : in  std_logic_vector(CPROGMEMSIZE downto 0); 
 					  din     : in  std_logic_vector(15 downto 0);		                
 					  dout    : out std_logic_vector(15 downto 0);
 					  we     : in  std_logic

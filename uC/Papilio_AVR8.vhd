@@ -43,15 +43,6 @@ end Papilio_AVR8;
 
 architecture Struct of Papilio_AVR8 is
 
-COMPONENT DCM32to16
-PORT(
-	CLKIN_IN : IN std_logic;          
-	CLKFX_OUT : OUT std_logic;
-	CLKIN_IBUFG_OUT : OUT std_logic;
-	CLK0_OUT : OUT std_logic
-	);
-END COMPONENT;
-
 -- Use these setting to control which peripherals you want to include with your custom AVR8 implementation.
 constant CImplTmrCnt          : boolean := TRUE;
 constant CImplPORTA           : boolean := TRUE;
@@ -62,6 +53,34 @@ constant CImplPORTE           : boolean := TRUE;
 constant CImplPORTF           : boolean := TRUE;
 constant CImplUART            : boolean := TRUE;
 
+component XDM4Kx8	port(
+	                    cp2       : in  std_logic;
+						ce      : in  std_logic;
+	                    address   : in  std_logic_vector(CDATAMEMSIZE downto 0); 
+					    din       : in  std_logic_vector(7 downto 0);		                
+					    dout      : out std_logic_vector(7 downto 0);
+					    we        : in  std_logic
+					   );
+end component;
+
+component XPM8Kx16 port(
+	                  cp2     : in  std_logic;
+					  ce      : in  std_logic;
+	                  address : in  std_logic_vector(CPROGMEMSIZE downto 0); 
+					  din     : in  std_logic_vector(15 downto 0);		                
+					  dout    : out std_logic_vector(15 downto 0);
+					  we     : in  std_logic
+					  );
+end component;
+
+COMPONENT DCM32to16
+PORT(
+	CLKIN_IN : IN std_logic;          
+	CLKFX_OUT : OUT std_logic;
+	CLKIN_IBUFG_OUT : OUT std_logic;
+	CLK0_OUT : OUT std_logic
+	);
+END COMPONENT;
 
 -- ############################## Signals connected directly to the core ##########################################
 
@@ -642,20 +661,22 @@ end generate;
 ram_cp2_n <= not clk16M;
 
 ---- Data memory(8-bit)					   
-DRAM_Inst:component XDM4Kx8 port map(
+DRAM_Inst:component XDM4Kx8 
+port map(
 	                    cp2       => ram_cp2_n,
 						ce        => vcc,
-	                    address   => mem_ramadr(11 downto 0), 
+	                    address   => mem_ramadr(CDATAMEMSIZE downto 0), 
 					    din       => mem_ram_dbus_in, 
 					    dout      => mem_ram_dbus_out, 
 					    we        => ram_ramwe
 					   );
 
 -- Program memory					   
-PM_Inst:component XPM8Kx16 port map(
+PM_Inst:component XPM8Kx16 
+port map(
 	                  cp2     => ram_cp2_n, 
 					  ce      => vcc,
-	                  address => pm_adr(12 downto 0),
+	                  address => pm_adr(CPROGMEMSIZE downto 0),
 					  din     => pm_din,
 					  dout    => pm_dout,
 					  we     => pm_l_we

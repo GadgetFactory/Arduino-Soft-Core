@@ -17,13 +17,13 @@
          <ClosedNode>/top_avr_core_v8 - Struct</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Papilio_AVR8 - Struct (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/uC/Papilio_AVR8.vhd)</SelectedItem>
+         <SelectedItem>DRAM_Inst - XDM4Kx8 - RTL (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/Memory/XDM4Kx8.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000218000000020000000000000000000000000000000064ffffffff000000810000000000000002000002180000000100000000000000000000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Papilio_AVR8 - Struct (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/uC/Papilio_AVR8.vhd)</CurrentItem>
+      <CurrentItem>DRAM_Inst - XDM4Kx8 - RTL (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/Memory/XDM4Kx8.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -34,20 +34,22 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Generate Programming File</SelectedItem>
+         <SelectedItem>Add Existing Source</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000016e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000016e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Generate Programming File</CurrentItem>
+      <CurrentItem>Add Existing Source</CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes/>
-      <SelectedItems/>
+      <SelectedItems>
+         <SelectedItem>CommonPacks\AVRuCPackage.vhd</SelectedItem>
+      </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000392000000040101000100000000000000000000000064ffffffff000000810000000000000004000000ec0000000100000000000000d70000000100000000000000660000000100000000000001690000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000003b5000000040101000100000000000000000000000064ffffffff0000008100000000000000040000010f0000000100000000000000d70000000100000000000000660000000100000000000001690000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>CommonPacks\AVRuCPackage.vhd</CurrentItem>
    </ItemView>
@@ -64,4 +66,15 @@
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes/>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000016e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000016e0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
 </Project>

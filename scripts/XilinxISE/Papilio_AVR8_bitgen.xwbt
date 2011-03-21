@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\dbdev\My Dropbox\GadgetFactory\Arduino-Soft-Core\scripts\XilinxISE\Papilio_AVR8.ncd
+OUTFILE=C:\dbdev\My Dropbox\GadgetFactory\Arduino-Soft-Core\scripts\XilinxISE\Papilio_AVR8.bit
+FAMILY=Spartan3E
+PART=xc3s250e-4vq100
+WORKINGDIR=C:\dbdev\My Dropbox\GadgetFactory\Arduino-Soft-Core\scripts\XilinxISE
+LICENSE=WebPack
+USER_INFO=0_0_333

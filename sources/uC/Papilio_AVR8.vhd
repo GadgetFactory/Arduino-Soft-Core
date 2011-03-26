@@ -82,6 +82,33 @@ PORT(
 	);
 END COMPONENT;
 
+-- ############################## Define Components for User Cores ##################################################
+
+-- Example Core - core9 
+COMPONENT papilio_core_template
+PORT(
+			-- begin Signals required by AVR8 for this core, do not modify.
+			nReset 		: in  STD_LOGIC;
+			clk 			: in  STD_LOGIC;
+			adr 			: in  STD_LOGIC_VECTOR (15 downto 0);
+			dbus_in 		: in  STD_LOGIC_VECTOR (7 downto 0);
+			dbus_out 	: out  STD_LOGIC_VECTOR (7 downto 0);
+			iore 			: in  STD_LOGIC;
+			iowe 			: in  STD_LOGIC;
+			out_en		: out STD_LOGIC;
+			-- end Signals required by AVR8 for this core, do not modify.
+
+		--Define signals that you want to go in or out of the peripheral. These are usually going to be connected to extenal pins of the Papilio board.
+			--Two Output Signals
+			output_sig	: out std_logic_vector (1 downto 0);
+			
+			--Two Input Signals
+			input_sig		: in std_logic_vector (1 downto 0)
+	);
+END COMPONENT;
+
+-- ###############################################################################################################
+
 -- ############################## Signals connected directly to the core ##########################################
 
 signal core_cpuwait  : std_logic;                    
@@ -115,45 +142,6 @@ signal core_irqackad : std_logic_vector(4 downto 0);
 signal ram_din       : std_logic_vector(7 downto 0);
 
 -- ###############################################################################################################
-
-
--- ############################## Signals connected directly to the I/O registers ################################
--- PortA
-signal porta_dbusout : std_logic_vector (7 downto 0);
-signal porta_out_en  : std_logic;
-
--- PortB
-signal portb_dbusout : std_logic_vector (7 downto 0);
-signal portb_out_en  : std_logic;
-
--- PortC
-signal portc_dbusout : std_logic_vector (7 downto 0);
-signal portc_out_en  : std_logic;
-
--- PortD
-signal portd_dbusout : std_logic_vector (7 downto 0);
-signal portd_out_en  : std_logic;
-
--- PortE
-signal porte_dbusout : std_logic_vector (7 downto 0);
-signal porte_out_en  : std_logic;
-
--- PortF
-signal portf_dbusout : std_logic_vector (7 downto 0);
-signal portf_out_en  : std_logic;
-
-
--- Timer/Counter
-signal tc_dbusout    : std_logic_vector (7 downto 0);
-signal tc_out_en     : std_logic;
-
--- UART
-signal uart_dbusout  : std_logic_vector (7 downto 0);
-signal uart_out_en   : std_logic;
-
-
--- ###############################################################################################################
-
 
 -- ####################### Signals connected directly to the external multiplexer ################################
 signal   io_port_out     : ext_mux_din_type;
@@ -283,6 +271,50 @@ signal clk16M             : std_logic;
 -- nrst
 signal nrst             : std_logic;  		--Comment this to connect reset to an external pushbutton.
 
+-- ############################## Signals connected directly to the I/O registers ################################
+-- PortA
+signal porta_dbusout : std_logic_vector (7 downto 0);
+signal porta_out_en  : std_logic;
+
+-- PortB
+signal portb_dbusout : std_logic_vector (7 downto 0);
+signal portb_out_en  : std_logic;
+
+-- PortC
+signal portc_dbusout : std_logic_vector (7 downto 0);
+signal portc_out_en  : std_logic;
+
+-- PortD
+signal portd_dbusout : std_logic_vector (7 downto 0);
+signal portd_out_en  : std_logic;
+
+-- PortE
+signal porte_dbusout : std_logic_vector (7 downto 0);
+signal porte_out_en  : std_logic;
+
+-- PortF
+signal portf_dbusout : std_logic_vector (7 downto 0);
+signal portf_out_en  : std_logic;
+
+
+-- Timer/Counter
+signal tc_dbusout    : std_logic_vector (7 downto 0);
+signal tc_out_en     : std_logic;
+
+-- UART
+signal uart_dbusout  : std_logic_vector (7 downto 0);
+signal uart_out_en   : std_logic;
+
+
+-- ###############################################################################################################
+
+-- ############################## Define Signals for User Cores ##################################################
+-- Example Core - - core9
+signal core9_input_sig : std_logic_vector(1 downto 0);		--Define a signal for the inputs.
+signal core9_dbusout  : std_logic_vector (7 downto 0);
+signal core9_out_en   : std_logic;
+
+-- ###############################################################################################################
 
 begin
 
@@ -300,7 +332,46 @@ nrst <= '1';										--Comment this to connect reset to an external pushbutton.
 		CLK0_OUT => open
 	);
 
-core_inst <= pm_dout;	
+core_inst <= pm_dout;
+
+-- ******************  User Cores - Instantiate User Cores Here **************************
+
+-- Example Core - core9
+Inst_papilio_core_template: papilio_core_template PORT MAP(
+	nReset => nrst,
+	clk => clk16M,
+	adr => core_ramadr,
+	dbus_in => core_dbusout,
+	dbus_out => core9_dbusout,
+	out_en => core9_out_en,
+	iore => core_ramre,
+	iowe => core_ramwe,
+	output_sig => porta(1 downto 0),
+	input_sig => core9_input_sig
+);	
+
+-- Example Core - core9 connection to the external multiplexer
+io_port_out(9) <= core9_dbusout;
+io_port_out_en(9) <= core9_out_en;
+core9_input_sig <= portb(1 downto 0);
+DDRAReg(0)<='0';
+DDRAReg(1)<='0';
+
+
+-- ******************  END User Cores - Instantiate User Cores Here **************************
+
+
+-- Unused IRQ lines
+core_irqlines(7 downto 4) <= ( others => '0');
+core_irqlines(3 downto 0) <= ( others => '0');
+core_irqlines(13 downto 10) <= ( others => '0');
+core_irqlines(16) <= '0';
+core_irqlines(22 downto 20) <= ( others => '0');
+-- ************************
+
+-- Unused out_en
+io_port_out_en(10 to 15) <= (others => '0');
+io_port_out(10 to 15) <= (others => (others => '0'));
 
 AVR_Core_Inst:component AVR_Core port map(
 	--Clock and reset
@@ -571,17 +642,6 @@ end generate;
 	
 -- ************************************************
 
--- Unused IRQ lines
-core_irqlines(7 downto 4) <= ( others => '0');
-core_irqlines(3 downto 0) <= ( others => '0');
-core_irqlines(13 downto 10) <= ( others => '0');
-core_irqlines(16) <= '0';
-core_irqlines(22 downto 20) <= ( others => '0');
--- ************************
-
--- Unused out_en
-io_port_out_en(9 to 15) <= (others => '0');
-io_port_out(9 to 15) <= (others => (others => '0'));
 
 
 

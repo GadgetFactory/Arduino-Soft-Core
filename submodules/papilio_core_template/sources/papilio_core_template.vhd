@@ -69,8 +69,8 @@ begin
 	status_Sel  <= '1' when adr=status_addr else '0';
 	
 	--Connect the registers to the output bus for reading when their address is selected.
-	dbus_out <= control_reg when control_Sel='1' else "00000000";
-	dbus_out <= status_reg when status_Sel='1' else "00000000";
+	dbus_out <= control_reg when control_Sel='1' else "ZZZZZZZZ";
+	dbus_out <= status_reg when status_Sel='1' else "ZZZZZZZZ";
 	--Lets the I/O multiplexer know when to connect the output bus from this core to the AVR8 for reading.
 	out_en <= '1' when ((adr=control_addr or adr=status_addr) and iore = '1') else '0';
 	

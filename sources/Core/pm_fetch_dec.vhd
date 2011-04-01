@@ -179,6 +179,8 @@ signal   ram_adr_int         : std_logic_vector (15 downto 0);
 constant const_ram_to_reg    : std_logic_vector := "00000000000";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL PURPOSE REGISTER (R0-R31) 0x00..0x19
 constant const_ram_to_io_a   : std_logic_vector := "00000000001";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL I/O PORT 0x20 0x3F 
 constant const_ram_to_io_b   : std_logic_vector := "00000000010";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL I/O PORT 0x20 0x3F 
+constant const_ram_to_io_c   : std_logic_vector := "00010000000";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL I/O PORT 0x1000 0x3FFF 
+constant const_ram_to_io_d   : std_logic_vector := "00100000000";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL I/O PORT 0x1000 0x3FFF 
 
 -- LD/LDD/ST/STD SIGNALS
 signal adiw_sbiw_encoder_out : std_logic_vector (4 downto 0);
@@ -766,8 +768,8 @@ if ireset='0' then io_file_adr_space<='0';
 elsif(cp2='1' and cp2'event) then
  if (cp2en='1') then 							  -- Clock enable
   if (ramadr_reg_en='1') then                           
-   if (ramadr_reg_in(15 downto 5)=const_ram_to_io_a or ramadr_reg_in(15 downto 5)=const_ram_to_io_b) then 
-    io_file_adr_space <= '1';                             -- ADRESS RANGE 0x0020-0x005F -> I/O PORTS (0x00-0x3F)
+   if (ramadr_reg_in(15 downto 5)=const_ram_to_io_a or ramadr_reg_in(15 downto 5)=const_ram_to_io_b or ramadr_reg_in(15 downto 5)=const_ram_to_io_c) then 
+    io_file_adr_space <= '1';                             -- ADRESS RANGE 0x0020-0x005F -> I/O PORTS (0x00-0x3F) and ADRESS RANGE 0x1000-0x3FFF -> User Ports
    else 
     io_file_adr_space <= '0';
    end if;
@@ -844,10 +846,11 @@ elsif (cp2='1' and cp2'event) then -- Clock
   case ramre_int is
    when '0' =>	
     if(ramadr_reg_in(15 downto 5)/=const_ram_to_io_a and 
-	   ramadr_reg_in(15 downto 5)/=const_ram_to_io_b and   
+	   ramadr_reg_in(15 downto 5)/=const_ram_to_io_b and     
+	   ramadr_reg_in(15 downto 5)/=const_ram_to_io_c and     
        ramadr_reg_in(15 downto 5)/=const_ram_to_reg  and  
       (idc_ld_x or idc_ld_y or idc_ldd_y or idc_ld_z or idc_ldd_z or  -- LD/LDD instruction	
-	   idc_lds or                                                     -- LDS instruction(two cycle execution)
+	   idc_lds or                                           -- LDS instruction(two cycle execution)
 	   idc_pop or                                                     -- POP instruction
        idc_ret or 	                                                -- RET instruction 
 	   idc_reti)='1') 												    -- RETI instruction 
@@ -879,10 +882,11 @@ elsif (cp2='1' and cp2'event) then -- Clock
   case ramwe_int is
    when '0' =>	
     if(ramadr_reg_in(15 downto 5)/=const_ram_to_io_a and 
-	   ramadr_reg_in(15 downto 5)/=const_ram_to_io_b and   
+	   ramadr_reg_in(15 downto 5)/=const_ram_to_io_b and     
+	   ramadr_reg_in(15 downto 5)/=const_ram_to_io_c and     
        ramadr_reg_in(15 downto 5)/=const_ram_to_reg  and  
       (idc_st_x or idc_st_y or idc_std_y or idc_st_z or idc_std_z or  -- ST/STD instruction	
-	   idc_sts or                                                     -- STS instruction (two cycle execution)	
+	   idc_sts or                                           -- STS instruction (two cycle execution)	
 	   idc_push or                                                    -- PUSH instruction
 	   idc_rcall or													  -- RCALL instruction
 	   idc_icall or													  -- ICALL instruction

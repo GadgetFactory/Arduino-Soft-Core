@@ -43,7 +43,7 @@ entity papilio_core_template is
 			out_en		: out STD_LOGIC;
 			-- end Signals required by AVR8 for this core, do not modify.
 
-		--Define signals that you want to go in or out of the peripheral. These are usually going to be connected to extenal pins of the Papilio board.
+			--Define signals that you want to go in or out of the peripheral. These are usually going to be connected to extenal pins of the Papilio board.
 			--Two Output Signals
 			output_sig	: out std_logic_vector (1 downto 0);
 			
@@ -57,16 +57,24 @@ architecture Behavioral of papilio_core_template is
 --Define the registers and signals that will be used inside the Core.
 	--Control Register is used to control the output signals. Default Value is all zeroes.
 		signal control_reg	: std_logic_vector(7 downto 0):= "00000000";
-		signal control_addr 	: std_logic_vector(15 downto 0):= io_base_address_generic;
+		constant control_addr 	: std_logic_vector(15 downto 0):= io_base_address_generic;
 	--Status Register is used to read the input signals. Default Value is all zeroes.
 		signal status_reg	: std_logic_vector(7 downto 0):= "00000000";
-		signal status_addr 	: std_logic_vector(15 downto 0):= io_base_address_generic + 1;
+		constant status_addr 	: std_logic_vector(15 downto 0):= io_base_address_generic + 1;
+		signal control_Sel, status_Sel : std_logic;
 
 begin
-	--Lets the I/O multiplexer know when to connect this output.
+	--Create a signal that is asserted when the address for our defined registers is selected.
+	control_Sel  <= '1' when adr=control_addr else '0';	
+	status_Sel  <= '1' when adr=status_addr else '0';
+	
+	--Connect the registers to the output bus for reading when their address is selected.
+	dbus_out <= control_reg when control_Sel='1' else "00000000";
+	dbus_out <= status_reg when status_Sel='1' else "00000000";
+	--Lets the I/O multiplexer know when to connect the output bus from this core to the AVR8 for reading.
 	out_en <= '1' when ((adr=control_addr or adr=status_addr) and iore = '1') else '0';
 	
-	-- All logic is contained in a process that is synchronized to a common clock.
+	-- All non combinational logic is contained in a process that is synchronized to a common clock.
 	Registers:process(clk, nreset)
 	begin
 		if (nReset = '0') then
@@ -76,39 +84,27 @@ begin
 		elsif (clk='1' and clk'event) then
 
 			--Placing these statements within a clocked process tells the synthesis tools that we want status and control to be data registers (with memory) instead of just signals (combinational).
+			--We are making a register that permanently stores the data on the input and output pins.
 			status_reg(1 downto 0) <= input_sig; 
 			output_sig <= control_reg(1 downto 0);
 
 			-- Write registers when the io_base_address is selected.
 			if (iowe = '1') then
 				case (adr) is
-					when io_base_address_generic =>
+					when control_addr =>
 						--Write to the Control register
 						control_reg <= dbus_in;
 												
-					when io_base_address_generic + 1 =>
+					when status_addr =>
 						--Nothing to be done for status register since it cannot be written.
 
 					when others =>
-				end case;
-			
-			-- Read registers when the io_base_address is selected.
-			elsif (iore = '1') then
-				case (adr) is 
-					when io_base_address_generic =>
-						--Read the Control register
-						dbus_out <= control_reg;
-					
-					when io_base_address_generic + 1 =>
-						--Read the status register
-						dbus_out <= status_reg;
-					
-					when others =>
-						--When the base address is not selected for read then do not drive the bus.
-						dbus_out <= "ZZZZZZZZ";
-				end case;		
+				end case;	
 			end if;
 		end if;
 	end process;
+	
+	
+	
 end Behavioral;
 

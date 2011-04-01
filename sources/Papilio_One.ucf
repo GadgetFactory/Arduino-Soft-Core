@@ -13,6 +13,9 @@
 # Crystal Clock - use 32MHz onboard oscillator
 NET "clk" LOC = "P89" | IOSTANDARD = LVCMOS25 | PERIOD = 31.25ns ;
 
+# Reset is in an input pin on the Papilio One that is not connected to anything. Adding a Pullup resistors ensures the project will always be running.
+NET "nrst" LOC = "P13" | PULLUP ;
+
 # Wing1 Column A
 NET "porta<0>" LOC = "P18" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#A0
 NET "porta<1>" LOC = "P23" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#A1

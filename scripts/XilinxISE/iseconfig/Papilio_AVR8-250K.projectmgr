@@ -16,13 +16,13 @@
          <ClosedNode>/Papilio_AVR8 - Struct/PORTF_COMP - pport - RTL</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Papilio_AVR8 - Struct (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/sources/uC/Papilio_AVR8.vhd)</SelectedItem>
+         <SelectedItem>papilio_core_template_COMP - papilio_core_template - Behavioral (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/submodules/papilio_core_template/sources/papilio_core_template.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000033d000000020000000000000000000000000000000064ffffffff0000008100000000000000020000033d0000000100000000000000000000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000034d000000020000000000000000000000000000000064ffffffff0000008100000000000000020000034d0000000100000000000000000000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Papilio_AVR8 - Struct (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/sources/uC/Papilio_AVR8.vhd)</CurrentItem>
+      <CurrentItem>papilio_core_template_COMP - papilio_core_template - Behavioral (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/submodules/papilio_core_template/sources/papilio_core_template.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -32,20 +32,22 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Generate Programming File</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001de000000010000000100000000000000000000000064ffffffff000000810000000000000001000001de0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000165000000010000000100000000000000000000000064ffffffff000000810000000000000001000001650000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Generate Programming File</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes/>
-      <SelectedItems/>
+      <SelectedItems>
+         <SelectedItem>..\..\sources\CommonPacks\AVRuCPackage.vhd</SelectedItem>
+      </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000392000000040101000100000000000000000000000064ffffffff0000008100000000000000040000012d0000000100000000000000d70000000100000000000000660000000100000000000001280000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000003a0000000040101000100000000000000000000000064ffffffff000000810000000000000004000001ff0000000100000000000000d70000000100000000000000660000000100000000000000640000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>..\..\sources\CommonPacks\AVRuCPackage.vhd</CurrentItem>
    </ItemView>
@@ -62,4 +64,88 @@
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001ee0000013c01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNode>/Papilio_AVR8 - Struct/AVR_Core_Inst - AVR_Core - Struct</ClosedNode>
+         <ClosedNode>/Papilio_AVR8 - Struct/JTAGOCDPrgTop_Inst - JTAGOCDPrgTop - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8 - Struct/PORTA_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8 - Struct/PORTB_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8 - Struct/PORTC_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8 - Struct/PORTD_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8 - Struct/PORTE_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8 - Struct/PORTF_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8_tb - behavior</ClosedNode>
+         <ClosedNode>/Papilio_AVR8_tb - behavior/uut - Papilio_AVR8 - Struct/AVR_Core_Inst - AVR_Core - Struct</ClosedNode>
+         <ClosedNode>/Papilio_AVR8_tb - behavior/uut - Papilio_AVR8 - Struct/JTAGOCDPrgTop_Inst - JTAGOCDPrgTop - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8_tb - behavior/uut - Papilio_AVR8 - Struct/PORTA_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8_tb - behavior/uut - Papilio_AVR8 - Struct/PORTB_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8_tb - behavior/uut - Papilio_AVR8 - Struct/PORTC_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8_tb - behavior/uut - Papilio_AVR8 - Struct/PORTD_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8_tb - behavior/uut - Papilio_AVR8 - Struct/PORTE_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/Papilio_AVR8_tb - behavior/uut - Papilio_AVR8 - Struct/PORTF_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/testbench - behavior/uut - Papilio_AVR8 - Struct/JTAGOCDPrgTop_Inst - JTAGOCDPrgTop - RTL</ClosedNode>
+         <ClosedNode>/testbench - behavior/uut - Papilio_AVR8 - Struct/PORTA_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/testbench - behavior/uut - Papilio_AVR8 - Struct/PORTB_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/testbench - behavior/uut - Papilio_AVR8 - Struct/PORTC_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/testbench - behavior/uut - Papilio_AVR8 - Struct/PORTD_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/testbench - behavior/uut - Papilio_AVR8 - Struct/PORTE_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/testbench - behavior/uut - Papilio_AVR8 - Struct/PORTF_COMP - pport - RTL</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>testbench - behavior (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/scripts/XilinxISE/testbench.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000351000000020000000000000000000000000000000064ffffffff000000810000000000000002000003510000000100000000000000000000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>testbench - behavior (C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/scripts/XilinxISE/testbench.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000272000000010000000100000000000000000000000064ffffffff000000810000000000000001000002720000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNode>ModelSim Simulator</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000019d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000019d0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_DECL" guiview="Process" >
+      <ClosedNodes/>
+      <SelectedItems>
+         <SelectedItem>Check Syntax</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000019d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000019d0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Check Syntax</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes/>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000019d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000019d0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
 </Project>

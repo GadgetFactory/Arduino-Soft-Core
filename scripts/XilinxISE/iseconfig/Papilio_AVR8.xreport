@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2011-03-25T18:39:59</DateModified>
+  <DateModified>2011-04-01T14:33:44</DateModified>
   <ModuleName>Papilio_AVR8</ModuleName>
-  <SummaryTimeStamp>2011-03-22T18:56:00</SummaryTimeStamp>
+  <SummaryTimeStamp>2011-03-31T10:56:12</SummaryTimeStamp>
   <SavedFilePath>C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/scripts/XilinxISE/iseconfig/Papilio_AVR8.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/dbdev/My Dropbox/GadgetFactory/Arduino-Soft-Core/scripts/XilinxISE\</ImplementationReportsDirectory>
   <DateInitialized>2011-03-08T13:10:03</DateInitialized>

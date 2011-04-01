@@ -37,20 +37,20 @@ ARCHITECTURE behavior OF testbench IS
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT top_avr_core_v8
+    COMPONENT Papilio_AVR8
     PORT(
-         nrst : IN  std_logic;
-         clk : IN  std_logic;
-         porta : INOUT  std_logic_vector(7 downto 0);
-         portb : INOUT  std_logic_vector(7 downto 0);
-         rxd : IN  std_logic;
-         txd : OUT  std_logic;
-         INTx : IN  std_logic_vector(7 downto 0);
-         TMS : IN  std_logic;
-         TCK : IN  std_logic;
-         TDI : IN  std_logic;
-         TDO : OUT  std_logic;
-         TRSTn : IN  std_logic
+	 nrst    : in    std_logic;
+	 clk    : in    std_logic;
+	 porta  : inout std_logic_vector(7 downto 0);
+	 portb  : inout std_logic_vector(7 downto 0);
+	 portc  : inout std_logic_vector(7 downto 0);
+	 portd  : inout std_logic_vector(7 downto 0);
+	 porte  : inout std_logic_vector(7 downto 0);
+	 portf  : inout std_logic_vector(7 downto 0);
+
+	-- UART 
+	rxd    : in    std_logic;
+	txd    : out   std_logic
         );
     END COMPONENT;
     
@@ -67,7 +67,11 @@ ARCHITECTURE behavior OF testbench IS
 
 	--BiDirs
    signal porta : std_logic_vector(7 downto 0);
-   signal portb : std_logic_vector(7 downto 0);
+   signal portb : std_logic_vector(7 downto 0) := (others => '1');
+   signal portc : std_logic_vector(7 downto 0);
+   signal portd : std_logic_vector(7 downto 0);
+   signal porte : std_logic_vector(7 downto 0);
+   signal portf : std_logic_vector(7 downto 0);
 
  	--Outputs
    signal txd : std_logic;
@@ -79,19 +83,17 @@ ARCHITECTURE behavior OF testbench IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: top_avr_core_v8 PORT MAP (
+   uut: Papilio_AVR8 PORT MAP (
           nrst => nrst,
           clk => clk,
           porta => porta,
           portb => portb,
+          portc => portc,
+          portd => portd,
+          porte => porte,
+          portf => portf,
           rxd => rxd,
-          txd => txd,
-          INTx => INTx,
-          TMS => TMS,
-          TCK => TCK,
-          TDI => TDI,
-          TDO => TDO,
-          TRSTn => TRSTn
+          txd => txd
         );
 
    -- Clock process definitions
@@ -108,12 +110,18 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100ms.
-      wait for 10ms;	
+      wait for 1ms;	
 
       wait for clk_period*10;
 
       -- insert stimulus here 
 		nrst <= '1';
+		portb <= "11111111";
+		portd <= "10101010";
+--		wait for clk_period*10;
+--		nrst <= '0';
+--		wait for clk_period*10;	
+--		nrst <= '1';
 
       wait;
    end process;

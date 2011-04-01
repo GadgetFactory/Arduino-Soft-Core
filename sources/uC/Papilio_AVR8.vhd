@@ -24,7 +24,7 @@ use WORK.MemAccessCtrlPack.all;
 use WORK.MemAccessCompPack.all;
 
 entity Papilio_AVR8 is port(
-	 --nrst   : in    std_logic;						--Uncomment this to connect reset to an external pushbutton. Must be defined in ucf.
+	 nrst   : in    std_logic;						--Uncomment this to connect reset to an external pushbutton. Must be defined in ucf.
 	 clk    : in    std_logic;
 	 porta  : inout std_logic_vector(7 downto 0);
 	 portb  : inout std_logic_vector(7 downto 0);
@@ -44,14 +44,16 @@ end Papilio_AVR8;
 architecture Struct of Papilio_AVR8 is
 
 -- Use these setting to control which peripherals you want to include with your custom AVR8 implementation.
-constant CImplTmrCnt          : boolean := TRUE;
-constant CImplPORTA           : boolean := TRUE;
-constant CImplPORTB           : boolean := TRUE;
-constant CImplPORTC           : boolean := TRUE;
-constant CImplPORTD           : boolean := TRUE;
-constant CImplPORTE           : boolean := TRUE;
-constant CImplPORTF           : boolean := TRUE;
-constant CImplUART            : boolean := TRUE;
+constant CImplPORTA			            : boolean := TRUE;
+constant CImplPORTB			            : boolean := TRUE;
+constant CImplPORTC							: boolean := TRUE;
+constant CImplPORTD    			         : boolean := TRUE;
+constant CImplPORTE      			      : boolean := TRUE;
+constant CImplPORTF           			: boolean := TRUE;
+constant CImplUART      			      : boolean := TRUE;	--AVR8 UART peripheral
+constant CImplTmrCnt     					: boolean := TRUE;	--AVR8 Timer
+constant CImplpapilio_core_template    : boolean := FALSE;	--An example User Core, use this template to make your own custom peripherals.
+
 
 component XDM4Kx8	port(
 	                    cp2       : in  std_logic;
@@ -98,7 +100,7 @@ PORT(
 			out_en		: out STD_LOGIC;
 			-- end Signals required by AVR8 for this core, do not modify.
 
-		--Define signals that you want to go in or out of the peripheral. These are usually going to be connected to extenal pins of the Papilio board.
+			--Define signals that you want to go in or out of the peripheral. These are usually going to be connected to extenal pins of the Papilio board.
 			--Two Output Signals
 			output_sig	: out std_logic_vector (1 downto 0);
 			
@@ -269,7 +271,7 @@ signal ram_ramwe         : std_logic;
 signal clk16M             : std_logic; 
 
 -- nrst
-signal nrst             : std_logic;  		--Comment this to connect reset to an external pushbutton.
+--signal nrst             : std_logic;  		--Comment this to connect reset to an external pushbutton.
 
 -- ############################## Signals connected directly to the I/O registers ################################
 -- PortA
@@ -310,7 +312,7 @@ signal uart_out_en   : std_logic;
 
 -- ############################## Define Signals for User Cores ##################################################
 -- Example Core - - core9
-signal core9_input_sig : std_logic_vector(1 downto 0);		--Define a signal for the inputs.
+--signal core9_input_sig : std_logic_vector(1 downto 0);		--Define a signal for the inputs.
 signal core9_dbusout  : std_logic_vector (7 downto 0);
 signal core9_out_en   : std_logic;
 
@@ -323,7 +325,7 @@ gnd <= '0';
 vcc  <= '1';
 -- Added for Synopsys compatibility	
 
-nrst <= '1';										--Comment this to connect reset to an external pushbutton.
+--nrst <= '1';										--Comment this to connect reset to an external pushbutton.
 
 	Inst_DCM32to16: DCM32to16 PORT MAP(
 		CLKIN_IN => clk,
@@ -336,26 +338,32 @@ core_inst <= pm_dout;
 
 -- ******************  User Cores - Instantiate User Cores Here **************************
 
--- Example Core - core9
-Inst_papilio_core_template: papilio_core_template PORT MAP(
+-- Example Core - core9 - This is an example of implenting a custom User core.
+Inst_papilio_core_template:if CImplpapilio_core_template generate
+papilio_core_template_COMP:component papilio_core_template 
+PORT MAP(
 	nReset => nrst,
 	clk => clk16M,
 	adr => core_ramadr,
 	dbus_in => core_dbusout,
 	dbus_out => core9_dbusout,
 	out_en => core9_out_en,
-	iore => core_ramre,
-	iowe => core_ramwe,
+	iore => core_iore,
+	iowe => core_iowe,
 	output_sig => porta(1 downto 0),
-	input_sig => core9_input_sig
+	input_sig => portb(1 downto 0)
 );	
 
 -- Example Core - core9 connection to the external multiplexer
 io_port_out(9) <= core9_dbusout;
 io_port_out_en(9) <= core9_out_en;
-core9_input_sig <= portb(1 downto 0);
-DDRAReg(0)<='0';
-DDRAReg(1)<='0';
+
+--In order to avoid a conflict of the GPIO core and Example core both trying to drive outputs either disable PortA and PortB or uncomment the lines below that set the DDR Registers to make the pins inputs.
+--DDRAReg(0)<='0';
+--DDRAReg(1)<='0';
+--DDRBReg(0)<='0';
+--DDRBReg(1)<='0';
+end generate;
 
 
 -- ******************  END User Cores - Instantiate User Cores Here **************************

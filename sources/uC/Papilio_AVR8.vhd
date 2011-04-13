@@ -120,7 +120,7 @@ signal core_pc   : std_logic_vector (15 downto 0); -- PROM address
 signal core_inst : std_logic_vector (15 downto 0); -- PROM data
 
 -- I/O registers
-signal core_adr  : std_logic_vector (5 downto 0);
+signal core_adr  : std_logic_vector (15 downto 0);
 signal core_iore : std_logic;                    
 signal core_iowe : std_logic;
 
@@ -344,7 +344,7 @@ papilio_core_template_COMP:component papilio_core_template
 PORT MAP(
 	nReset => nrst,
 	clk => clk16M,
-	adr => core_ramadr,
+	adr => core_adr,
 	dbus_in => core_dbusout,
 	dbus_out => core9_dbusout,
 	out_en => core9_out_en,

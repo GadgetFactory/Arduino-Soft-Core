@@ -20,7 +20,7 @@ entity pport is generic(PPortNum : natural);
 	                    -- AVR Control
                         ireset     : in std_logic;
                         cp2	       : in std_logic;
-                        adr        : in std_logic_vector(5 downto 0);
+                        adr        : in std_logic_vector(15 downto 0);
                         dbus_in    : in std_logic_vector(7 downto 0);
                         dbus_out   : out std_logic_vector(7 downto 0);
                         iore       : in std_logic;

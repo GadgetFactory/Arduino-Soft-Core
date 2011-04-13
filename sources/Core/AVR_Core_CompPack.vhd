@@ -25,7 +25,7 @@ component pm_fetch_dec is port(
                               pc               : out std_logic_vector (15 downto 0);   
                               inst             : in  std_logic_vector (15 downto 0);
                               -- I/O control
-                              adr              : out std_logic_vector (5 downto 0); 	
+                              adr              : out std_logic_vector (15 downto 0); 	
                               iore             : out std_logic;                       
                               iowe             : out std_logic;						
                               -- Data memory control
@@ -236,7 +236,7 @@ component io_reg_file is port (
 							   cp2en         : in  std_logic;							   
                                ireset        : in  std_logic;
 
-                               adr           : in  std_logic_vector(5 downto 0);         
+                               adr           : in  std_logic_vector(15 downto 0);         
                                iowe          : in  std_logic;         
                                dbusout       : in  std_logic_vector(7 downto 0);         
 
@@ -287,7 +287,7 @@ component bit_processor is port(
 end component;
 
 component io_adr_dec is port (
-          adr          : in std_logic_vector(5 downto 0);         
+          adr          : in std_logic_vector(15 downto 0);         
           iore         : in std_logic;         
           dbusin_ext   : in std_logic_vector(7 downto 0);
           dbusin_int   : out std_logic_vector(7 downto 0);

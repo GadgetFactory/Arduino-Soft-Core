@@ -27,7 +27,7 @@ entity AVR_Core is port(
                         pc          : out std_logic_vector(15 downto 0);   
                         inst        : in  std_logic_vector(15 downto 0);
                         -- I/O control
-                        adr         : out std_logic_vector(5 downto 0); 	
+                        adr         : out std_logic_vector(15 downto 0); 	
                         iore        : out std_logic;                       
                         iowe        : out std_logic;						
                         -- Data memory control
@@ -56,7 +56,7 @@ architecture Struct of avr_core is
 signal dbusin_int  : std_logic_vector(7 downto 0);
 signal dbusout_int : std_logic_vector(7 downto 0);
 
-signal adr_int     : std_logic_vector(5 downto 0);      
+signal adr_int     : std_logic_vector(15 downto 0);      
 
 signal iowe_int    : std_logic;
 signal iore_int    : std_logic;

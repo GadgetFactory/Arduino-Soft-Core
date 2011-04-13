@@ -11,7 +11,7 @@ use IEEE.std_logic_1164.all;
 use WORK.AVRuCPackage.all;
 
 entity io_adr_dec is port (
-          adr          : in std_logic_vector(5 downto 0);         
+          adr          : in std_logic_vector(15 downto 0);         
           iore         : in std_logic;         
           dbusin_ext   : in std_logic_vector(7 downto 0);
           dbusin_int   : out std_logic_vector(7 downto 0);

@@ -16,7 +16,7 @@ component pport is generic(PPortNum : natural);
 	                   -- AVR Control
                ireset     : in std_logic;
                cp2	      : in std_logic;
-               adr        : in std_logic_vector(5 downto 0);
+               adr        : in std_logic_vector(15 downto 0);
                dbus_in    : in std_logic_vector(7 downto 0);
                dbus_out   : out std_logic_vector(7 downto 0);
                iore       : in std_logic;
@@ -60,7 +60,7 @@ component Timer_Counter is port(
 							 tmr_cp2en      : in  std_logic;
 							 stopped_mode   : in  std_logic; -- ??
 						     tmr_running    : in  std_logic; -- ??
-                             adr            : in  std_logic_vector(5 downto 0);
+                             adr            : in  std_logic_vector(15 downto 0);
                              dbus_in        : in  std_logic_vector(7 downto 0);
                              dbus_out       : out std_logic_vector(7 downto 0);
                              iore           : in  std_logic;
@@ -99,7 +99,7 @@ end component;
 --	                   -- AVR Control
 --               ireset     : in std_logic;
 --               cp2	      : in std_logic;
---               adr        : in std_logic_vector(5 downto 0);
+--               adr        : in std_logic_vector(15 downto 0);
 --               dbus_in    : in std_logic_vector(7 downto 0);
 --               dbus_out   : out std_logic_vector(7 downto 0);
 --               iore       : in std_logic;
@@ -134,7 +134,7 @@ component AVR_Core is port(
                         pc          : out std_logic_vector (15 downto 0);   
                         inst        : in  std_logic_vector (15 downto 0);
                         -- I/O control
-                        adr         : out std_logic_vector (5 downto 0); 	
+                        adr         : out std_logic_vector (15 downto 0); 	
                         iore        : out std_logic;                       
                         iowe        : out std_logic;						
                         -- Data memory control
@@ -254,7 +254,7 @@ component uart is port(
 	                -- AVR Control
                     ireset     : in  std_logic;
                     cp2	       : in  std_logic;
-                    adr        : in  std_logic_vector(5 downto 0);
+                    adr        : in  std_logic_vector(15 downto 0);
                     dbus_in    : in  std_logic_vector(7 downto 0);
                     dbus_out   : out std_logic_vector(7 downto 0);
                     iore       : in  std_logic;
@@ -281,7 +281,7 @@ end component;
 --	                    -- AVR Control
 --                        ireset       : in  std_logic;
 --                        cp2	         : in  std_logic;
---                        adr          : in  std_logic_vector(5 downto 0);
+--                        adr          : in  std_logic_vector(15 downto 0);
 --                        dbus_in      : in  std_logic_vector(7 downto 0);
 --                        dbus_out     : out std_logic_vector(7 downto 0);
 --                        iore         : in  std_logic;

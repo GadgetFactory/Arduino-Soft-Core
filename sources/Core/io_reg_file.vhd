@@ -18,7 +18,7 @@ entity io_reg_file is port (
 							cp2en         : in std_logic;
                             ireset        : in std_logic;
 
-                            adr           : in std_logic_vector(5 downto 0);         
+                            adr           : in std_logic_vector(15 downto 0);         
                             iowe          : in std_logic;         
                             dbusout       : in std_logic_vector(7 downto 0);         
 

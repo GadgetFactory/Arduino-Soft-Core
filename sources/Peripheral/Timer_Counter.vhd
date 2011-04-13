@@ -21,7 +21,7 @@ entity Timer_Counter is port(
 							 tmr_cp2en      : in  std_logic;
 							 stopped_mode   : in  std_logic; -- ??
 						     tmr_running    : in  std_logic; -- ??
-                             adr            : in  std_logic_vector(5 downto 0);
+                             adr            : in  std_logic_vector(15 downto 0);
                              dbus_in        : in  std_logic_vector(7 downto 0);
                              dbus_out       : out std_logic_vector(7 downto 0);
                              iore           : in  std_logic;

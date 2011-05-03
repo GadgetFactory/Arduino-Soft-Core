@@ -29,7 +29,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity papilio_core_template is
 	Generic (
 				--Default base location in the I/O address space for this core. 
-				io_base_address_generic : STD_LOGIC_VECTOR (15 downto 0) := x"1000"
+				io_base_address_generic : STD_LOGIC_VECTOR (15 downto 0) := x"0FE0" -- _SFR_IO8(0x0FE0) / _SFR_MEM8(0x1000)
 	);  
 	Port ( 
 			-- begin Signals required by AVR8 for this core, do not modify.

@@ -18,6 +18,10 @@ subtype ext_mux_en_type  is std_logic_vector(0 to CExtMuxInSize-1);
 -- End of old package
 
 constant IOAdrWidth    : positive := 16;
+
+-- AVR adr(15:12) mask for IO devices
+-- added 05.10.2011
+constant AVRIOMASK : std_logic_vector(3 downto 0) := "0001";  
 	
 type AVRIOAdr_Type is array(0 to 63) of std_logic_vector(IOAdrWidth-1 downto 0); 	
 constant CAVRIOAdr : AVRIOAdr_Type :=("0000000000000000","0000000000000001","0000000000000010","0000000000000011",

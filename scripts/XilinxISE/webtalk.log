@@ -1,0 +1,16 @@
+Release 13.1 - WebTalk (O.40d)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Project Information
+--------------------
+ProjectID=B37165401EB343588AF3A71098446C50
+ProjectIteration=1
+
+WebTalk Summary
+----------------
+INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
+
+INFO:WebTalk:9 - WebTalk Install setting is OFF.
+INFO:WebTalk:6 - WebTalk User setting is ON.
+
+INFO:WebTalk:4 - C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2011-05-03T17:38:31.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/13.1/ISE_DS/ISE/data/reports/webtalk_introduction.html

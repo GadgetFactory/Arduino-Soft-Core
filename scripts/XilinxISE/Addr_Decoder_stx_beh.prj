@@ -1,0 +1,3 @@
+vhdl isim_temp "../../sources/CommonPacks/SynthCtrlPack.vhd"
+vhdl isim_temp "../../sources/CommonPacks/AVRuCPackage.vhd"
+vhdl isim_temp "../../sources/uC/Addr_Decoder.vhd"

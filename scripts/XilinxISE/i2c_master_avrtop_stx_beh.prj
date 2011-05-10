@@ -1,0 +1,5 @@
+vhdl isim_temp "../../sources/Peripheral/i2c_master/i2c_master_bit_ctrl.vhd"
+vhdl isim_temp "../../sources/Peripheral/i2c_master/i2c_master_byte_ctrl.vhd"
+vhdl isim_temp "../../sources/Peripheral/i2c_master/i2c_master_top.vhd"
+vhdl isim_temp "../../sources/Peripheral/AVR2Wishbone_Bridge.vhd"
+vhdl isim_temp "../../sources/Peripheral/i2c_master/i2c_master_avrtop.vhd"

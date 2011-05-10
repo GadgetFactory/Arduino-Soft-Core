@@ -1,0 +1,245 @@
+Release 13.1 Map O.40d (nt64)
+Xilinx Mapping Report File for Design 'Papilio_AVR8'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off
+-c 100 -o Papilio_AVR8_map.ncd Papilio_AVR8.ngd Papilio_AVR8.pcf 
+Target Device  : xc3s500e
+Target Package : vq100
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Tue May 03 17:34:43 2011
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   13
+Logic Utilization:
+  Number of Slice Flip Flops:           856 out of   9,312    9%
+  Number of 4 input LUTs:             2,287 out of   9,312   24%
+Logic Distribution:
+  Number of occupied Slices:          1,492 out of   4,656   32%
+    Number of Slices containing only related logic:   1,492 out of   1,492 100%
+    Number of Slices containing unrelated logic:          0 out of   1,492   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       2,316 out of   9,312   24%
+    Number used as logic:             2,282
+    Number used as a route-thru:         29
+    Number used as Shift registers:       5
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 52 out of      66   78%
+  Number of RAMB16s:                     10 out of      20   50%
+  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of DCMs:                         1 out of       4   25%
+
+Average Fanout of Non-Clock Nets:                3.58
+
+Peak Memory Usage:  250 MB
+Total REAL time to MAP completion:  21 secs 
+Total CPU time to MAP completion:   10 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:266 - The function generator
+   AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>132 failed to merge with F5
+   multiplexer AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>520_SW1.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:PhysDesignRules:367 - The signal <porta<2>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <porta<3>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <porta<4>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <porta<5>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <porta<6>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portb<2>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <porta<7>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portb<3>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portb<4>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portb<5>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portb<6>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portb<7>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network portb<2>_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 11 more times for the
+   following (max. 5 shown):
+   portb<3>_IBUF,
+   portb<4>_IBUF,
+   portb<5>_IBUF,
+   portb<6>_IBUF,
+   portb<7>_IBUF
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:159 - Net Timing constraints on signal clk are pushed forward
+   through input buffer.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp
+   Inst_DCM32to16/DCM_SP_INST, consult the device Interactive Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   3 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| nrst                               | IBUF             | INPUT     | LVCMOS25             |       |          |      |              | PULLUP   | 0 / 0    |
+| porta<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| porta<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| porta<2>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| porta<3>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| porta<4>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| porta<5>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| porta<6>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| porta<7>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portb<0>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portb<1>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portb<2>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portb<3>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portb<4>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portb<5>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portb<6>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portb<7>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portc<0>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portc<1>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portc<2>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portc<3>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portc<4>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portc<5>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portc<6>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portc<7>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portd<0>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portd<1>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portd<2>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portd<3>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portd<4>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portd<5>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portd<6>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portd<7>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| porte<0>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| porte<1>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| porte<2>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| porte<3>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| porte<4>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| porte<5>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| porte<6>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| porte<7>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portf<0>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portf<1>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portf<2>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portf<3>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portf<4>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portf<5>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portf<6>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portf<7>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| rxd                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| txd                                | IOB              | OUTPUT    | LVCMOS25             |       | 4        | SLOW |              |          | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

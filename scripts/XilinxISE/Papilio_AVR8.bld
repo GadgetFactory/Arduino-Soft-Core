@@ -1,0 +1,62 @@
+Release 13.1 ngdbuild O.40d (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\13.1\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc
+C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/Gadge
+tFactory-Arduino-Soft-Core-06f1ba4/sources/Papilio_One.ucf -bm Papilio_AVR8.bmm
+-p xc3s500e-vq100-4 Papilio_AVR8.ngc Papilio_AVR8.ngd
+
+Reading NGO file
+"C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/Gadg
+etFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/Papilio_AVR8.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/Gadg
+etFactory-Arduino-Soft-Core-06f1ba4/sources/Papilio_One.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem - The Period constraint <PERIOD = 31.25ns ;>
+   [C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/G
+   adgetFactory-Arduino-Soft-Core-06f1ba4/sources/Papilio_One.ucf(14)], is
+   specified using the Net Period method which is not recommended. Please use
+   the Timespec PERIOD method.
+
+Done...
+
+Processing BMM file "Papilio_AVR8.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:470 - bidirect pad net 'portb<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'portb<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'portb<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'portb<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'portb<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'portb<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'porta<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'porta<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'porta<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'porta<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'porta<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'porta<7>' has no legal driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  12
+
+Total memory usage is 142756 kilobytes
+
+Writing NGD file "Papilio_AVR8.ngd" ...
+Total REAL time to NGDBUILD completion:  16 sec
+Total CPU time to NGDBUILD completion:   9 sec
+
+Writing NGDBUILD log file "Papilio_AVR8.bld"...

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/testbench_isim_beh.exe" -prj "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/testbench_beh.prj" "work.testbench" 

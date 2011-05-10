@@ -1,0 +1,139 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/testbench_isim_beh.exe" -prj "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/testbench_beh.prj" "work.testbench" 
+ISim O.40d (signature 0x79f3f3a8)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Peripheral/i2c_master/i2c_master_bit_ctrl.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/CommonPacks/SynthCtrlPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Peripheral/i2c_master/i2c_master_byte_ctrl.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/JTAGTAPCtrlSMPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/JTAGProgrammerPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/JTAGPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/JTAGDataPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/CommonPacks/AVRuCPackage.vhd" into library work
+WARNING:HDLCompiler:443 - "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/CommonPacks/AVRuCPackage.vhd" Line 181: Function log2 does not always return a value.
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Peripheral/SynchronizerLatch.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Peripheral/SynchronizerDFF.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Peripheral/SynchronizerCompPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Peripheral/i2c_master/i2c_master_top.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Peripheral/AVR2Wishbone_Bridge.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Memory/prog_mem_init.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/MemArbAndMux/MemAccessCtrlPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/Resync1b_TCK.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/Resync1b_cp2.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/OCDProgTCK.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/OCDProgcp2.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/JTAGCompPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Core/reg_file.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Core/pm_fetch_dec.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Core/io_reg_file.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Core/io_adr_dec.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Core/bit_processor.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Core/AVR_Core_CompPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Core/alu_avr.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../submodules/papilio_core_template/sources/papilio_core_template.vhd" into library work
+WARNING:HDLCompiler:957 - "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../submodules/papilio_core_template/sources/papilio_core_template.vhd" Line 109: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../submodules/papilio_core_template/sources/papilio_core_template.vhd" Line 113: Case choice must be a locally static expression
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/uC/ResetGenerator.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/uC/RAMDataReg.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/uC/external_mux.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/uC/AVR_uC_CompPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/uC/Addr_Decoder.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Peripheral/uart.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Peripheral/Timer_Counter.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Peripheral/portx.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Peripheral/i2c_master/i2c_master_avrtop.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Memory/XPM8Kx16.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Memory/XMemCompPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Memory/XDM4Kx8.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/MemArbAndMux/RAMAdrDcd.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/MemArbAndMux/MemRdMux.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/MemArbAndMux/MemAccessCompPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/MemArbAndMux/ArbiterAndMux.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/JTAGOCDPrgTop.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/Core/avr_core.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/DCM32to16.vhd" into library work
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/uC/Papilio_AVR8.vhd" into library work
+WARNING:HDLCompiler:946 - "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/../../sources/uC/Papilio_AVR8.vhd" Line 850: Actual for formal port reset_i is neither a static name nor a globally static expression
+Parsing VHDL file "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/testbench.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 118840 KB
+Fuse CPU Usage: 5452 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package std_logic_arith from library ieee
+Using precompiled package std_logic_unsigned from library ieee
+Using precompiled package numeric_std from library ieee
+Using precompiled package textio from library std
+Using precompiled package vital_timing from library ieee
+Using precompiled package vital_primitives from library ieee
+Compiling package synthctrlpack
+Compiling package avrucpackage
+Compiling package avr_uc_comppack
+Compiling package xmemcomppack
+Compiling package memaccessctrlpack
+Compiling package memaccesscomppack
+Compiling package vcomponents
+Compiling package avr_core_comppack
+Compiling package synchronizercomppack
+Compiling package prog_mem_init_pkg
+Compiling package jtagcomppack
+Compiling package vpkg
+Compiling architecture bufg_v of entity bufg [bufg_default]
+Compiling architecture ibufg_v of entity ibufg [\IBUFG("DONT_CARE","0",true,"DEF...]
+Compiling architecture dcm_sp_clock_divide_by_2_v of entity dcm_sp_clock_divide_by_2 [dcm_sp_clock_divide_by_2_default]
+Compiling architecture dcm_sp_maximum_period_check_v of entity dcm_sp_maximum_period_check [\dcm_sp_maximum_period_check("*"...]
+Compiling architecture dcm_sp_maximum_period_check_v of entity dcm_sp_maximum_period_check [\dcm_sp_maximum_period_check("*"...]
+Compiling architecture dcm_sp_clock_lost_v of entity dcm_sp_clock_lost [dcm_sp_clock_lost_default]
+Compiling architecture dcm_sp_v of entity dcm_sp [\DCM_SP(true,"*",true,false,2.0,...]
+Compiling architecture behavioral of entity dcm32to16 [dcm32to16_default]
+Compiling architecture behavioral of entity papilio_core_template [\papilio_core_template(('1','1',...]
+Compiling architecture rtl of entity pm_fetch_dec [pm_fetch_dec_default]
+Compiling architecture rtl of entity reg_file [reg_file_default]
+Compiling architecture rtl of entity bit_processor [bit_processor_default]
+Compiling architecture rtl of entity io_adr_dec [io_adr_dec_default]
+Compiling architecture rtl of entity io_reg_file [io_reg_file_default]
+Compiling architecture rtl of entity alu_avr [alu_avr_default]
+Compiling architecture struct of entity avr_core [avr_core_default]
+Compiling architecture rtl of entity addr_decoder [addr_decoder_default]
+Compiling architecture rtl of entity ramdatareg [ramdatareg_default]
+Compiling architecture rtl of entity external_mux [external_mux_default]
+Compiling architecture rtl of entity synchronizerdff [synchronizerdff_default]
+Compiling architecture rtl of entity pport [\pport(2)\]
+Compiling architecture rtl of entity pport [\pport(3)\]
+Compiling architecture rtl of entity pport [\pport(4)\]
+Compiling architecture rtl of entity pport [\pport(5)\]
+Compiling architecture rtl of entity timer_counter [timer_counter_default]
+Compiling architecture rtl of entity resetgenerator [resetgenerator_default]
+Compiling architecture ramb16_s9_v of entity ramb16_s9 [\RAMB16_S9("000000000000","00000...]
+Compiling architecture rtl of entity xdm4kx8 [xdm4kx8_default]
+Compiling architecture ramb16_s18_v of entity ramb16_s18 [\RAMB16_S18("0000000000000000000...]
+Compiling architecture ramb16_s18_v of entity ramb16_s18 [\RAMB16_S18("0000000000000000000...]
+Compiling architecture rtl of entity xpm8kx16 [xpm8kx16_default]
+Compiling package jtagpack
+Compiling package jtagprogrammerpack
+Compiling package jtagdatapack
+Compiling package jtagtapctrlsmpack
+Compiling architecture rtl of entity ocdprogtck [ocdprogtck_default]
+Compiling architecture rtl of entity ocdprogcp2 [ocdprogcp2_default]
+Compiling architecture rtl of entity resync1b_cp2 [resync1b_cp2_default]
+Compiling architecture rtl of entity resync1b_tck [resync1b_tck_default]
+Compiling architecture rtl of entity jtagocdprgtop [jtagocdprgtop_default]
+Compiling architecture rtl of entity uart [uart_default]
+Compiling architecture structural of entity i2c_master_bit_ctrl [i2c_master_bit_ctrl_default]
+Compiling architecture structural of entity i2c_master_byte_ctrl [i2c_master_byte_ctrl_default]
+Compiling architecture structural of entity i2c_master_top [\i2c_master_top('0')\]
+Compiling architecture rtl of entity avr2wishbone_bridge [avr2wishbone_bridge_default]
+Compiling architecture struct of entity i2c_master_avrtop [i2c_master_avrtop_default]
+Compiling architecture rtl of entity arbiterandmux [arbiterandmux_default]
+Compiling architecture rtl of entity memrdmux [memrdmux_default]
+Compiling architecture rtl of entity ramadrdcd [ramadrdcd_default]
+Compiling architecture struct of entity papilio_avr8 [papilio_avr8_default]
+Compiling architecture behavior of entity testbench
+Time Resolution for simulation is 1ps.
+Waiting for 50 sub-compilation(s) to finish...
+Compiled 117 VHDL Units
+Built simulation executable X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/testbench_isim_beh.exe
+Fuse Memory Usage: 164708 KB
+Fuse CPU Usage: 11233 ms

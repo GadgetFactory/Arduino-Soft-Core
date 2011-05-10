@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pn" timeStamp="Tue May 03 17:35:08 2011">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="B37165401EB343588AF3A71098446C50" type="project"/>
+<property name="ProjectIteration" value="1" type="project"/>
+<property name="ProjectFile" value="C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/Papilio_AVR8-500K.xise" type="project"/>
+<property name="ProjectCreationTimestamp" value="2011-03-08T11:55:43" type="project"/>
+</section>
+<section name="Project Statistics" visible="true">
+<property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
+<property name="PROP_FitterReportFormat" value="HTML" type="process"/>
+<property name="PROP_LastAppliedGoal" value="Balanced" type="design"/>
+<property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
+<property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
+<property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/testbench" type="process"/>
+<property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
+<property name="PROP_SynthTopFile" value="changed" type="process"/>
+<property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
+<property name="PROP_UseSmartGuide" value="false" type="design"/>
+<property name="PROP_UserConstraintEditorPreference" value="Constraints Editor" type="process"/>
+<property name="PROP_intProjectCreationTimestamp" value="2011-03-08T11:55:43" type="design"/>
+<property name="PROP_intWbtProjectID" value="B37165401EB343588AF3A71098446C50" type="design"/>
+<property name="PROP_intWbtProjectIteration" value="1" type="process"/>
+<property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
+<property name="PROP_intWorkingDirUsed" value="No" type="design"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.testbench" type="process"/>
+<property name="PROP_AutoTop" value="true" type="design"/>
+<property name="PROP_DevFamily" value="Spartan3E" type="design"/>
+<property name="PROP_DevDevice" value="xc3s500e" type="design"/>
+<property name="PROP_DevFamilyPMName" value="spartan3e" type="design"/>
+<property name="PROP_DevPackage" value="vq100" type="design"/>
+<property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
+<property name="PROP_DevSpeed" value="-4" type="design"/>
+<property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
+<property name="FILE_BMM" value="1" type="source"/>
+<property name="FILE_UCF" value="1" type="source"/>
+<property name="FILE_VHDL" value="43" type="source"/>
+<property name="FILE_XAW" value="1" type="source"/>
+</section>
+</application>
+</document>

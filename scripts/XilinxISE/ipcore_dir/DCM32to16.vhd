@@ -1,17 +1,17 @@
 --------------------------------------------------------------------------------
--- Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --------------------------------------------------------------------------------
 --   ____  ____ 
 --  /   /\/   / 
 -- /___/  \  /    Vendor: Xilinx 
--- \   \   \/     Version : 12.2
+-- \   \   \/     Version : 13.1
 --  \   \         Application : xaw2vhdl
 --  /   /         Filename : DCM32to16.vhd
--- /___/   /\     Timestamp : 03/08/2011 11:55:36
+-- /___/   /\     Timestamp : 05/05/2011 22:08:07
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: xaw2vhdl-st C:/dbdev/My Dropbox/GadgetFactory/AVR8/package/avr8_v1.0/avr8/trunk/ipcore_dir/DCM32to16.xaw C:/dbdev/My Dropbox/GadgetFactory/AVR8/package/avr8_v1.0/avr8/trunk/ipcore_dir/DCM32to16
+--Command: xaw2vhdl-st X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/ipcore_dir/DCM32to16.xaw X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/ipcore_dir/DCM32to16
 --Design Name: DCM32to16
 --Device: xc3s250e-4vq100
 --

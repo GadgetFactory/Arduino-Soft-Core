@@ -1,0 +1,344 @@
+ISim log file
+Running: X:\Papilio\GadgetFactory-Arduino-Soft-Core-06f1ba4\scripts\XilinxISE\testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/testbench_isim_beh.wdb 
+ISim O.40d (signature 0x79f3f3a8)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench/uut/AVR_Core_Inst/pm_fetch_dec_Inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /testbench/uut/DRAM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+Finished circuit initialization process.
+at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# restart
+# run 20ms
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench/uut/DRAM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+Finished circuit initialization process.
+at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1037500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1043500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1045500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1233500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1239500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1241500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1429500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1435500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1437500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1625500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1631500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1633500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1821500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1827500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 1829500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2017500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2023500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2025500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2213500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2219500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2221500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2409500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2415500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2417500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2605500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2611500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2613500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2801500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2807500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2809500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 2997500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3003500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3005500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3193500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3199500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3201500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3389500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3395500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3397500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3585500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3591500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3593500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3781500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3787500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3789500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3977500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3983500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 3985500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4173500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4179500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4181500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4369500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4375500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4377500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4565500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4571500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4573500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4761500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4767500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4769500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4957500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4963500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 4965500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5153500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5159500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5161500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5349500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5355500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5357500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5545500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5551500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5553500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5741500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5747500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5749500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5937500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5943500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 5945500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6133500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6139500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6141500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6329500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6335500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6337500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6525500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6531500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6533500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6721500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6727500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6729500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6917500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6923500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 6925500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7113500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7119500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7121500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7309500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7315500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7317500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7505500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7511500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7513500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7701500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7707500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7709500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7897500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7903500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 7905500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8093500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8099500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8101500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8289500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8295500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8297500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8485500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8491500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8493500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8681500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8687500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8689500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8877500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8883500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 8885500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9073500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9079500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9081500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9269500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9275500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9277500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9465500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9471500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9473500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9661500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9667500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9669500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9857500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9863500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 9865500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10053500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10059500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10061500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10249500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10255500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10257500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10445500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10451500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10453500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10641500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10647500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10649500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10837500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10843500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 10845500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11033500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11039500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11041500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11229500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11235500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11237500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11425500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11431500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11433500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11621500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11627500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11629500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11817500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11823500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 11825500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12013500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12019500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12021500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12209500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12215500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12217500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12405500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12411500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12413500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12601500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12607500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12609500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12797500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12803500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12805500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12993500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 12999500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13001500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13189500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13195500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13197500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13385500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13391500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13393500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13581500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13587500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13589500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13777500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13783500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13785500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13973500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13979500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 13981500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14169500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14175500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14177500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14365500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14371500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14373500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14561500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14567500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14569500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14757500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14763500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14765500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14953500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14959500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 14961500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15149500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15155500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15157500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15345500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15351500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15353500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15541500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15547500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15549500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15737500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15743500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15745500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15933500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15939500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 15941500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16129500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16135500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16137500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16325500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16331500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16333500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16521500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16527500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16529500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16717500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16723500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16725500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16913500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16919500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 16921500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17109500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17115500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17117500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17305500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17311500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17313500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17501500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17507500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17509500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17697500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17703500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17705500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17893500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17899500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 17901500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18089500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18095500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18097500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18285500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18291500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18293500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18481500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18487500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18489500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18677500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18683500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18685500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18873500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18879500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 18881500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19069500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19075500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19077500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19265500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19271500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19273500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19461500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19467500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19469500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19657500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19663500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19665500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19853500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19859500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+at 19861500 ns(2): Note: Illegal write address, setting all registers to unknown. (/testbench/uut/I2C_MASTER_INST/I2C_MASTER/).
+# restart
+ISim O.40d (signature 0x79f3f3a8)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench/uut/AVR_Core_Inst/pm_fetch_dec_Inst/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /testbench/uut/DRAM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+Finished circuit initialization process.
+at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# restart
+# run 20ms
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench/uut/DRAM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+Finished circuit initialization process.
+at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# restart
+# isim force add /testbench/uut/core_adr 1A00 -radix hex
+# isim force add /testbench/uut/core_adr 1A00 -radix hex
+# run 20ms
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench/uut/DRAM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+Finished circuit initialization process.
+at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.

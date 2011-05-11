@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/i2c_master/i2c_master_bit_ctrl.vhd";
+static const char *ng0 = "X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_bit_ctrl.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_3499444699;
 
@@ -342,7 +342,7 @@ LAB5:    xsi_set_current_line(230, ng0);
 
 LAB20:    t2 = (t0 + 3492U);
     t7 = *((char **)t2);
-    t2 = (t0 + 18768U);
+    t2 = (t0 + 17896U);
     t18 = ieee_p_3499444699_sub_2368615388_3536714472(IEEE_P_3499444699, t7, t2, 0);
     t15 = t18;
 
@@ -377,7 +377,7 @@ LAB12:    t1 = (t0 + 3308U);
 LAB23:    xsi_set_current_line(237, ng0);
     t1 = (t0 + 3492U);
     t2 = *((char **)t1);
-    t1 = (t0 + 18768U);
+    t1 = (t0 + 17896U);
     t5 = ieee_p_3499444699_sub_1438165383_3536714472(IEEE_P_3499444699, t28, t2, t1, 1);
     t6 = (t0 + 8388);
     t7 = (t6 + 32U);
@@ -503,7 +503,7 @@ LAB3:    t1 = (t0 + 8140);
 
 LAB1:    return;
 LAB2:    xsi_set_current_line(258, ng0);
-    t1 = (t0 + 18944);
+    t1 = (t0 + 18072);
     t6 = (t0 + 8460);
     t7 = (t6 + 32U);
     t8 = *((char **)t7);
@@ -512,7 +512,7 @@ LAB2:    xsi_set_current_line(258, ng0);
     memcpy(t10, t1, 2U);
     xsi_driver_first_trans_fast(t6);
     xsi_set_current_line(259, ng0);
-    t1 = (t0 + 18946);
+    t1 = (t0 + 18074);
     t5 = (t0 + 8496);
     t6 = (t5 + 32U);
     t7 = *((char **)t6);
@@ -583,7 +583,7 @@ LAB7:    t2 = (t0 + 732U);
     goto LAB9;
 
 LAB10:    xsi_set_current_line(262, ng0);
-    t2 = (t0 + 18948);
+    t2 = (t0 + 18076);
     t8 = (t0 + 8460);
     t9 = (t8 + 32U);
     t10 = *((char **)t9);
@@ -592,7 +592,7 @@ LAB10:    xsi_set_current_line(262, ng0);
     memcpy(t16, t2, 2U);
     xsi_driver_first_trans_fast(t8);
     xsi_set_current_line(263, ng0);
-    t1 = (t0 + 18950);
+    t1 = (t0 + 18078);
     t5 = (t0 + 8496);
     t6 = (t5 + 32U);
     t7 = *((char **)t6);
@@ -687,7 +687,7 @@ LAB15:    if (t13 != 0)
 
 LAB12:    t1 = (t0 + 3952U);
     t2 = *((char **)t1);
-    t1 = (t0 + 18816U);
+    t1 = (t0 + 17944U);
     t3 = ieee_p_3499444699_sub_2368615388_3536714472(IEEE_P_3499444699, t2, t1, 0);
     if (t3 != 0)
         goto LAB16;
@@ -695,7 +695,7 @@ LAB12:    t1 = (t0 + 3952U);
 LAB17:    xsi_set_current_line(282, ng0);
     t1 = (t0 + 3952U);
     t2 = *((char **)t1);
-    t1 = (t0 + 18816U);
+    t1 = (t0 + 17944U);
     t5 = ieee_p_3499444699_sub_1438165383_3536714472(IEEE_P_3499444699, t24, t2, t1, 1);
     t6 = (t0 + 8532);
     t7 = (t6 + 32U);
@@ -842,7 +842,7 @@ LAB5:    xsi_set_current_line(293, ng0);
 
 LAB12:    t1 = (t0 + 3952U);
     t2 = *((char **)t1);
-    t1 = (t0 + 18816U);
+    t1 = (t0 + 17944U);
     t3 = ieee_p_3499444699_sub_2368615388_3536714472(IEEE_P_3499444699, t2, t1, 0);
     if (t3 != 0)
         goto LAB13;

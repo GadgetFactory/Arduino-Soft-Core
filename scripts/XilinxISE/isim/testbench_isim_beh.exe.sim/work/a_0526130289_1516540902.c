@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XPM8Kx16.vhd";
+static const char *ng0 = "X:/Papilio/workarea/Arduino_Soft_Core/sources/Memory/XPM8Kx16.vhd";
 extern char *IEEE_P_3620187407;
 
 unsigned char ieee_p_3620187407_sub_2546418145_3965413181(char *, char *, char *, int );

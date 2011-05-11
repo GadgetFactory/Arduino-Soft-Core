@@ -29,7 +29,10 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_unsigned.all;
 USE ieee.numeric_std.ALL;
- 
+
+library UNISIM;
+use UNISIM.vcomponents.all;
+
 ENTITY testbench IS
 END testbench;
  
@@ -50,7 +53,12 @@ ARCHITECTURE behavior OF testbench IS
 
 	-- UART 
 	rxd    : in    std_logic;
-	txd    : out   std_logic
+	txd    : out   std_logic;
+
+        -- I2C
+        scl : inout std_logic;
+        sda : inout std_logic
+
         );
     END COMPONENT;
     
@@ -72,6 +80,8 @@ ARCHITECTURE behavior OF testbench IS
    signal portd : std_logic_vector(7 downto 0);
    signal porte : std_logic_vector(7 downto 0);
    signal portf : std_logic_vector(7 downto 0);
+   signal scl   : std_logic;
+   signal sda   : std_logic;
 
  	--Outputs
    signal txd : std_logic;
@@ -93,8 +103,14 @@ BEGIN
           porte => porte,
           portf => portf,
           rxd => rxd,
-          txd => txd
+          txd => txd,
+          scl => scl,
+          sda => sda
         );
+
+   -- pull ups for I2C pads
+   scl_pullup : pullup PORT MAP (O => scl);
+   sda_pullup : pullup PORT MAP (O => sda);   
 
    -- Clock process definitions
    clk_process :process

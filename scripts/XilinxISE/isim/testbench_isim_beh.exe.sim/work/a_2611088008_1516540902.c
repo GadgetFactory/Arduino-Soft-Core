@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/ResetGenerator.vhd";
+static const char *ng0 = "X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/ResetGenerator.vhd";
 
 
 

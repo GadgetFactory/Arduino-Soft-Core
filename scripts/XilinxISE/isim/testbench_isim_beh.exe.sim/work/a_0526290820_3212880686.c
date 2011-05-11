@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/submodules/papilio_core_template/sources/papilio_core_template.vhd";
+static const char *ng0 = "X:/Papilio/workarea/Arduino_Soft_Core/submodules/papilio_core_template/sources/papilio_core_template.vhd";
 extern char *IEEE_P_3620187407;
 
 
@@ -48,10 +48,10 @@ static void work_a_0526290820_3212880686_p_0(char *t0)
 LAB0:    xsi_set_current_line(69, ng0);
     t1 = (t0 + 776U);
     t2 = *((char **)t1);
-    t1 = (t0 + 7660U);
+    t1 = (t0 + 7348U);
     t3 = (t0 + 2028U);
     t4 = *((char **)t3);
-    t3 = (t0 + 7756U);
+    t3 = (t0 + 7444U);
     t5 = ieee_std_logic_unsigned_equal_stdv_stdv(IEEE_P_3620187407, t2, t1, t4, t3);
     if (t5 != 0)
         goto LAB3;
@@ -104,10 +104,10 @@ static void work_a_0526290820_3212880686_p_1(char *t0)
 LAB0:    xsi_set_current_line(70, ng0);
     t1 = (t0 + 776U);
     t2 = *((char **)t1);
-    t1 = (t0 + 7660U);
+    t1 = (t0 + 7348U);
     t3 = (t0 + 2096U);
     t4 = *((char **)t3);
-    t3 = (t0 + 7788U);
+    t3 = (t0 + 7476U);
     t5 = ieee_std_logic_unsigned_equal_stdv_stdv(IEEE_P_3620187407, t2, t1, t4, t3);
     if (t5 != 0)
         goto LAB3;
@@ -240,20 +240,20 @@ static void work_a_0526290820_3212880686_p_3(char *t0)
 LAB0:    xsi_set_current_line(90, ng0);
     t3 = (t0 + 776U);
     t4 = *((char **)t3);
-    t3 = (t0 + 7660U);
+    t3 = (t0 + 7348U);
     t5 = (t0 + 2028U);
     t6 = *((char **)t5);
-    t5 = (t0 + 7756U);
+    t5 = (t0 + 7444U);
     t7 = ieee_std_logic_unsigned_equal_stdv_stdv(IEEE_P_3620187407, t4, t3, t6, t5);
     if (t7 == 1)
         goto LAB8;
 
 LAB9:    t8 = (t0 + 776U);
     t9 = *((char **)t8);
-    t8 = (t0 + 7660U);
+    t8 = (t0 + 7348U);
     t10 = (t0 + 2096U);
     t11 = *((char **)t10);
-    t10 = (t0 + 7788U);
+    t10 = (t0 + 7476U);
     t12 = ieee_std_logic_unsigned_equal_stdv_stdv(IEEE_P_3620187407, t9, t8, t11, t10);
     t2 = t12;
 

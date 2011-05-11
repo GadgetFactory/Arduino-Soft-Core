@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/testbench.vhd";
+static const char *ng0 = "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/testbench.vhd";
 
 
 
@@ -36,46 +36,46 @@ static void work_a_1949178628_2372691052_p_0(char *t0)
     int64 t7;
     int64 t8;
 
-LAB0:    t1 = (t0 + 2700U);
+LAB0:    t1 = (t0 + 2884U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(102, ng0);
-    t2 = (t0 + 3076);
+LAB2:    xsi_set_current_line(118, ng0);
+    t2 = (t0 + 3260);
     t3 = (t2 + 32U);
     t4 = *((char **)t3);
     t5 = (t4 + 40U);
     t6 = *((char **)t5);
     *((unsigned char *)t6) = (unsigned char)2;
     xsi_driver_first_trans_fast(t2);
-    xsi_set_current_line(103, ng0);
-    t2 = (t0 + 2144U);
+    xsi_set_current_line(119, ng0);
+    t2 = (t0 + 2328U);
     t3 = *((char **)t2);
     t7 = *((int64 *)t3);
     t8 = (t7 / 2);
-    t2 = (t0 + 2600);
+    t2 = (t0 + 2784);
     xsi_process_wait(t2, t8);
 
 LAB6:    *((char **)t1) = &&LAB7;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(104, ng0);
-    t2 = (t0 + 3076);
+LAB4:    xsi_set_current_line(120, ng0);
+    t2 = (t0 + 3260);
     t3 = (t2 + 32U);
     t4 = *((char **)t3);
     t5 = (t4 + 40U);
     t6 = *((char **)t5);
     *((unsigned char *)t6) = (unsigned char)3;
     xsi_driver_first_trans_fast(t2);
-    xsi_set_current_line(105, ng0);
-    t2 = (t0 + 2144U);
+    xsi_set_current_line(121, ng0);
+    t2 = (t0 + 2328U);
     t3 = *((char **)t2);
     t7 = *((int64 *)t3);
     t8 = (t7 / 2);
-    t2 = (t0 + 2600);
+    t2 = (t0 + 2784);
     xsi_process_wait(t2, t8);
 
 LAB10:    *((char **)t1) = &&LAB11;
@@ -106,27 +106,27 @@ static void work_a_1949178628_2372691052_p_1(char *t0)
     char *t9;
     char *t10;
 
-LAB0:    t1 = (t0 + 2844U);
+LAB0:    t1 = (t0 + 3028U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(113, ng0);
+LAB2:    xsi_set_current_line(129, ng0);
     t3 = (1 * 1000000000LL);
-    t2 = (t0 + 2744);
+    t2 = (t0 + 2928);
     xsi_process_wait(t2, t3);
 
 LAB6:    *((char **)t1) = &&LAB7;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(115, ng0);
-    t2 = (t0 + 2144U);
+LAB4:    xsi_set_current_line(131, ng0);
+    t2 = (t0 + 2328U);
     t4 = *((char **)t2);
     t3 = *((int64 *)t4);
     t5 = (t3 * 10);
-    t2 = (t0 + 2744);
+    t2 = (t0 + 2928);
     xsi_process_wait(t2, t5);
 
 LAB10:    *((char **)t1) = &&LAB11;
@@ -136,33 +136,33 @@ LAB5:    goto LAB4;
 
 LAB7:    goto LAB5;
 
-LAB8:    xsi_set_current_line(118, ng0);
-    t2 = (t0 + 3112);
+LAB8:    xsi_set_current_line(134, ng0);
+    t2 = (t0 + 3296);
     t4 = (t2 + 32U);
     t6 = *((char **)t4);
     t7 = (t6 + 40U);
     t8 = *((char **)t7);
     *((unsigned char *)t8) = (unsigned char)3;
     xsi_driver_first_trans_fast(t2);
-    xsi_set_current_line(119, ng0);
-    t2 = (t0 + 6408);
-    t6 = (t0 + 3148);
+    xsi_set_current_line(135, ng0);
+    t2 = (t0 + 6736);
+    t6 = (t0 + 3332);
     t7 = (t6 + 32U);
     t8 = *((char **)t7);
     t9 = (t8 + 40U);
     t10 = *((char **)t9);
     memcpy(t10, t2, 8U);
     xsi_driver_first_trans_fast(t6);
-    xsi_set_current_line(120, ng0);
-    t2 = (t0 + 6416);
-    t6 = (t0 + 3184);
+    xsi_set_current_line(136, ng0);
+    t2 = (t0 + 6744);
+    t6 = (t0 + 3368);
     t7 = (t6 + 32U);
     t8 = *((char **)t7);
     t9 = (t8 + 40U);
     t10 = *((char **)t9);
     memcpy(t10, t2, 8U);
     xsi_driver_first_trans_fast(t6);
-    xsi_set_current_line(126, ng0);
+    xsi_set_current_line(142, ng0);
 
 LAB14:    *((char **)t1) = &&LAB15;
     goto LAB1;

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/io_adr_dec.vhd";
+static const char *ng0 = "X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/io_adr_dec.vhd";
 extern char *WORK_P_4118952410;
 
 

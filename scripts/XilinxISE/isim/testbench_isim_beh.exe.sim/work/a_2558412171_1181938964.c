@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/i2c_master/i2c_master_byte_ctrl.vhd";
+static const char *ng0 = "X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_byte_ctrl.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_3499444699;
 
@@ -459,7 +459,7 @@ LAB13:    xsi_set_current_line(218, ng0);
 LAB15:    xsi_set_current_line(220, ng0);
     t1 = (t0 + 3676U);
     t5 = *((char **)t1);
-    t1 = (t0 + 14108U);
+    t1 = (t0 + 13432U);
     t6 = ieee_p_3499444699_sub_1438165383_3536714472(IEEE_P_3499444699, t17, t5, t1, 1);
     t7 = (t0 + 6344);
     t8 = (t7 + 32U);
@@ -492,7 +492,7 @@ static void work_a_2558412171_1181938964_p_6(char *t0)
 LAB0:    xsi_set_current_line(225, ng0);
     t1 = (t0 + 3676U);
     t2 = *((char **)t1);
-    t1 = (t0 + 14108U);
+    t1 = (t0 + 13432U);
     t3 = ieee_p_3499444699_sub_2368615388_3536714472(IEEE_P_3499444699, t2, t1, 0);
     if (t3 != 0)
         goto LAB3;
@@ -866,7 +866,7 @@ LAB23:    xsi_set_current_line(354, ng0);
     memcpy(t8, t2, 4U);
     xsi_driver_first_trans_fast(t1);
     xsi_set_current_line(356, ng0);
-    t1 = (t0 + 14212);
+    t1 = (t0 + 13536);
     xsi_report(t1, 38U, 0);
     goto LAB16;
 

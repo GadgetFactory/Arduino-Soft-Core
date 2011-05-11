@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 13.1
 --  \   \         Application : xaw2vhdl
 --  /   /         Filename : DCM32to16.vhd
--- /___/   /\     Timestamp : 05/05/2011 22:14:24
+-- /___/   /\     Timestamp : 05/11/2011 13:15:53
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: xaw2vhdl-intstyle X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/ipcore_dir/DCM32to16.xaw -st DCM32to16.vhd
+--Command: xaw2vhdl-intstyle X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/ipcore_dir/DCM32to16.xaw -st DCM32to16.vhd
 --Design Name: DCM32to16
 --Device: xc3s250e-4vq100
 --

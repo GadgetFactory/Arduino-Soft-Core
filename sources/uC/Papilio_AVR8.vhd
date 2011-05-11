@@ -35,7 +35,11 @@ entity Papilio_AVR8 is port(
 
   -- UART 
   rxd : in  std_logic;
-  txd : out std_logic
+  txd : out std_logic;
+
+  -- I2C
+  scl : inout std_logic;
+  sda : inout std_logic
 
   );
 
@@ -314,7 +318,14 @@ architecture Struct of Papilio_AVR8 is
 -- I2C (added 05.10.2011)
   signal i2cmaster_dbusout : std_logic_vector (7 downto 0);
   signal i2cmaster_out_en  : std_logic;
+  signal scl_pad_i    : std_logic;  -- i2c clock line input
+  signal scl_pad_o    : std_logic;  -- i2c clock line output
+  signal scl_padoen_o : std_logic;  -- i2c clock line output enable, active low
+  signal sda_pad_i    : std_logic;  -- i2c data line input
+  signal sda_pad_o    : std_logic;  -- i2c data line output
+  signal sda_padoen_o : std_logic;  -- i2c data line output enable, active low
 
+  
 -- ###############################################################################################################
 
 -- ############################## Define Signals for User Cores ##################################################
@@ -846,7 +857,7 @@ begin
 -- *******************************************************************************************************      
   I2C_MASTER_INST : component i2c_master_avrtop
     port map (
-      clk_i        => clk,              -- 32MHz (?)
+      clk_i        => clk,              -- 1MHz (?)
       reset_i      => not core_ireset,  -- Wishbone sync reset is HI asserted
       avr_adr_i    => core_adr(7 downto 0),
       avr_dbus_i   => core_dbusout,
@@ -854,14 +865,12 @@ begin
       iowe_i       => core_iowebus(10),
       out_en_o     => i2cmaster_out_en,
       avr_dbus_o   => i2cmaster_dbusout,
-      scl_pad_i    => '1',
---      scl_pad_i    => scl_pad_i,
---      scl_pad_o    => scl_pad_o,
---      scl_padoen_o => scl_padoen_o,
-      sda_pad_i    => '1',
---      sda_pad_i    => sda_pad_i,
---      sda_pad_o    => sda_pad_o,
---      sda_padoen_o => sda_padoen_o,
+      scl_pad_i    => scl_pad_i,
+      scl_pad_o    => scl_pad_o,
+      scl_padoen_o => scl_padoen_o,
+      sda_pad_i    => sda_pad_i,
+      sda_pad_o    => sda_pad_o,
+      sda_padoen_o => sda_padoen_o,
       arst_i       => nrst,
       i2c_int_o    => core_irqlines(10));
   
@@ -869,10 +878,18 @@ begin
   io_port_out(10)    <= i2cmaster_dbusout;
   io_port_out_en(10) <= i2cmaster_out_en;
 
+-- I2C pads
+  scl <= scl_pad_o when (scl_padoen_o = '0') else 'Z';
+  sda <= sda_pad_o when (sda_padoen_o = '0') else 'Z';
+  scl_pad_i <= scl;
+  sda_pad_i <= sda;
+
 
 
   
+-- *******************************************************************************************************      
 -- Arbiter and mux
+-- *******************************************************************************************************      
   ArbiterAndMux_Inst : component ArbiterAndMux port map(
     --Clock and reset
     ireset   => core_ireset,

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/MemRdMux.vhd";
+static const char *ng0 = "X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/MemRdMux.vhd";
 extern char *WORK_P_4001478723;
 
 
@@ -78,9 +78,9 @@ LAB0:    xsi_set_current_line(31, ng0);
     t2 = *((char **)t1);
     t8 = *((int *)t2);
     t9 = (t8 - 1);
-    t1 = (t0 + 4243);
+    t1 = (t0 + 4099);
     *((int *)t1) = 0;
-    t3 = (t0 + 4247);
+    t3 = (t0 + 4103);
     *((int *)t3) = t9;
     t10 = 0;
     t11 = t9;
@@ -95,7 +95,7 @@ LAB1:    return;
 LAB3:    xsi_set_current_line(33, ng0);
     t4 = (t0 + 732U);
     t5 = *((char **)t4);
-    t4 = (t0 + 4243);
+    t4 = (t0 + 4099);
     t12 = *((int *)t4);
     t13 = (t12 - 1);
     t14 = (t13 * -1);
@@ -111,23 +111,23 @@ LAB3:    xsi_set_current_line(33, ng0);
 
 LAB8:
 LAB7:
-LAB4:    t1 = (t0 + 4243);
+LAB4:    t1 = (t0 + 4099);
     t10 = *((int *)t1);
-    t2 = (t0 + 4247);
+    t2 = (t0 + 4103);
     t11 = *((int *)t2);
     if (t10 == t11)
         goto LAB5;
 
 LAB10:    t8 = (t10 + 1);
     t10 = t8;
-    t3 = (t0 + 4243);
+    t3 = (t0 + 4099);
     *((int *)t3) = t10;
     goto LAB2;
 
 LAB6:    xsi_set_current_line(34, ng0);
     t7 = (t0 + 732U);
     t20 = *((char **)t7);
-    t7 = (t0 + 4243);
+    t7 = (t0 + 4099);
     t21 = *((int *)t7);
     t22 = (t21 - 1);
     t23 = (t22 * -1);
@@ -192,9 +192,9 @@ LAB0:    xsi_set_current_line(43, ng0);
     t2 = *((char **)t1);
     t7 = *((int *)t2);
     t8 = (t7 - 1);
-    t1 = (t0 + 4251);
+    t1 = (t0 + 4107);
     *((int *)t1) = 0;
-    t3 = (t0 + 4255);
+    t3 = (t0 + 4111);
     *((int *)t3) = t8;
     t9 = 0;
     t10 = t8;
@@ -209,7 +209,7 @@ LAB1:    return;
 LAB3:    xsi_set_current_line(45, ng0);
     t4 = (t0 + 732U);
     t5 = *((char **)t4);
-    t4 = (t0 + 4251);
+    t4 = (t0 + 4107);
     t11 = *((int *)t4);
     t12 = (t11 - 1);
     t13 = (t12 * -1);
@@ -225,16 +225,16 @@ LAB3:    xsi_set_current_line(45, ng0);
 
 LAB8:
 LAB7:
-LAB4:    t1 = (t0 + 4251);
+LAB4:    t1 = (t0 + 4107);
     t9 = *((int *)t1);
-    t2 = (t0 + 4255);
+    t2 = (t0 + 4111);
     t10 = *((int *)t2);
     if (t9 == t10)
         goto LAB5;
 
 LAB10:    t7 = (t9 + 1);
     t9 = t7;
-    t3 = (t0 + 4251);
+    t3 = (t0 + 4107);
     *((int *)t3) = t9;
     goto LAB2;
 

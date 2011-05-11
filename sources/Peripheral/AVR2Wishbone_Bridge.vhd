@@ -37,7 +37,7 @@ architecture RTL of AVR2Wishbone_Bridge is
 begin
 
   -- Signals to read data multiplexer
-  out_en_o   <= wb_ack_i;
+  out_en_o   <= wb_ack_i and iore_i;
   avr_dbus_o <= wb_dat_i;
 
   -- Signals to Wishbone slave

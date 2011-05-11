@@ -427,11 +427,11 @@ begin
 
   -- added 05.10.2011
   ADDRESS_DECODER : component Addr_Decoder port map(
-    avr2io_addr_in     => core_adr,
-    avr2io_iore_in     => core_iore,
-    avr2io_iorebus_out => core_iorebus,
-    avr2io_iowe_in     => core_iowe,
-    avr2io_iowebus_out => core_iowebus
+    avr2io_addr_i    => core_adr,
+    avr2io_iore_i    => core_iore,
+    avr2io_iorebus_o => core_iorebus,
+    avr2io_iowe_i    => core_iowe,
+    avr2io_iowebus_o => core_iowebus
     );
   
   RAM_Data_Register : component RAMDataReg port map(

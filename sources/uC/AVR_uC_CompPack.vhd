@@ -14,11 +14,11 @@ package AVR_uC_CompPack is
 
   -- added 05.10.2011
   component Addr_Decoder is port(
-    avr2io_addr_in     : in  std_logic_vector(15 downto 0);
-    avr2io_iore_in     : in  std_logic;
-    avr2io_iorebus_out : out std_logic_vector(CExtMuxInSize-1 downto 0);
-    avr2io_iowe_in     : in  std_logic;
-    avr2io_iowebus_out : out std_logic_vector(CExtMuxInSize-1 downto 0));
+    avr2io_addr_i    : in  std_logic_vector(15 downto 0);
+    avr2io_iore_i    : in  std_logic;
+    avr2io_iorebus_o : out std_logic_vector(CExtMuxInSize-1 downto 0);
+    avr2io_iowe_i    : in  std_logic;
+    avr2io_iowebus_o : out std_logic_vector(CExtMuxInSize-1 downto 0));
   end component;
   
   -- added 05.10.2011

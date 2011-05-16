@@ -57,7 +57,10 @@ ARCHITECTURE behavior OF testbench IS
 
         -- I2C
         scl : inout std_logic;
-        sda : inout std_logic
+        sda : inout std_logic;
+
+        buttons_i : in  std_logic_vector(3 downto 0);
+        leds_o    : out std_logic_vector(3 downto 0) 
 
         );
     END COMPONENT;
@@ -72,6 +75,7 @@ ARCHITECTURE behavior OF testbench IS
    signal TCK : std_logic := '0';
    signal TDI : std_logic := '0';
    signal TRSTn : std_logic := '0';
+   signal buttons : std_logic_vector(3 downto 0);
 
 	--BiDirs
    signal porta : std_logic_vector(7 downto 0);
@@ -86,6 +90,7 @@ ARCHITECTURE behavior OF testbench IS
  	--Outputs
    signal txd : std_logic;
    signal TDO : std_logic;
+   signal leds : std_logic_vector(3 downto 0);
 
    -- Clock period definitions
    constant clk_period : time := 1us;
@@ -105,7 +110,9 @@ BEGIN
           rxd => rxd,
           txd => txd,
           scl => scl,
-          sda => sda
+          sda => sda,
+          buttons_i => buttons,
+          leds_o => leds
         );
 
    -- pull ups for I2C pads

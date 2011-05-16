@@ -24,6 +24,7 @@
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="AVR2Wishbone_Bridge_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Addr_Decoder_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Button_LED_avrtop_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="DCM32to16.vhd">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
@@ -66,6 +67,7 @@
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="Papilio_AVR8_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Papilio_AVR8_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Papilio_AVR8_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Wishbone_Button_LED_Core_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -87,6 +89,7 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testbench_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testbench_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testbench_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testbench_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -101,7 +104,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1305090951" xil_pn:in_ck="3733148075473635231" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1305090951">
+    <transform xil_pn:end_ts="1305563235" xil_pn:in_ck="6474000997483262166" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1305563234">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../../sources/CommonPacks/AVRuCPackage.vhd"/>
@@ -134,6 +137,8 @@
       <outfile xil_pn:name="../../sources/Memory/XPM8Kx16.vhd"/>
       <outfile xil_pn:name="../../sources/Memory/prog_mem_init.vhd"/>
       <outfile xil_pn:name="../../sources/Peripheral/AVR2Wishbone_Bridge.vhd"/>
+      <outfile xil_pn:name="../../sources/Peripheral/Button_LED_Core/Button_LED_avrtop.vhd"/>
+      <outfile xil_pn:name="../../sources/Peripheral/Button_LED_Core/Wishbone_Button_LED_Core.vhd"/>
       <outfile xil_pn:name="../../sources/Peripheral/SynchronizerCompPack.vhd"/>
       <outfile xil_pn:name="../../sources/Peripheral/SynchronizerDFF.vhd"/>
       <outfile xil_pn:name="../../sources/Peripheral/SynchronizerLatch.vhd"/>
@@ -154,12 +159,12 @@
       <outfile xil_pn:name="../../submodules/papilio_core_template/sources/papilio_core_template.vhd"/>
       <outfile xil_pn:name="testbench.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1305090955" xil_pn:in_ck="3597099248867875760" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4434870115928851094" xil_pn:start_ts="1305090951">
+    <transform xil_pn:end_ts="1305562833" xil_pn:in_ck="3597099248867875760" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4434870115928851094" xil_pn:start_ts="1305562833">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="DCM32to16.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1305000951" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3122580995542427112" xil_pn:start_ts="1305000951">
+    <transform xil_pn:end_ts="1305562833" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3122580995542427112" xil_pn:start_ts="1305562833">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -167,9 +172,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1305090955" xil_pn:in_ck="-7102355265924992334" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1305090955">
+    <transform xil_pn:end_ts="1305562833" xil_pn:in_ck="-6108895261413925559" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1305562833">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../../sources/CommonPacks/AVRuCPackage.vhd"/>
       <outfile xil_pn:name="../../sources/CommonPacks/SynthCtrlPack.vhd"/>
       <outfile xil_pn:name="../../sources/Core/AVR_Core_CompPack.vhd"/>
@@ -200,6 +209,8 @@
       <outfile xil_pn:name="../../sources/Memory/XPM8Kx16.vhd"/>
       <outfile xil_pn:name="../../sources/Memory/prog_mem_init.vhd"/>
       <outfile xil_pn:name="../../sources/Peripheral/AVR2Wishbone_Bridge.vhd"/>
+      <outfile xil_pn:name="../../sources/Peripheral/Button_LED_Core/Button_LED_avrtop.vhd"/>
+      <outfile xil_pn:name="../../sources/Peripheral/Button_LED_Core/Wishbone_Button_LED_Core.vhd"/>
       <outfile xil_pn:name="../../sources/Peripheral/SynchronizerCompPack.vhd"/>
       <outfile xil_pn:name="../../sources/Peripheral/SynchronizerDFF.vhd"/>
       <outfile xil_pn:name="../../sources/Peripheral/SynchronizerLatch.vhd"/>
@@ -221,9 +232,14 @@
       <outfile xil_pn:name="DCM32to16.vhd"/>
       <outfile xil_pn:name="testbench.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1305091000" xil_pn:in_ck="-7102355265924992334" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1604413538578049394" xil_pn:start_ts="1305090955">
+    <transform xil_pn:end_ts="1305562880" xil_pn:in_ck="-6108895261413925559" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1604413538578049394" xil_pn:start_ts="1305562833">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
@@ -231,9 +247,12 @@
       <outfile xil_pn:name="testbench_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1305091001" xil_pn:in_ck="6579369730589759756" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8916427109707753147" xil_pn:start_ts="1305091000">
+    <transform xil_pn:end_ts="1305562880" xil_pn:in_ck="6579369730589759756" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8916427109707753147" xil_pn:start_ts="1305562880">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="testbench_isim_beh.wdb"/>

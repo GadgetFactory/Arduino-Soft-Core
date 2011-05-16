@@ -3,8 +3,8 @@
 -- Engineer: 
 -- 
 -- Create Date:    
--- Design Name: OpenCores I2C Master AVR bus wrapper
--- Module Name: i2c_master_avrtop
+-- Design Name: Wishbone Button LED Core AVR bus wrapper
+-- Module Name: Wishbone_Button_LED_Core
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -24,7 +24,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity i2c_master_avrtop is
+entity Button_LED_avrtop is
   port (
     -- AVR and read-data multiplexer signals
     clk_i      : in  std_logic;                    -- Clock
@@ -36,48 +36,33 @@ entity i2c_master_avrtop is
     out_en_o   : out std_logic;                    -- Read data enable to multiplexer
     avr_dbus_o : out std_logic_vector(7 downto 0); -- Read data to multiplexer
 
-    -- i2c lines
-    scl_pad_i    : in  std_logic;  -- i2c clock line input
-    scl_pad_o    : out std_logic;  -- i2c clock line output
-    scl_padoen_o : out std_logic;  -- i2c clock line output enable, active low
-    sda_pad_i    : in  std_logic;  -- i2c data line input
-    sda_pad_o    : out std_logic;  -- i2c data line output
-    sda_padoen_o : out std_logic;  -- i2c data line output enable, active low
+    buttons_i : in  std_logic_vector(3 downto 0);  -- input from buttons
+    leds_o    : out std_logic_vector(3 downto 0);  -- output to LEDs
 
-    arst_i     : in  std_logic;                    -- asynchronous reset
-    i2c_int_o  : out std_logic                     -- interrupt request output signal
+    button_led_int_o  : out std_logic                     -- interrupt request output signal
     );
-end entity i2c_master_avrtop;
+end entity Button_LED_avrtop;
 
-architecture Struct of i2c_master_avrtop is
+architecture Struct of Button_LED_avrtop is
 
-  component i2c_master_top is
-    generic(
-      ARST_LVL : std_logic              -- asynchronous reset level
-      );
+  component Wishbone_Button_LED_Core
     port (
       -- wishbone signals
-      wb_clk_i  : in  std_logic;        -- master clock input
-      wb_rst_i  : in  std_logic;        -- synchronous active high reset
-      arst_i    : in  std_logic;        -- asynchronous reset
-      wb_adr_i  : in  std_logic_vector(2 downto 0);  -- lower address bits
-      wb_dat_i  : in  std_logic_vector(7 downto 0);  -- Databus input
-      wb_dat_o  : out std_logic_vector(7 downto 0);  -- Databus output
-      wb_we_i   : in  std_logic;        -- Write enable input
-      wb_stb_i  : in  std_logic;        -- Strobe signals / core select signal
-      wb_cyc_i  : in  std_logic;        -- Valid bus cycle input
-      wb_ack_o  : out std_logic;        -- Bus cycle acknowledge output
-      wb_inta_o : out std_logic;        -- interrupt request output signal
+      wb_clk_i  : in  std_logic;          -- master clock input
+      wb_rst_i  : in  std_logic;          -- synchronous active high reset input
+      wb_adr_i  : in  std_logic_vector(3 downto 0);  -- address input
+      wb_dat_i  : in  std_logic_vector(7 downto 0);  -- write data input
+      wb_dat_o  : out std_logic_vector(7 downto 0);  -- read data output
+      wb_we_i   : in  std_logic;          -- write enable input
+      wb_stb_i  : in  std_logic;          -- strobe signal / core select input
+      wb_cyc_i  : in  std_logic;          -- valid bus cycle input
+      wb_ack_o  : out std_logic;          -- bus cycle acknowledge output
+      wb_int_o  : out std_logic;          -- interrupt request output
 
-      -- i2c lines
-      scl_pad_i    : in  std_logic;     -- i2c clock line input
-      scl_pad_o    : out std_logic;     -- i2c clock line output
-      scl_padoen_o : out std_logic;     -- i2c clock line output enable, active low
-      sda_pad_i    : in  std_logic;     -- i2c data line input
-      sda_pad_o    : out std_logic;     -- i2c data line output
-      sda_padoen_o : out std_logic      -- i2c data line output enable, active low
+      buttons_i : in  std_logic_vector(3 downto 0);  -- input from buttons
+      leds_o    : out std_logic_vector(3 downto 0)   -- output to LEDs
       );
-  end component i2c_master_top;
+  end component;
 
   component AVR2Wishbone_Bridge is
     port (
@@ -117,32 +102,20 @@ architecture Struct of i2c_master_avrtop is
 
 begin
 
-  I2C_MASTER : i2c_master_top
-    generic map (
-      ARST_LVL => '0'                   -- low asserted
-      )
+  Wishbone_Button_LED_Core_inst : Wishbone_Button_LED_Core
     port map (
-      -- wishbone signals
       wb_clk_i  => wb_clk,
       wb_rst_i  => wb_rst,
-      arst_i    => arst_i,
-      wb_adr_i  => wb_adr(2 downto 0),
+      wb_adr_i  => wb_adr(3 downto 0),
       wb_dat_i  => wb_dat_w,
       wb_dat_o  => wb_dat_r,
       wb_we_i   => wb_we,
       wb_stb_i  => wb_stb,
       wb_cyc_i  => wb_cyc,
       wb_ack_o  => wb_ack,
-      wb_inta_o => i2c_int_o,
-
-      -- i2c lines
-      scl_pad_i    => scl_pad_i,
-      scl_pad_o    => scl_pad_o,   
-      scl_padoen_o => scl_padoen_o,
-      sda_pad_i    => sda_pad_i,   
-      sda_pad_o    => sda_pad_o,   
-      sda_padoen_o => sda_padoen_o
-      );
+      wb_int_o  => button_led_int_o,
+      buttons_i => buttons_i,
+      leds_o    => leds_o);
 
   AVR2WB : AVR2Wishbone_Bridge
     port map (

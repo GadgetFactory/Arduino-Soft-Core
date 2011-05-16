@@ -41,6 +41,22 @@ package AVR_uC_CompPack is
       arst_i       : in  std_logic;
       i2c_int_o    : out std_logic);
   end component;
+
+  -- added 05.16.2011
+  component Button_LED_avrtop
+    port (
+      clk_i            : in  std_logic;
+      reset_i          : in  std_logic;
+      avr_adr_i        : in  std_logic_vector(7 downto 0);
+      avr_dbus_i       : in  std_logic_vector(7 downto 0);
+      iore_i           : in  std_logic;
+      iowe_i           : in  std_logic;
+      out_en_o         : out std_logic;
+      avr_dbus_o       : out std_logic_vector(7 downto 0);
+      buttons_i        : in  std_logic_vector(3 downto 0);
+      leds_o           : out std_logic_vector(3 downto 0);
+      button_led_int_o : out std_logic);
+  end component;
   
   component pport is generic(PPortNum : natural);
                      port(

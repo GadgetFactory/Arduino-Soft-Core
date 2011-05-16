@@ -39,7 +39,11 @@ entity Papilio_AVR8 is port(
 
   -- I2C
   scl : inout std_logic;
-  sda : inout std_logic
+  sda : inout std_logic;
+
+  -- Buttons/LEDs
+  buttons_i : in  std_logic_vector(3 downto 0);  -- input from buttons
+  leds_o    : out std_logic_vector(3 downto 0)  -- output to LEDs
 
   );
 
@@ -57,7 +61,8 @@ architecture Struct of Papilio_AVR8 is
   constant CImplUART                  : boolean := true;  --AVR8 UART peripheral
   constant CImplTmrCnt                : boolean := true;  --AVR8 Timer
   constant CImplpapilio_core_template : boolean := true;  --An example User Core, use this template to make your own custom peripherals.
-
+  constant CImplI2CMaster             : boolean := true;  --I2C Master
+  constant CImplButtonLED             : boolean := true;  --Button/LED Core
 
   component XDM4Kx8 port(
     cp2     : in  std_logic;
@@ -325,6 +330,9 @@ architecture Struct of Papilio_AVR8 is
   signal sda_pad_o    : std_logic;  -- i2c data line output
   signal sda_padoen_o : std_logic;  -- i2c data line output enable, active low
 
+-- Buttons/LEDs (added 05.16.2011)
+  signal buttonled_dbusout : std_logic_vector (7 downto 0);
+  signal buttonled_out_en  : std_logic;
   
 -- ###############################################################################################################
 
@@ -850,11 +858,10 @@ begin
   io_port_out(2)    <= uart_dbusout;
   io_port_out_en(2) <= uart_out_en;
 
-
-  
 -- *******************************************************************************************************      
 -- I2C Master (added 05.10.2011)
 -- *******************************************************************************************************      
+I2C_MASTER_GEN: if (CImplI2CMaster) generate
   I2C_MASTER_INST : component i2c_master_avrtop
     port map (
       clk_i        => clk,              -- 1MHz (?)
@@ -883,10 +890,42 @@ begin
   sda <= sda_pad_o when (sda_padoen_o = '0') else 'Z';
   scl_pad_i <= scl;
   sda_pad_i <= sda;
+  
+end generate I2C_MASTER_GEN;
 
-
+I2C_MASTER_NOGEN: if (not CImplI2CMaster) generate
+  io_port_out(10)    <= (others => '0');
+  io_port_out_en(10) <= '0';
+  core_irqlines(10)  <= '0';
+end generate I2C_MASTER_NOGEN;
 
   
+-- *******************************************************************************************************      
+-- Button / LED Core (added 05.16.2011)
+-- *******************************************************************************************************      
+BUTTON_LED_CORE_GEN: if (CImplButtonLED) generate
+  Button_LED_avrtop_inst : Button_LED_avrtop
+    port map (
+      clk_i            => clk,
+      reset_i          => not core_ireset,  -- Wishbone sync reset is HI asserted
+      avr_adr_i        => core_adr(7 downto 0),
+      avr_dbus_i       => core_dbusout,
+      iore_i           => core_iorebus(11),
+      iowe_i           => core_iowebus(11),
+      out_en_o         => buttonled_out_en,
+      avr_dbus_o       => buttonled_dbusout,
+      buttons_i        => buttons_i,
+      leds_o           => leds_o,
+      button_led_int_o => core_irqlines(11));
+end generate BUTTON_LED_CORE_GEN;
+
+BUTTON_LED_CORE_NOGEN: if (not CImplButtonLED) generate
+  io_port_out(11)    <= (others => '0');
+  io_port_out_en(11) <= '0';
+  core_irqlines(11)  <= '0';
+end generate BUTTON_LED_CORE_NOGEN;
+
+
 -- *******************************************************************************************************      
 -- Arbiter and mux
 -- *******************************************************************************************************      

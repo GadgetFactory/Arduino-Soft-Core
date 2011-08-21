@@ -4,3 +4,35 @@ map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o Papilio
 par -w -intstyle ise -ol high -t 1 Papilio_AVR8_map.ncd Papilio_AVR8.ncd Papilio_AVR8.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Papilio_AVR8.twx Papilio_AVR8.ncd -o Papilio_AVR8.twr Papilio_AVR8.pcf 
 bitgen -intstyle ise -f Papilio_AVR8.ut Papilio_AVR8.ncd 
+xst -intstyle ise -ifn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.xst" -ofn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.syr" 
+netgen -intstyle ise -ar Structure -tm Papilio_AVR8 -w -dir netgen/synthesis -ofmt vhdl -sim Papilio_AVR8.ngc Papilio_AVR8_synthesis.vhd 
+xst -intstyle ise -ifn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.xst" -ofn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.syr" 
+xst -intstyle ise -ifn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.xst" -ofn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.syr" 
+xst -intstyle ise -ifn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.xst" -ofn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc X:/Papilio/workarea/Arduino_Soft_Core/sources/Papilio_One.ucf -bm Papilio_AVR8.bmm -p xc3s500e-vq100-4 Papilio_AVR8.ngc Papilio_AVR8.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o Papilio_AVR8_map.ncd Papilio_AVR8.ngd Papilio_AVR8.pcf 
+par -w -intstyle ise -ol high -t 1 Papilio_AVR8_map.ncd Papilio_AVR8.ncd Papilio_AVR8.pcf 
+xst -intstyle ise -ifn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.xst" -ofn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc X:/Papilio/workarea/Arduino_Soft_Core/sources/Papilio_One.ucf -bm Papilio_AVR8.bmm -p xc3s500e-vq100-4 Papilio_AVR8.ngc Papilio_AVR8.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o Papilio_AVR8_map.ncd Papilio_AVR8.ngd Papilio_AVR8.pcf 
+par -w -intstyle ise -ol high -t 1 Papilio_AVR8_map.ncd Papilio_AVR8.ncd Papilio_AVR8.pcf 
+xst -intstyle ise -ifn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.xst" -ofn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc X:/Papilio/workarea/Arduino_Soft_Core/sources/Papilio_One.ucf -bm Papilio_AVR8.bmm -p xc3s500e-vq100-4 Papilio_AVR8.ngc Papilio_AVR8.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o Papilio_AVR8_map.ncd Papilio_AVR8.ngd Papilio_AVR8.pcf 
+par -w -intstyle ise -ol high -t 1 Papilio_AVR8_map.ncd Papilio_AVR8.ncd Papilio_AVR8.pcf 
+par -w -intstyle ise -ol high -t 1 Papilio_AVR8_map.ncd Papilio_AVR8.ncd Papilio_AVR8.pcf 
+xst -intstyle ise -ifn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.xst" -ofn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc X:/Papilio/workarea/Arduino_Soft_Core/sources/Papilio_One.ucf -bm Papilio_AVR8.bmm -p xc3s500e-vq100-4 Papilio_AVR8.ngc Papilio_AVR8.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o Papilio_AVR8_map.ncd Papilio_AVR8.ngd Papilio_AVR8.pcf 
+par -w -intstyle ise -ol high -t 1 Papilio_AVR8_map.ncd Papilio_AVR8.ncd Papilio_AVR8.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Papilio_AVR8.twx Papilio_AVR8.ncd -o Papilio_AVR8.twr Papilio_AVR8.pcf 
+xst -intstyle ise -ifn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.xst" -ofn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.syr" 
+xst -intstyle ise -ifn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.xst" -ofn "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/Papilio_AVR8.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc X:/Papilio/workarea/Arduino_Soft_Core/sources/Papilio_One.ucf -bm Papilio_AVR8.bmm -p xc3s500e-vq100-4 Papilio_AVR8.ngc Papilio_AVR8.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o Papilio_AVR8_map.ncd Papilio_AVR8.ngd Papilio_AVR8.pcf 
+par -w -intstyle ise -ol high -t 1 Papilio_AVR8_map.ncd Papilio_AVR8.ncd Papilio_AVR8.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Papilio_AVR8.twx Papilio_AVR8.ncd -o Papilio_AVR8.twr Papilio_AVR8.pcf 
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -detail -ir off -pr off -c 100 -o Papilio_AVR8_map.ncd Papilio_AVR8.ngd Papilio_AVR8.pcf 
+par -w -intstyle ise -ol high -t 1 Papilio_AVR8_map.ncd Papilio_AVR8.ncd Papilio_AVR8.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Papilio_AVR8.twx Papilio_AVR8.ncd -o Papilio_AVR8.twr Papilio_AVR8.pcf 
+bitgen -intstyle ise -f Papilio_AVR8.ut Papilio_AVR8.ncd 

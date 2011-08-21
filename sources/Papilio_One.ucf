@@ -74,6 +74,11 @@ NET "portf<7>" LOC = "P17" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#
 NET "rxd"  LOC = "P88" | IOSTANDARD = LVCMOS25 ;
 NET "txd"  LOC = "P90" | IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = SLOW ;
 
+## I2C
+NET "scl"  LOC = "P24" | IOSTANDARD = LVCMOS25 ;
+NET "sda"  LOC = "P27" | IOSTANDARD = LVCMOS25 ;
+
+
 ## Prohibit the automatic placement of pins that are connected to VCC or GND for configuration.
 CONFIG PROHIBIT=P99 ;		#HSWAP
 CONFIG PROHIBIT=P43 ;		#M0

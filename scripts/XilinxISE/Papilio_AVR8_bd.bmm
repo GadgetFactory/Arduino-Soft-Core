@@ -21,11 +21,11 @@ ADDRESS_MAP avrmap PPC405 0
 
     ADDRESS_SPACE rom_code RAMB16 [0x00000000:0x00003FFF]
         BUS_BLOCK
-            PM_Inst/RAM_Word0 [15:0] PLACED = X1Y1;
+            PM_Inst/RAM_Word0 [15:0] PLACED = X1Y8;
         END_BUS_BLOCK;
 
         BUS_BLOCK
-            PM_Inst/RAM_Word1 [15:0] PLACED = X1Y3;
+            PM_Inst/RAM_Word1 [15:0] PLACED = X1Y6;
         END_BUS_BLOCK;
 
         BUS_BLOCK
@@ -33,23 +33,23 @@ ADDRESS_MAP avrmap PPC405 0
         END_BUS_BLOCK;
 
         BUS_BLOCK
-            PM_Inst/RAM_Word3 [15:0] PLACED = X1Y5;
+            PM_Inst/RAM_Word3 [15:0] PLACED = X1Y3;
         END_BUS_BLOCK;
 
         BUS_BLOCK
-            PM_Inst/RAM_Word4 [15:0] PLACED = X1Y7;
+            PM_Inst/RAM_Word4 [15:0] PLACED = X1Y1;
         END_BUS_BLOCK;
 
         BUS_BLOCK
-            PM_Inst/RAM_Word5 [15:0] PLACED = X1Y4;
+            PM_Inst/RAM_Word5 [15:0] PLACED = X1Y7;
         END_BUS_BLOCK;
 
         BUS_BLOCK
-            PM_Inst/RAM_Word6 [15:0] PLACED = X1Y6;
+            PM_Inst/RAM_Word6 [15:0] PLACED = X1Y5;
         END_BUS_BLOCK;
 
         BUS_BLOCK
-            PM_Inst/RAM_Word7 [15:0] PLACED = X1Y0;
+            PM_Inst/RAM_Word7 [15:0] PLACED = X1Y4;
         END_BUS_BLOCK;
     END_ADDRESS_SPACE;
 

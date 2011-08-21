@@ -215,7 +215,8 @@ begin
 
   -- purpose: read multiplexer for read access
   -- type   : combinational
-  READ_MUX: process (buttons_2r, led_latch_reg, read_enable, wb_adr_i)
+  READ_MUX: process (btn_intcontrol_reg, buttons_2r, led_latch_reg,
+                     read_enable, wb_adr_i)
   begin  -- process READ_MUX
     -- initialize to 0 all bits
     wb_dat_o <= (others => '0');

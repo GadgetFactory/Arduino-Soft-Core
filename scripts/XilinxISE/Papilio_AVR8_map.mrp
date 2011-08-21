@@ -1,46 +1,46 @@
-Release 13.1 Map O.40d (nt64)
+Release 13.1 Map O.40d (nt)
 Xilinx Mapping Report File for Design 'Papilio_AVR8'
 
 Design Information
 ------------------
-Command Line   : map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off
--c 100 -o Papilio_AVR8_map.ncd Papilio_AVR8.ngd Papilio_AVR8.pcf 
+Command Line   : map -intstyle ise -p xc3s500e-vq100-4 -cm area -detail -ir off
+-pr off -c 100 -o Papilio_AVR8_map.ncd Papilio_AVR8.ngd Papilio_AVR8.pcf 
 Target Device  : xc3s500e
 Target Package : vq100
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Tue May 03 17:34:43 2011
+Mapped Date    : Sun Aug 21 19:57:21 2011
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   13
+Number of warnings:   23
 Logic Utilization:
-  Number of Slice Flip Flops:           856 out of   9,312    9%
-  Number of 4 input LUTs:             2,287 out of   9,312   24%
+  Number of Slice Flip Flops:         2,423 out of   9,312   26%
+  Number of 4 input LUTs:             5,198 out of   9,312   55%
 Logic Distribution:
-  Number of occupied Slices:          1,492 out of   4,656   32%
-    Number of Slices containing only related logic:   1,492 out of   1,492 100%
-    Number of Slices containing unrelated logic:          0 out of   1,492   0%
+  Number of occupied Slices:          3,434 out of   4,656   73%
+    Number of Slices containing only related logic:   3,434 out of   3,434 100%
+    Number of Slices containing unrelated logic:          0 out of   3,434   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,316 out of   9,312   24%
-    Number used as logic:             2,282
-    Number used as a route-thru:         29
-    Number used as Shift registers:       5
+  Total Number of 4 input LUTs:       5,234 out of   9,312   56%
+    Number used as logic:             5,192
+    Number used as a route-thru:         36
+    Number used as Shift registers:       6
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 52 out of      66   78%
+  Number of bonded IOBs:                 54 out of      66   81%
   Number of RAMB16s:                     10 out of      20   50%
   Number of BUFGMUXs:                     2 out of      24    8%
   Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                3.58
+Average Fanout of Non-Clock Nets:                3.78
 
-Peak Memory Usage:  250 MB
-Total REAL time to MAP completion:  21 secs 
-Total CPU time to MAP completion:   10 secs 
+Peak Memory Usage:  202 MB
+Total REAL time to MAP completion:  23 secs 
+Total CPU time to MAP completion:   19 secs 
 
 NOTES:
 
@@ -82,9 +82,27 @@ Section 1 - Errors
 Section 2 - Warnings
 --------------------
 WARNING:Pack:266 - The function generator
-   AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>132 failed to merge with F5
-   multiplexer AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>520_SW1.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux000022 failed to merge with F5 multiplexer
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux00002_f5.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux000022 failed to merge with F5 multiplexer
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux00002_f5.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux000022 failed to merge with F5 multiplexer
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux00002_f5.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
+WARNING:PhysDesignRules:367 - The signal <sda_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <scl_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <porta<2>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <porta<3>_IBUF> is incomplete. The
@@ -109,18 +127,41 @@ WARNING:PhysDesignRules:367 - The signal <portb<6>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <portb<7>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<2>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<3>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<4>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<5>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<6>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<7>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
 
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network portb<2>_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 11 more times for the
-   following (max. 5 shown):
-   portb<3>_IBUF,
-   portb<4>_IBUF,
-   portb<5>_IBUF,
-   portb<6>_IBUF,
-   portb<7>_IBUF
-   To see the details of these info messages, please use the -detail switch.
+INFO:LIT:243 - Logical network portb<3>_IBUF has no load.
+INFO:LIT:243 - Logical network portb<4>_IBUF has no load.
+INFO:LIT:243 - Logical network portb<5>_IBUF has no load.
+INFO:LIT:243 - Logical network portb<6>_IBUF has no load.
+INFO:LIT:243 - Logical network portb<7>_IBUF has no load.
+INFO:LIT:243 - Logical network portd<2>_IBUF has no load.
+INFO:LIT:243 - Logical network portd<3>_IBUF has no load.
+INFO:LIT:243 - Logical network portd<4>_IBUF has no load.
+INFO:LIT:243 - Logical network porta<2>_IBUF has no load.
+INFO:LIT:243 - Logical network portd<5>_IBUF has no load.
+INFO:LIT:243 - Logical network porta<3>_IBUF has no load.
+INFO:LIT:243 - Logical network portd<6>_IBUF has no load.
+INFO:LIT:243 - Logical network porta<4>_IBUF has no load.
+INFO:LIT:243 - Logical network portd<7>_IBUF has no load.
+INFO:LIT:243 - Logical network porta<5>_IBUF has no load.
+INFO:LIT:243 - Logical network porta<6>_IBUF has no load.
+INFO:LIT:243 - Logical network porta<7>_IBUF has no load.
+INFO:LIT:243 - Logical network sda_IBUF has no load.
+INFO:LIT:243 - Logical network scl_IBUF has no load.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:MapLib:159 - Net Timing constraints on signal clk are pushed forward
    through input buffer.
@@ -130,7 +171,8 @@ INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   3 block(s) optimized away
+   4 block(s) optimized away
+ 495 Block(s) redundant
 
 Section 5 - Removed Logic
 -------------------------
@@ -140,8 +182,542 @@ TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
 
-To enable printing of redundant blocks removed and signals merged, set the
-detailed map report option and rerun map.
+Redundant Block(s):
+TYPE 		BLOCK
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/nop_insert_st_wg_lut<5>/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_rcall_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in_or00011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_lds_cmp_eq00002/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_sts_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/dbusout_int_0_or0004119/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_in<7>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_in<8>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_in<9>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_v_flag_out_int23/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_v_flag_out_int213/LUT2_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_in<10>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_in<11>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_in<12>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_in<13>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_in<14>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_in<15>1/LUT3_D_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/TCNT2CmpBl_and00001/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<0>12/LUT4_L_BUF
+LOCALBUF
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/datareg_24_not000111/LUT3_D_B
+UF
+LOCALBUF
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/datareg_10_not000121/LUT3_D_B
+UF
+LOCALBUF
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/datareg_0_not000141/LUT3_D_BU
+F
+LOCALBUF
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/datareg_0_not000111/LUT3_D_BU
+F
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/TIFR_7_not000123/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<1>12/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_ori_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<2>12/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_andi_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<3>12/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<4>12/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_swap_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_neg_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_com_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_v_flag_out_int21/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_c_flag_out_int1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_15_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_inc_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_dec_cmp_eq000011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/skip_inst_start111/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rr_data<31><7>609/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/instruction_code_reg<8>1/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rr_data<31><6>609/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_14_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/alu_data_r_in<5>_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rr_data<31><5>609/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/instruction_code_reg<2>1/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/instruction_code_reg<1>1/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/instruction_code_reg<0>1/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/alu_data_r_in_or00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rr_data<31><4>609/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_13_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_12_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_11_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_10_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_9_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_subi_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_cpi_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_8_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_7_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_6_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_5_or0000_SW0/LUT4_D_BUF
+LOCALBUF
+		AVR_Core_Inst/pm_fetch_dec_Inst/io_file_adr_space_cmp_eq00021/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_0_or0000/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_out<1>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rr_data<31><3>609/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_ror_cmp_eq00001/LUT2_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/alu_data_r_in<0>11/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_asr_cmp_eq000011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<1>17/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<0>17/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<0>44/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_4_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_3_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_h_data_2_or0000_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_out<4>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_out<3>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/reg_h_out<2>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<9>12/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<15>12/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<14>12/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<11>12/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<10>12/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rr_data<31><2>609/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<3>17/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<3>44/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<2>17/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<2>44/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<4>17/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<4>54/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<8>12/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<7>12/LUT4_L_BUF
+LOCALBUF
+		AVR_Core_Inst/pm_fetch_dec_Inst/io_file_adr_space_cmp_eq0000117/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<6>17/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<6>66/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/neg_op_carry_3_and00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/incdec_op_carry_4_and00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/incdec_op_carry_2_and00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_1_or000051/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<7>17/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<7>66/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_2_or000010/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_4_or000039/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_5_or000085/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/alu_data_r_in_or00021/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/adder_carry_5_or00011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/adder_carry_3_or00011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/adder_carry_1_or00011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_c_flag_out_int15/LUT2_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_c_flag_out_int61/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_7_or000039/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_v_flag_out_int6/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_v_flag_out_int143/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<1>112/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/instruction_code_reg<9>1/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in_or00001/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<0>1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<0>1121/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<2>62/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in_or00021/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_wr22/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<4>80/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<3>8/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_mux_out_7_mux00001112/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<7>9/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<7>65/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<7>147/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<7>203/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<6>9/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<6>65/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<6>147/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<6>203/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<5>9/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<5>65/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<5>147/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<5>203/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<4>9/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<4>65/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<4>147/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<4>203/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<3>9/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<3>65/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<3>147/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<3>203/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<2>9/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<2>65/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<2>147/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<2>203/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<1>9/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<1>65/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<1>147/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<1>203/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/skip_inst_start/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/irq_start9/LUT3_L_BUF
+LOCALBUF
+		Inst_papilio_core_template.papilio_core_template_COMP/out_en_cmp_eq00001_SW0/L
+UT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/iore_int1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<0>22/LUT4_L_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/out_en_and000020/LUT4_L_BUF
+LOCALBUF 		EXT_MUX/dbus_out<0>1111/LUT3_D_BUF
+LOCALBUF 		PORTF_Impl.PORTF_COMP/out_en1/LUT3_D_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/dbus_out_cmp_eq00021/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/dbusout_int_0_or00011/LUT2_D_BUF
+LOCALBUF 		ADDRESS_DECODER/avr2io_iowebus_int<10>41/LUT3_D_BUF
+LOCALBUF 		ADDRESS_DECODER/avr2io_iorebus_int<10>41/LUT3_D_BUF
+LOCALBUF 		uart_Inst/UCR_Wr_En_cmp_eq000011/LUT3_D_BUF
+LOCALBUF 		ADDRESS_DECODER/avr2io_iowebus_int<0>41/LUT3_D_BUF
+LOCALBUF 		uart_Inst/UBRR_Wr_En_cmp_eq00002/LUT4_D_BUF
+LOCALBUF 		ADDRESS_DECODER/avr2io_iowebus_int<12>11/LUT4_D_BUF
+LOCALBUF 		ADDRESS_DECODER/avr2io_iorebus_int<12>11/LUT4_D_BUF
+LOCALBUF 		ADDRESS_DECODER/avr2io_iorebus_int<0>61/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<4>20/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<1>20/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<0>20/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<3>20/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<1>8/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<1>30/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<2>8/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<2>30/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<3>8/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<3>30/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<4>8/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<4>30/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<5>8/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<5>30/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/instruction_code_reg<10>1/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<6>8/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<6>30/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<7>8/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<7>30/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<8>8/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<8>30/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<9>8/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<9>30/LUT4_L_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/dbus_out<7>31/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<10>22/LUT2_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/instruction_code_reg<14>1/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/instruction_code_reg<15>1/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/instruction_code_reg<13>1/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/instruction_code_reg<12>1/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/instruction_code_reg<11>1/LUT2_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<7>69/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<7>79/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<7>223/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<6>69/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<6>79/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<6>225/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<6>295/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<6>381/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<5>69/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<5>79/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<5>224/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<4>201/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<4>337/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<4>371/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<2>71/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<2>110/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<2>175/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<3>71/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<3>110/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<3>175/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<3>311/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<3>345/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<1>71/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<1>110/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<1>184/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<1>335/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<0>71/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<0>110/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<0>184/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<0>217/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<0>335/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<0>356/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<9>1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<8>1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<6>1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<14>1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<12>1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<10>1/LUT4_D_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/dbus_out_mux0000<0>32/LUT4_D_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/dbus_out_cmp_eq000111/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_mux_out_7_mux0000146_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65/LUT4_D_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/TCNT2CmpBl_cmp_eq00002/LUT4_D_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/dbus_out_mux0000<0>311/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_bld_cmp_eq000011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<2>317/LUT4_L_BUF
+LOCALBUF 		uart_Inst/UBRR_Wr_En_cmp_eq0000159/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<5>308/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<7>251/LUT4_L_BUF
+LOCALBUF
+		BUTTON_LED_CORE_GEN.Button_LED_avrtop_inst/Wishbone_Button_LED_Core_inst/wb_da
+t_o_0_mux0001111/LUT3_D_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/dbus_out<0>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW2/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW3/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW5/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<5>281_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_elpm_cmp_eq00001_SW1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<4>146_SW0/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<7>483/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<6>538/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<5>498/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_brbc_cmp_eq000011/LUT4_D_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/TCNT0CmpBl_cmp_eq0000143_SW0/LUT4_L_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/TCNT0CmpBl_cmp_eq000012/LUT4_L_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/dbus_out_mux0000<0>32_SW0/LUT3_L_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/out_en_cmp_eq00061/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<2>525/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<3>559/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<4>585/LUT4_L_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/dbus_out_mux0000<0>32_SW1/LUT3_L_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/dbus_out_mux0000<0>32_SW2/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW6/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW7/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<4>433/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<2>407/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<3>407_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_h_adr_1_or00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_h_adr_2_or00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_7_or0000185/LUT4_D_BUF
+LOCALBUF 		PORTE_Impl.PORTE_COMP/DDRx_Sel_cmp_eq0000167/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>4124_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW8/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW9/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW10/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW11/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<7>102_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<6>102_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<5>102_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW12/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW13/LUT4_L_BUF
+LOCALBUF
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/fsm_cs_FSM_FFd7-In1/LUT4_D_BU
+F
+LOCALBUF
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/fsm_cs_FSM_FFd6-In1/LUT4_D_BU
+F
+LOCALBUF
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/fsm_cs_FSM_FFd5-In1/LUT4_D_BU
+F
+LOCALBUF
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/fsm_cs_FSM_FFd4-In1/LUT4_D_BU
+F
+LOCALBUF
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/fsm_cs_FSM_FFd3-In1/LUT4_D_BU
+F
+LOCALBUF
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/fsm_cs_FSM_FFd1-In1/LUT4_D_BU
+F
+LOCALBUF 		PORTF_Impl.PORTF_COMP/DDRx_Sel_cmp_eq0000151/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<1>375_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>1124_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>2124_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>3124_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/BP_Inst/bit_test_op_out65_SW15/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<2>284/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<3>284/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<4>310/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<6>418_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rr_data<31><0>606/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_6_or0000164/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>111/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<4>1/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in_and00021/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<1>50_SW0/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_cbi_cmp_eq000011/LUT4_D_BUF
+LOCALBUF 		uart_Inst/dbus_out_3_or000031/LUT4_D_BUF
+LOCALBUF 		uart_Inst/dbus_out_3_or000021_SW0/LUT4_D_BUF
+LOCALBUF 		uart_Inst/dbus_out_3_or000011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_z_flag_out_int_cmp_eq000055_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_wr56/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr_or00001_SW0/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/IORegs_Inst/sreg_4_mux000145_SW1/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<7>517/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<6>572/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<5>532/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_rd_decode_0_cmp_eq0000111/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/register_wr_en_16_cmp_eq0000111/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/register_wr_en_10_cmp_eq0000111/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<1>569/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<0>569/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_4_or000022/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_6_or000057/LUT4_L_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/TCNT2CmpBl_cmp_eq000011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_7_or000096/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<2>12/LUT4_L_BUF
+LOCALBUF
+		AVR_Core_Inst/pm_fetch_dec_Inst/io_file_adr_space_cmp_eq0000133_SW0/LUT2_L_BUF
+LOCALBUF 		EXT_MUX/dbus_out<0>41/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<3>453_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<7>351_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<5>366_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<4>479_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<1>326_SW1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_pop_cmp_eq000011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_3_or0000105_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_5_or0000180/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/adder_nadd_sub19/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<0>24/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rr_adr<4>/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rr_adr<1>_SW2/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rr_adr<3>_SW2/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rr_adr<2>_SW2/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<14>27_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<13>27_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<0>23/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_add_cmp_eq000011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<2>9/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<0>1/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int_and0000156/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<2>407_SW0_SW1_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<3>407_SW0_SW1_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<4>433_SW0_SW1_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr_or00011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/adr_int<5>11_SW0/LUT3_L_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/out_en_and000012/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_3_or0000190/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<0>65/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<0>203/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<0>9/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_tmp_rd_data_31_mux0000<0>147/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<2>235_SW1/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<3>235/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<4>261/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramre_int_not000121/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_pop_cmp_eq000021/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<6>56_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<5>56_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_0_or0004122/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<0>624/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<5>68_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_5_or00008/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_6_or00008_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_4_or0000227_SW2/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<12>27_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<11>27_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<10>27_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<9>27_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<8>27_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<7>27_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in<15>27_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<1>244_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_2_or000066/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_3_or000022/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_7_or000022/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_1_or0000138/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<4>75/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_4_or0000132/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_6_or0000137/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_2_or0000183/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_adc_cmp_eq00002/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/ramadr_reg_in_or000019_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<1>44/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<0>41/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_c_flag_out_int_or00011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_v_flag_out_int38/LUT3_L_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/TCNT2_mux0002<6>_SW1/LUT4_L_BUF
+LOCALBUF 		TmrCnt_Impl.TmrCnt_Inst/TCNT2_mux0002<4>_SW1/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/io_dec_Inst/dbusin_int<7>214/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_5_or000047/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_data_out_int_3_or000063/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>5124_SW1/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/irq_start264/LUT3_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_eor_cmp_eq000011/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<1>15_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_elpm_cmp_eq00002/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_elpm_cmp_eq00004/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_psinc_or0000/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_cp_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/I66_mux0000<0>221/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_icall_cmp_eq000011/LUT3_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_icall_cmp_eq00001/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/ALU_Inst/alu_v_flag_out_int123_SW0/LUT4_L_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_in<7>94_1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/sg_rd_decode_0_cmp_eq0000111_1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/idc_cbi_cmp_eq000011_1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/register_wr_en_10_cmp_eq0000111_1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/pm_fetch_dec_Inst/reg_rd_adr<2>62_1/LUT4_D_BUF
+LOCALBUF 		AVR_Core_Inst/GPRF_Inst/register_wr_en_16_cmp_eq0000111_1/LUT4_D_BUF
+LUT1 		TmrCnt_Impl.TmrCnt_Inst/Mcount_Pre1Cnt_cy<8>_rt
+LUT1 		TmrCnt_Impl.TmrCnt_Inst/Mcount_Pre1Cnt_cy<7>_rt
+LUT1 		TmrCnt_Impl.TmrCnt_Inst/Mcount_Pre1Cnt_cy<6>_rt
+LUT1 		TmrCnt_Impl.TmrCnt_Inst/Mcount_Pre1Cnt_cy<5>_rt
+LUT1 		TmrCnt_Impl.TmrCnt_Inst/Mcount_Pre1Cnt_cy<4>_rt
+LUT1 		TmrCnt_Impl.TmrCnt_Inst/Mcount_Pre1Cnt_cy<3>_rt
+LUT1 		TmrCnt_Impl.TmrCnt_Inst/Mcount_Pre1Cnt_cy<2>_rt
+LUT1 		TmrCnt_Impl.TmrCnt_Inst/Mcount_Pre1Cnt_cy<1>_rt
+LUT1 		AVR_Core_Inst/pm_fetch_dec_Inst/Msub_adr_int_addsub0000_cy<5>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<14>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<13>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<12>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<11>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<10>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<9>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<8>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<7>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<6>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<5>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<4>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<3>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<2>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_cy<1>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Msub_sp_intm_cy<0>_rt
+LUT1
+		I2C_MASTER_GEN.I2C_MASTER_INST/I2C_MASTER/byte_ctrl/bit_ctrl/Msub_filter_cnt_a
+ddsub0000_cy<0>_rt
+LUT1
+		I2C_MASTER_GEN.I2C_MASTER_INST/I2C_MASTER/byte_ctrl/bit_ctrl/Mcount_cnt_cy<0>_
+rt
+LUT1 		TmrCnt_Impl.TmrCnt_Inst/Mcount_Pre1Cnt_xor<9>_rt
+LUT1 		AVR_Core_Inst/IORegs_Inst/Madd_sp_intp_xor<15>_rt
+INV 		uart_Inst/ireset_inv811_INV_0
+INV 		uart_Inst/ireset_inv811_INV_0_1
+INV 		uart_Inst/ireset_inv811_INV_0_2
+INV 		ram_cp2_n1_INV_0
+INV 		ResetGenerator_Inst/ClrRstDFF_Tmp_inv1_INV_0
+INV 		Inst_papilio_core_template.papilio_core_template_COMP/nReset_inv1_INV_0
+INV 		uart_Inst/USR_4_not00011_INV_0
+INV 		uart_Inst/Div16_In<0>1_INV_0
+INV 		TmrCnt_Impl.TmrCnt_Inst/TIFR_7_mux00001_INV_0
+INV 		TmrCnt_Impl.TmrCnt_Inst/TIFR_6_mux00001_INV_0
+INV 		TmrCnt_Impl.TmrCnt_Inst/TIFR_1_mux00001_INV_0
+INV 		TmrCnt_Impl.TmrCnt_Inst/TIFR_0_mux00001_INV_0
+INV 		TmrCnt_Impl.TmrCnt_Inst/TCNT2WrFl_mux00001_INV_0
+INV 		TmrCnt_Impl.TmrCnt_Inst/TCNT0WrFl_mux00001_INV_0
+INV 		TmrCnt_Impl.TmrCnt_Inst/Cnt2Dir_mux00001_INV_0
+INV 		TmrCnt_Impl.TmrCnt_Inst/Cnt0Dir_mux00001_INV_0
+INV
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/fsel_internal_inv_
+not00011_INV_0
+INV 		JTAGOCDPrgTop_Inst/OCDProgcp2_Inst/pm_l_we_Int_mux00001_INV_0
+INV 		JTAGOCDPrgTop_Inst/OCDProgcp2_Inst/Mcount_FlWrCnt_xor<0>11_INV_0
+INV 		JTAGOCDPrgTop_Inst/OCDProgcp2_Inst/Mcount_FlRdCnt_xor<0>11_INV_0
+INV 		JTAGOCDPrgTop_Inst/OCDProgcp2_Inst/ChipEraseDone1_INV_0
+INV 		AVR_Core_Inst/pm_fetch_dec_Inst/ramwe_int_mux00001_INV_0
+INV 		AVR_Core_Inst/pm_fetch_dec_Inst/ramre_int_mux00001_INV_0
+INV
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/ldda
+ta_inv1_INV_0
+INV
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/ldda
+ta_inv1_INV_0
+INV
+		TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/ldda
+ta_inv1_INV_0
+INV 		ResetGenerator_Inst/ClrRstDFF_Tmp_or00001_INV_0
+INV 		DDRFReg<7>_inv1_INV_0
+INV 		DDRFReg<6>_inv1_INV_0
+INV 		DDRFReg<5>_inv1_INV_0
+INV 		DDRFReg<4>_inv1_INV_0
+INV 		DDRFReg<3>_inv1_INV_0
+INV 		DDRFReg<2>_inv1_INV_0
+INV 		DDRFReg<1>_inv1_INV_0
+INV 		DDRFReg<0>_inv1_INV_0
+INV 		DDREReg<7>_inv1_INV_0
+INV 		DDREReg<6>_inv1_INV_0
+INV 		DDREReg<5>_inv1_INV_0
+INV 		DDREReg<4>_inv1_INV_0
+INV 		DDREReg<3>_inv1_INV_0
+INV 		DDREReg<2>_inv1_INV_0
+INV 		DDREReg<1>_inv1_INV_0
+INV 		DDREReg<0>_inv1_INV_0
+INV 		TmrCnt_Impl.TmrCnt_Inst/TCNT0_mux0002<0>36_INV_0
 
 Section 6 - IOB Properties
 --------------------------
@@ -168,22 +744,22 @@ Section 6 - IOB Properties
 | portb<5>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | portb<6>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | portb<7>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| portc<0>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portc<1>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portc<2>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portc<3>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portc<4>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portc<5>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portc<6>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portc<7>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portc<0>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portc<1>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portc<2>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portc<3>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portc<4>                           | IOB              | OUTPUT    | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portc<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portc<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portc<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
 | portd<0>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
 | portd<1>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portd<2>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portd<3>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portd<4>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portd<5>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portd<6>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
-| portd<7>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
+| portd<2>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portd<3>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portd<4>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portd<5>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portd<6>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| portd<7>                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | porte<0>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
 | porte<1>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
 | porte<2>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
@@ -201,6 +777,8 @@ Section 6 - IOB Properties
 | portf<6>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
 | portf<7>                           | IOB              | BIDIR     | LVCMOS25             |       | 8        | FAST |              |          | 0 / 0    |
 | rxd                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| scl                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| sda                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | txd                                | IOB              | OUTPUT    | LVCMOS25             |       | 4        | SLOW |              |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -234,7 +812,822 @@ This design was not run using timing mode.
 
 Section 11 - Configuration String Details
 -----------------------------------------
-Use the "-detail" map option to print out Configuration Strings
+RAMB16 "DRAM_Inst/RAM_Inst[0].RAM_Byte":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_08 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_09 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_10 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_11 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_12 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_13 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_14 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_15 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_16 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_17 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_18 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_19 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_20 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_21 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_22 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_23 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_24 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_25 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_26 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_27 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_28 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_29 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_30 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_31 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_32 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_33 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+PORTA_ATTR:2048X9
+WRITEMODEA:WRITE_FIRST
+INIT_A = 000
+SRVAL_A = 000
+
+
+RAMB16 "DRAM_Inst/RAM_Inst[1].RAM_Byte":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_08 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_09 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_10 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_11 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_12 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_13 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_14 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_15 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_16 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_17 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_18 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_19 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_20 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_21 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_22 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_23 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_24 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_25 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_26 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_27 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_28 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_29 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_30 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_31 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_32 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_33 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+PORTA_ATTR:2048X9
+WRITEMODEA:WRITE_FIRST
+INIT_A = 000
+SRVAL_A = 000
+
+
+BUFGMUX "Inst_DCM32to16/CLK0_BUFG_INST":
+DISABLE_ATTR:LOW
+
+
+
+BUFGMUX "Inst_DCM32to16/CLKFX_BUFG_INST":
+DISABLE_ATTR:LOW
+
+
+
+DCM "Inst_DCM32to16/DCM_SP_INST":
+CLKDV_DIVIDE:2
+CLKOUT_PHASE_SHIFT:NONE
+CLK_FEEDBACK:1X
+DESKEW_ADJUST:6
+DFS_FREQUENCY_MODE:LOW
+DLL_FREQUENCY_MODE:LOW
+DUTY_CYCLE_CORRECTION:TRUE
+FACTORY_JF1:0XC0
+FACTORY_JF2:0X80
+CLKFX_DIVIDE = 32
+CLKFX_MULTIPLY = 16
+PHASE_SHIFT = 0
+X_CLKIN_PERIOD = 31.2500000000000000
+
+
+RAMB16 "PM_Inst/RAM_Word0":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 0053940C0053940C0053940C0053940C0053940C0053940C0053940C0030940C
+INIT_01 = 0053940C0053940C0053940C0053940C0053940C0053940C0053940C0053940C
+INIT_02 = 0053940C0053940C0053940C0053940C0053940C0053940C0053940C0061940C
+INIT_03 = 95D8C004BF0B9503EF0FE0F1E8E4E0B0E6A0E010BFCDBFDEE0DFEFCFBE1F2411
+INIT_04 = 940EF7E107B136A9921DC001E0B0E6A0E010BE1BF7C907B136A0F3C89631920D
+INIT_05 = 0059940E0055940E00A9940E9508950810009380E0830000940C00C0940C005A
+INIT_06 = 006591900064918093BF93AF939F938F933F932F2411920FB60F920F921FCFFD
+INIT_07 = 1DA19601572DF020372D5F2D2F231DB11DA1960100689130006791B0006691A0
+INIT_08 = 91A00061919000609180006793B0006693A00065939000649380006893201DB1
+INIT_09 = 91AF91BF006393B0006293A000619390006093801DB11DA19601006391B00062
+INIT_0a = BF876081B787BF836084B78394789518901F900FBE0F900F912F913F918F919F
+INIT_0b = 9508BD856081B585BD856082B585BD8F6081B58FBD8E6081B58EBD8E6082B58E
+INIT_0c = 00000000000000000000000000000000000000000000000000000000CFFF94F8
+INIT_0d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_10 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_11 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_12 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_13 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_14 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_15 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_16 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_17 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_18 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_19 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_20 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_21 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_22 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_23 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_24 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_25 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_26 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_27 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_28 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_29 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_30 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_31 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_32 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_33 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+PORTA_ATTR:1024X18
+WRITEMODEA:WRITE_FIRST
+INIT_A = 00000
+SRVAL_A = 00000
+
+
+RAMB16 "PM_Inst/RAM_Word1":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_08 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_09 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_10 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_11 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_12 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_13 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_14 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_15 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_16 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_17 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_18 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_19 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_20 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_21 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_22 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_23 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_24 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_25 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_26 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_27 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_28 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_29 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_30 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_31 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_32 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_33 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+PORTA_ATTR:1024X18
+WRITEMODEA:WRITE_FIRST
+INIT_A = 00000
+SRVAL_A = 00000
+
+
+RAMB16 "PM_Inst/RAM_Word2":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_08 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_09 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_10 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_11 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_12 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_13 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_14 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_15 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_16 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_17 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_18 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_19 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_20 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_21 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_22 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_23 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_24 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_25 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_26 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_27 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_28 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_29 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_30 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_31 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_32 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_33 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+PORTA_ATTR:1024X18
+WRITEMODEA:WRITE_FIRST
+INIT_A = 00000
+SRVAL_A = 00000
+
+
+RAMB16 "PM_Inst/RAM_Word3":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_08 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_09 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_10 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_11 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_12 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_13 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_14 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_15 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_16 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_17 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_18 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_19 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_20 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_21 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_22 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_23 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_24 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_25 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_26 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_27 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_28 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_29 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_30 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_31 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_32 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_33 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+PORTA_ATTR:1024X18
+WRITEMODEA:WRITE_FIRST
+INIT_A = 00000
+SRVAL_A = 00000
+
+
+RAMB16 "PM_Inst/RAM_Word4":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_08 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_09 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_10 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_11 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_12 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_13 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_14 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_15 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_16 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_17 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_18 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_19 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_20 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_21 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_22 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_23 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_24 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_25 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_26 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_27 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_28 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_29 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_30 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_31 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_32 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_33 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+PORTA_ATTR:1024X18
+WRITEMODEA:WRITE_FIRST
+INIT_A = 00000
+SRVAL_A = 00000
+
+
+RAMB16 "PM_Inst/RAM_Word5":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_08 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_09 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_10 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_11 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_12 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_13 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_14 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_15 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_16 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_17 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_18 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_19 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_20 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_21 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_22 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_23 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_24 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_25 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_26 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_27 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_28 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_29 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_30 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_31 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_32 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_33 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+PORTA_ATTR:1024X18
+WRITEMODEA:WRITE_FIRST
+INIT_A = 00000
+SRVAL_A = 00000
+
+
+RAMB16 "PM_Inst/RAM_Word6":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_08 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_09 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_10 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_11 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_12 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_13 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_14 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_15 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_16 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_17 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_18 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_19 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_20 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_21 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_22 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_23 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_24 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_25 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_26 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_27 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_28 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_29 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_30 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_31 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_32 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_33 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+PORTA_ATTR:1024X18
+WRITEMODEA:WRITE_FIRST
+INIT_A = 00000
+SRVAL_A = 00000
+
+
+RAMB16 "PM_Inst/RAM_Word7":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_08 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_09 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_10 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_11 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_12 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_13 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_14 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_15 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_16 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_17 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_18 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_19 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_20 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_21 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_22 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_23 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_24 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_25 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_26 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_27 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_28 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_29 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_30 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_31 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_32 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_33 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+PORTA_ATTR:1024X18
+WRITEMODEA:WRITE_FIRST
+INIT_A = 00000
+SRVAL_A = 00000
+
+
 
 Section 12 - Control Set Information
 ------------------------------------
@@ -242,4 +1635,109 @@ No control set information for this architecture.
 
 Section 13 - Utilization by Hierarchy
 -------------------------------------
-Use the "-detail" map option to print out the Utilization by Hierarchy section.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                                                     | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                                                                                          |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Papilio_AVR8/                                              |           | 183/3985      | 0/2423        | 106/5198      | 0/6           | 0/10      | 0/0       | 0/2   | 0/1   | Papilio_AVR8                                                                                                    |
+| +ADDRESS_DECODER                                           |           | 8/8           | 0/0           | 12/12         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/ADDRESS_DECODER                                                                                    |
+| +AVR_Core_Inst                                             |           | 0/1277        | 0/470         | 0/1887        | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/AVR_Core_Inst                                                                                      |
+| ++ALU_Inst                                                 |           | 78/78         | 0/0           | 134/134       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/AVR_Core_Inst/ALU_Inst                                                                             |
+| ++BP_Inst                                                  |           | 53/53         | 14/14         | 50/50         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/AVR_Core_Inst/BP_Inst                                                                              |
+| ++GPRF_Inst                                                |           | 406/406       | 256/256       | 547/547       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/AVR_Core_Inst/GPRF_Inst                                                                            |
+| ++IORegs_Inst                                              |           | 68/68         | 32/32         | 98/98         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/AVR_Core_Inst/IORegs_Inst                                                                          |
+| ++io_dec_Inst                                              |           | 186/186       | 0/0           | 323/323       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/AVR_Core_Inst/io_dec_Inst                                                                          |
+| ++pm_fetch_dec_Inst                                        |           | 486/486       | 168/168       | 735/735       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/AVR_Core_Inst/pm_fetch_dec_Inst                                                                    |
+| +ArbiterAndMux_Inst                                        |           | 11/11         | 0/0           | 19/19         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/ArbiterAndMux_Inst                                                                                 |
+| +BUTTON_LED_CORE_GEN.Button_LED_avrtop_inst                |           | 0/24          | 0/25          | 0/25          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/BUTTON_LED_CORE_GEN.Button_LED_avrtop_inst                                                         |
+| ++Wishbone_Button_LED_Core_inst                            |           | 24/24         | 25/25         | 25/25         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/BUTTON_LED_CORE_GEN.Button_LED_avrtop_inst/Wishbone_Button_LED_Core_inst                           |
+| +DRAM_Inst                                                 |           | 1/1           | 0/0           | 2/2           | 0/0           | 2/2       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/DRAM_Inst                                                                                          |
+| +EXT_MUX                                                   |           | 5/5           | 0/0           | 6/6           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/EXT_MUX                                                                                            |
+| +I2C_MASTER_GEN.I2C_MASTER_INST                            |           | 0/172         | 0/152         | 0/268         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/I2C_MASTER_GEN.I2C_MASTER_INST                                                                     |
+| ++I2C_MASTER                                               |           | 56/172        | 54/152        | 72/268        | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/I2C_MASTER_GEN.I2C_MASTER_INST/I2C_MASTER                                                          |
+| +++byte_ctrl                                               |           | 31/116        | 23/98         | 53/196        | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/I2C_MASTER_GEN.I2C_MASTER_INST/I2C_MASTER/byte_ctrl                                                |
+| ++++bit_ctrl                                               |           | 85/85         | 75/75         | 143/143       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/I2C_MASTER_GEN.I2C_MASTER_INST/I2C_MASTER/byte_ctrl/bit_ctrl                                       |
+| +Inst_DCM32to16                                            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0       | 2/2   | 1/1   | Papilio_AVR8/Inst_DCM32to16                                                                                     |
+| +Inst_papilio_core_template.papilio_core_template_COMP     |           | 10/10         | 12/12         | 6/6           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/Inst_papilio_core_template.papilio_core_template_COMP                                              |
+| +JTAGOCDPrgTop_Inst                                        |           | 0/21          | 0/23          | 0/31          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/JTAGOCDPrgTop_Inst                                                                                 |
+| ++OCDProgcp2_Inst                                          |           | 21/21         | 23/23         | 31/31         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/JTAGOCDPrgTop_Inst/OCDProgcp2_Inst                                                                 |
+| +PM_Inst                                                   |           | 37/37         | 0/0           | 72/72         | 0/0           | 8/8       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PM_Inst                                                                                            |
+| +PORTE_Impl.PORTE_COMP                                     |           | 18/26         | 24/32         | 7/7           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTE_Impl.PORTE_COMP                                                                              |
+| ++SynchDFF.PINxDFFSynchronizer[0].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTE_Impl.PORTE_COMP/SynchDFF.PINxDFFSynchronizer[0].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[1].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTE_Impl.PORTE_COMP/SynchDFF.PINxDFFSynchronizer[1].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[2].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTE_Impl.PORTE_COMP/SynchDFF.PINxDFFSynchronizer[2].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[3].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTE_Impl.PORTE_COMP/SynchDFF.PINxDFFSynchronizer[3].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[4].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTE_Impl.PORTE_COMP/SynchDFF.PINxDFFSynchronizer[4].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[5].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTE_Impl.PORTE_COMP/SynchDFF.PINxDFFSynchronizer[5].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[6].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTE_Impl.PORTE_COMP/SynchDFF.PINxDFFSynchronizer[6].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[7].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTE_Impl.PORTE_COMP/SynchDFF.PINxDFFSynchronizer[7].PINxDFFSynchronizer_Inst                     |
+| +PORTF_Impl.PORTF_COMP                                     |           | 18/26         | 24/32         | 8/8           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTF_Impl.PORTF_COMP                                                                              |
+| ++SynchDFF.PINxDFFSynchronizer[0].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTF_Impl.PORTF_COMP/SynchDFF.PINxDFFSynchronizer[0].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[1].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTF_Impl.PORTF_COMP/SynchDFF.PINxDFFSynchronizer[1].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[2].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTF_Impl.PORTF_COMP/SynchDFF.PINxDFFSynchronizer[2].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[3].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTF_Impl.PORTF_COMP/SynchDFF.PINxDFFSynchronizer[3].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[4].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTF_Impl.PORTF_COMP/SynchDFF.PINxDFFSynchronizer[4].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[5].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTF_Impl.PORTF_COMP/SynchDFF.PINxDFFSynchronizer[5].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[6].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTF_Impl.PORTF_COMP/SynchDFF.PINxDFFSynchronizer[6].PINxDFFSynchronizer_Inst                     |
+| ++SynchDFF.PINxDFFSynchronizer[7].PINxDFFSynchronizer_Inst |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/PORTF_Impl.PORTF_COMP/SynchDFF.PINxDFFSynchronizer[7].PINxDFFSynchronizer_Inst                     |
+| +RAM_Data_Register                                         |           | 4/4           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/RAM_Data_Register                                                                                  |
+| +ResetGenerator_Inst                                       |           | 8/8           | 9/9           | 3/3           | 2/2           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/ResetGenerator_Inst                                                                                |
+| +TDES_CORE_GEN.tdes_avrtop_i                               |           | 0/1913        | 0/1450        | 0/2426        | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i                                                                        |
+| ++Wishbone_TDES_Core_i                                     |           | 170/1913      | 247/1450      | 119/2426      | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i                                                   |
+| +++tdes_top_i                                              |           | 212/1743      | 413/1203      | 117/2307      | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i                                        |
+| ++++DESCIPHERTOP1                                          |           | 33/510        | 65/263        | 0/730         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1                          |
+| +++++DESTOP                                                |           | 127/291       | 142/142       | 187/426       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP                   |
+| ++++++BLOCKTOP                                             |           | 0/164         | 0/0           | 0/239         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP          |
+| +++++++ADDKEY                                              |           | 38/38         | 0/0           | 49/49         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/ADDKEY   |
+| +++++++ADDLEFT                                             |           | 32/32         | 0/0           | 64/64         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/ADDLEFT  |
+| +++++++SBOX                                                |           | 0/94          | 0/0           | 0/126         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/SBOX     |
+| ++++++++S1                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/SBOX/S1  |
+| ++++++++S2                                                 |           | 12/12         | 0/0           | 15/15         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/SBOX/S2  |
+| ++++++++S3                                                 |           | 11/11         | 0/0           | 15/15         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/SBOX/S3  |
+| ++++++++S4                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/SBOX/S4  |
+| ++++++++S5                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/SBOX/S5  |
+| ++++++++S6                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/SBOX/S6  |
+| ++++++++S7                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/SBOX/S7  |
+| ++++++++S8                                                 |           | 11/11         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/SBOX/S8  |
+| +++++KEYSCHEDULE                                           |           | 186/186       | 56/56         | 304/304       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/KEYSCHEDULE              |
+| ++++DESCIPHERTOP2                                          |           | 33/510        | 65/263        | 0/730         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2                          |
+| +++++DESTOP                                                |           | 127/291       | 142/142       | 187/426       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP                   |
+| ++++++BLOCKTOP                                             |           | 0/164         | 0/0           | 0/239         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP          |
+| +++++++ADDKEY                                              |           | 38/38         | 0/0           | 49/49         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/ADDKEY   |
+| +++++++ADDLEFT                                             |           | 32/32         | 0/0           | 64/64         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/ADDLEFT  |
+| +++++++SBOX                                                |           | 0/94          | 0/0           | 0/126         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/SBOX     |
+| ++++++++S1                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/SBOX/S1  |
+| ++++++++S2                                                 |           | 12/12         | 0/0           | 15/15         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/SBOX/S2  |
+| ++++++++S3                                                 |           | 11/11         | 0/0           | 15/15         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/SBOX/S3  |
+| ++++++++S4                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/SBOX/S4  |
+| ++++++++S5                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/SBOX/S5  |
+| ++++++++S6                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/SBOX/S6  |
+| ++++++++S7                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/SBOX/S7  |
+| ++++++++S8                                                 |           | 11/11         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/SBOX/S8  |
+| +++++KEYSCHEDULE                                           |           | 186/186       | 56/56         | 304/304       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/KEYSCHEDULE              |
+| ++++DESCIPHERTOP3                                          |           | 33/511        | 65/264        | 0/730         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3                          |
+| +++++DESTOP                                                |           | 127/291       | 142/142       | 187/426       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP                   |
+| ++++++BLOCKTOP                                             |           | 0/164         | 0/0           | 0/239         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP          |
+| +++++++ADDKEY                                              |           | 38/38         | 0/0           | 49/49         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/ADDKEY   |
+| +++++++ADDLEFT                                             |           | 32/32         | 0/0           | 64/64         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/ADDLEFT  |
+| +++++++SBOX                                                |           | 0/94          | 0/0           | 0/126         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/SBOX     |
+| ++++++++S1                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/SBOX/S1  |
+| ++++++++S2                                                 |           | 12/12         | 0/0           | 15/15         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/SBOX/S2  |
+| ++++++++S3                                                 |           | 11/11         | 0/0           | 15/15         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/SBOX/S3  |
+| ++++++++S4                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/SBOX/S4  |
+| ++++++++S5                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/SBOX/S5  |
+| ++++++++S6                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/SBOX/S6  |
+| ++++++++S7                                                 |           | 12/12         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/SBOX/S7  |
+| ++++++++S8                                                 |           | 11/11         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/SBOX/S8  |
+| +++++KEYSCHEDULE                                           |           | 187/187       | 57/57         | 304/304       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/KEYSCHEDULE              |
+| +TmrCnt_Impl.TmrCnt_Inst                                   |           | 147/147       | 98/98         | 193/193       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/TmrCnt_Impl.TmrCnt_Inst                                                                            |
+| +uart_Inst                                                 |           | 112/112       | 112/112       | 127/127       | 4/4           | 0/0       | 0/0       | 0/0   | 0/0   | Papilio_AVR8/uart_Inst                                                                                          |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

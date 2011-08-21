@@ -1,11 +1,11 @@
-Release 13.1 - par O.40d (nt64)
+Release 13.1 - par O.40d (nt)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Tue May 03 17:36:50 2011
+Sun Aug 21 20:05:11 2011
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 12 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 20 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
    porta<2>_IBUF
@@ -20,5 +20,13 @@ WARNING:ParHelpers:361 - There are 12 loadless signals in this design. This desi
    portb<5>_IBUF
    portb<6>_IBUF
    portb<7>_IBUF
+   portd<2>_IBUF
+   portd<3>_IBUF
+   portd<4>_IBUF
+   portd<5>_IBUF
+   portd<6>_IBUF
+   portd<7>_IBUF
+   scl_IBUF
+   sda_IBUF
 
 

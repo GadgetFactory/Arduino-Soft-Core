@@ -53,14 +53,14 @@ ARCHITECTURE behavior OF testbench IS
 
 	-- UART 
 	rxd    : in    std_logic;
-	txd    : out   std_logic;
+	txd    : out   std_logic
 
         -- I2C
-        scl : inout std_logic;
-        sda : inout std_logic;
+--        scl : inout std_logic;
+--        sda : inout std_logic;
 
-        buttons_i : in  std_logic_vector(3 downto 0);
-        leds_o    : out std_logic_vector(3 downto 0) 
+--        buttons_i : in  std_logic_vector(3 downto 0);
+--        leds_o    : out std_logic_vector(3 downto 0) 
 
         );
     END COMPONENT;
@@ -94,30 +94,33 @@ ARCHITECTURE behavior OF testbench IS
 
    -- Clock period definitions
    constant clk_period : time := 1us;
+
+   signal leds_buttons : std_logic_vector(7 downto 0);
  
 BEGIN
- 
+
+  leds_buttons <= leds & buttons;
 	-- Instantiate the Unit Under Test (UUT)
    uut: Papilio_AVR8 PORT MAP (
           nrst => nrst,
           clk => clk,
           porta => porta,
           portb => portb,
-          portc => portc,
+          portc => leds_buttons,
           portd => portd,
           porte => porte,
           portf => portf,
           rxd => rxd,
-          txd => txd,
-          scl => scl,
-          sda => sda,
-          buttons_i => buttons,
-          leds_o => leds
+          txd => txd
+--          scl => scl,
+--          sda => sda,
+--          buttons_i => buttons,
+--          leds_o => leds
         );
 
    -- pull ups for I2C pads
-   scl_pullup : pullup PORT MAP (O => scl);
-   sda_pullup : pullup PORT MAP (O => sda);   
+   scl_pullup : pullup PORT MAP (O => portd(0));
+   sda_pullup : pullup PORT MAP (O => portd(1));   
 
    -- Clock process definitions
    clk_process :process
@@ -139,8 +142,8 @@ BEGIN
 
       -- insert stimulus here 
 		nrst <= '1';
-		portb <= "11111111";
-		portd <= "10101010";
+--		portb <= "11111111";
+		portd <= "11111111";
 --		wait for clk_period*10;
 --		nrst <= '0';
 --		wait for clk_period*10;	

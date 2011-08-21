@@ -15,3 +15,5 @@ at 0 ps, Instance /testbench/uut/DRAM_Inst/ : Warning: CONV_INTEGER: There is an
 at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 Finished circuit initialization process.
 at 0 ps, Instance /testbench/uut/PM_Inst/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# run all
+Stopped at time : 48059500 ns : File "X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/alu_avr.vhd" Line 165

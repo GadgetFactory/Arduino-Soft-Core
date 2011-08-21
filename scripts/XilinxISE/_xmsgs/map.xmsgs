@@ -5,64 +5,142 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portb&lt;2&gt;_IBUF</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">portb&lt;2&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">11</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">portb&lt;3&gt;_IBUF,
-portb&lt;4&gt;_IBUF,
-portb&lt;5&gt;_IBUF,
-portb&lt;6&gt;_IBUF,
-portb&lt;7&gt;_IBUF</arg>
-To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portb&lt;3&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="info" file="MapLib" num="562" delta="new" >No environment variables are currently set.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portb&lt;4&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="info" file="MapLib" num="159" delta="new" >Net Timing constraints on signal <arg fmt="%s" index="1">clk</arg> are pushed forward through input buffer.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portb&lt;5&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy&lt;8&gt;132</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy&lt;8&gt;520_SW1</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portb&lt;6&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">porta&lt;2&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portb&lt;7&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">porta&lt;3&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portd&lt;2&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">porta&lt;4&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portd&lt;3&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">porta&lt;5&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portd&lt;4&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">porta&lt;6&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">porta&lt;2&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">portb&lt;2&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portd&lt;5&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">porta&lt;7&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">porta&lt;3&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">portb&lt;3&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portd&lt;6&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">portb&lt;4&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">porta&lt;4&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">portb&lt;5&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">portd&lt;7&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">portb&lt;6&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">porta&lt;5&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">portb&lt;7&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">porta&lt;6&gt;_IBUF</arg> has no load.
 </msg>
 
-<msg type="info" file="PhysDesignRules" num="772" delta="new" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">Inst_DCM32to16/DCM_SP_INST</arg>, consult the device Interactive Data Sheet.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">porta&lt;7&gt;_IBUF</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">sda_IBUF</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">scl_IBUF</arg> has no load.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="MapLib" num="159" delta="old" >Net Timing constraints on signal <arg fmt="%s" index="1">clk</arg> are pushed forward through input buffer.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux000022</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DESTOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux00002_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux000022</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DESTOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux00002_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux000022</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DESTOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux00002_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">sda_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">scl_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">porta&lt;2&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">porta&lt;3&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">porta&lt;4&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">porta&lt;5&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">porta&lt;6&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portb&lt;2&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">porta&lt;7&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portb&lt;3&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portb&lt;4&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portb&lt;5&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portb&lt;6&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portb&lt;7&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portd&lt;2&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portd&lt;3&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portd&lt;4&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portd&lt;5&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portd&lt;6&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">portd&lt;7&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="info" file="PhysDesignRules" num="772" delta="old" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">Inst_DCM32to16/DCM_SP_INST</arg>, consult the device Interactive Data Sheet.
 </msg>
 
 </messages>

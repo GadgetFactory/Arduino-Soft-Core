@@ -3,8 +3,26 @@ ISim O.40d (signature 0x79f3f3a8)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/s8_box.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/s7_box.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/s6_box.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/s5_box.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/s4_box.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/s3_box.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/s2_box.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/s1_box.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/s_box.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/p_box.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/e_expansion_function.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/add_left.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/add_key.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/block_top.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/key_schedule.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/des_top.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/des_cipher_top.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/i2c_master/i2c_master_bit_ctrl.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/CommonPacks/SynthCtrlPack.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/tdes_top.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/i2c_master/i2c_master_byte_ctrl.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/JTAGTAPCtrlSMPack.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/JTAGProgrammerPack.vhd" into library work
@@ -12,6 +30,7 @@ Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../..
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/JTAG_OCD_Prg/JTAGDataPack.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/CommonPacks/AVRuCPackage.vhd" into library work
 WARNING:HDLCompiler:443 - "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/CommonPacks/AVRuCPackage.vhd" Line 181: Function log2 does not always return a value.
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/Wishbone_tdes_core.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/SynchronizerLatch.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/SynchronizerDFF.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/SynchronizerCompPack.vhd" into library work
@@ -42,6 +61,7 @@ Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../..
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/uC/Addr_Decoder.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/uart.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/Timer_Counter.vhd" into library work
+Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/tdes/tdes_avrtop.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/portx.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/i2c_master/i2c_master_avrtop.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Peripheral/Button_LED_Core/Button_LED_avrtop.vhd" into library work
@@ -56,13 +76,11 @@ Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../..
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/Core/avr_core.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/DCM32to16.vhd" into library work
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/uC/Papilio_AVR8.vhd" into library work
-WARNING:HDLCompiler:946 - "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/uC/Papilio_AVR8.vhd" Line 868: Actual for formal port reset_i is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/../../sources/uC/Papilio_AVR8.vhd" Line 910: Actual for formal port reset_i is neither a static name nor a globally static expression
 Parsing VHDL file "X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/testbench.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 118648 KB
-Fuse CPU Usage: 3577 ms
+Fuse Memory Usage: 119864 KB
+Fuse CPU Usage: 5046 ms
 Using precompiled package standard from library std
 Using precompiled package std_logic_1164 from library ieee
 Using precompiled package std_logic_arith from library ieee
@@ -103,8 +121,6 @@ Compiling architecture rtl of entity addr_decoder [addr_decoder_default]
 Compiling architecture rtl of entity ramdatareg [ramdatareg_default]
 Compiling architecture rtl of entity external_mux [external_mux_default]
 Compiling architecture rtl of entity synchronizerdff [synchronizerdff_default]
-Compiling architecture rtl of entity pport [\pport(2)\]
-Compiling architecture rtl of entity pport [\pport(3)\]
 Compiling architecture rtl of entity pport [\pport(4)\]
 Compiling architecture rtl of entity pport [\pport(5)\]
 Compiling architecture rtl of entity timer_counter [timer_counter_default]
@@ -131,6 +147,26 @@ Compiling architecture rtl of entity avr2wishbone_bridge [avr2wishbone_bridge_de
 Compiling architecture struct of entity i2c_master_avrtop [i2c_master_avrtop_default]
 Compiling architecture rtl of entity wishbone_button_led_core [wishbone_button_led_core_default]
 Compiling architecture struct of entity button_led_avrtop [button_led_avrtop_default]
+Compiling architecture behavioral of entity key_schedule [key_schedule_default]
+Compiling architecture behavioral of entity e_expansion_function [e_expansion_function_default]
+Compiling architecture behavioral of entity add_key [add_key_default]
+Compiling architecture behavioral of entity s1_box [s1_box_default]
+Compiling architecture behavioral of entity s2_box [s2_box_default]
+Compiling architecture behavioral of entity s3_box [s3_box_default]
+Compiling architecture behavioral of entity s4_box [s4_box_default]
+Compiling architecture behavioral of entity s5_box [s5_box_default]
+Compiling architecture behavioral of entity s6_box [s6_box_default]
+Compiling architecture behavioral of entity s7_box [s7_box_default]
+Compiling architecture behavioral of entity s8_box [s8_box_default]
+Compiling architecture behavioral of entity s_box [s_box_default]
+Compiling architecture behavioral of entity p_box [p_box_default]
+Compiling architecture behavioral of entity add_left [add_left_default]
+Compiling architecture behavioral of entity block_top [block_top_default]
+Compiling architecture behavioral of entity des_top [des_top_default]
+Compiling architecture behavioral of entity des_cipher_top [des_cipher_top_default]
+Compiling architecture behavioral of entity tdes_top [tdes_top_default]
+Compiling architecture rtl of entity wishbone_tdes_core [wishbone_tdes_core_default]
+Compiling architecture struct of entity tdes_avrtop [tdes_avrtop_default]
 Compiling architecture rtl of entity arbiterandmux [arbiterandmux_default]
 Compiling architecture rtl of entity memrdmux [memrdmux_default]
 Compiling architecture rtl of entity ramadrdcd [ramadrdcd_default]
@@ -138,8 +174,8 @@ Compiling architecture struct of entity papilio_avr8 [papilio_avr8_default]
 Compiling architecture pullup_v of entity pullup [pullup_default]
 Compiling architecture behavior of entity testbench
 Time Resolution for simulation is 1ps.
-Waiting for 63 sub-compilation(s) to finish...
-Compiled 123 VHDL Units
+Waiting for 80 sub-compilation(s) to finish...
+Compiled 159 VHDL Units
 Built simulation executable X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/testbench_isim_beh.exe
-Fuse Memory Usage: 164516 KB
-Fuse CPU Usage: 7156 ms
+Fuse Memory Usage: 165732 KB
+Fuse CPU Usage: 9874 ms

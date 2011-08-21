@@ -39,11 +39,11 @@ entity Papilio_AVR8 is port(
 
   -- I2C
   scl : inout std_logic;
-  sda : inout std_logic;
+  sda : inout std_logic
 
   -- Buttons/LEDs
-  buttons_i : in  std_logic_vector(3 downto 0);  -- input from buttons
-  leds_o    : out std_logic_vector(3 downto 0)  -- output to LEDs
+--  buttons_i : in  std_logic_vector(3 downto 0);  -- input from buttons
+--  leds_o    : out std_logic_vector(3 downto 0)  -- output to LEDs
 
   );
 
@@ -54,8 +54,8 @@ architecture Struct of Papilio_AVR8 is
 -- Use these setting to control which peripherals you want to include with your custom AVR8 implementation.
   constant CImplPORTA                 : boolean := false;
   constant CImplPORTB                 : boolean := false;
-  constant CImplPORTC                 : boolean := true;
-  constant CImplPORTD                 : boolean := true;
+  constant CImplPORTC                 : boolean := false;
+  constant CImplPORTD                 : boolean := false;
   constant CImplPORTE                 : boolean := true;
   constant CImplPORTF                 : boolean := true;
   constant CImplUART                  : boolean := true;  --AVR8 UART peripheral
@@ -63,6 +63,7 @@ architecture Struct of Papilio_AVR8 is
   constant CImplpapilio_core_template : boolean := true;  --An example User Core, use this template to make your own custom peripherals.
   constant CImplI2CMaster             : boolean := true;  --I2C Master
   constant CImplButtonLED             : boolean := true;  --Button/LED Core
+  constant CImplTDES                  : boolean := true;  --Triple DES Core
 
   component XDM4Kx8 port(
     cp2     : in  std_logic;
@@ -166,7 +167,8 @@ architecture Struct of Papilio_AVR8 is
 
 -- ################################## Reset signals #############################################
   signal core_ireset : std_logic;
-
+  signal core_ireset_inv : std_logic;
+  
 -- ##############################################################################################
 
 -- Port signals
@@ -333,6 +335,10 @@ architecture Struct of Papilio_AVR8 is
 -- Buttons/LEDs (added 05.16.2011)
   signal buttonled_dbusout : std_logic_vector (7 downto 0);
   signal buttonled_out_en  : std_logic;
+
+-- Triple DES (added 08.17.2011)
+  signal tdes_dbusout : std_logic_vector (7 downto 0);
+  signal tdes_out_en  : std_logic;
   
 -- ###############################################################################################################
 
@@ -398,14 +404,14 @@ begin
 -- Unused IRQ lines
   core_irqlines(7 downto 4)   <= (others => '0');
   core_irqlines(3 downto 0)   <= (others => '0');
-  core_irqlines(13 downto 10) <= (others => '0');
+  core_irqlines(13)           <= '0';
   core_irqlines(16)           <= '0';
   core_irqlines(22 downto 20) <= (others => '0');
 -- ************************
 
 -- Unused out_en
-  io_port_out_en(10 to 15) <= (others => '0');
-  io_port_out(10 to 15)    <= (others => (others => '0'));
+  io_port_out_en(13 to 15) <= (others => '0');
+  io_port_out(13 to 15)    <= (others => (others => '0'));
 
   AVR_Core_Inst : component AVR_Core port map(
     --Clock and reset
@@ -754,6 +760,8 @@ begin
     nrst_clksw => nrst_clksw
     );
 
+  core_ireset_inv <= not core_ireset;
+
   
   ClockGatingDis : if not CImplClockSw generate
     core_cp2 <= clk16M;
@@ -864,8 +872,8 @@ begin
 I2C_MASTER_GEN: if (CImplI2CMaster) generate
   I2C_MASTER_INST : component i2c_master_avrtop
     port map (
-      clk_i        => clk,              -- 1MHz (?)
-      reset_i      => not core_ireset,  -- Wishbone sync reset is HI asserted
+      clk_i        => clk16M,           -- 
+      reset_i      => core_ireset_inv,  -- Wishbone sync reset is HI asserted
       avr_adr_i    => core_adr(7 downto 0),
       avr_dbus_i   => core_dbusout,
       iore_i       => core_iorebus(10),
@@ -886,10 +894,14 @@ I2C_MASTER_GEN: if (CImplI2CMaster) generate
   io_port_out_en(10) <= i2cmaster_out_en;
 
 -- I2C pads
-  scl <= scl_pad_o when (scl_padoen_o = '0') else 'Z';
-  sda <= sda_pad_o when (sda_padoen_o = '0') else 'Z';
-  scl_pad_i <= scl;
-  sda_pad_i <= sda;
+--  scl <= scl_pad_o when (scl_padoen_o = '0') else 'Z';
+--  sda <= sda_pad_o when (sda_padoen_o = '0') else 'Z';
+--  scl_pad_i <= scl;
+--  sda_pad_i <= sda;
+  portd(0) <= scl_pad_o when (scl_padoen_o = '0') else 'Z';
+  portd(1) <= sda_pad_o when (sda_padoen_o = '0') else 'Z';
+  scl_pad_i <= portd(0);
+  sda_pad_i <= portd(1);
   
 end generate I2C_MASTER_GEN;
 
@@ -906,17 +918,23 @@ end generate I2C_MASTER_NOGEN;
 BUTTON_LED_CORE_GEN: if (CImplButtonLED) generate
   Button_LED_avrtop_inst : Button_LED_avrtop
     port map (
-      clk_i            => clk,
-      reset_i          => not core_ireset,  -- Wishbone sync reset is HI asserted
+      clk_i            => clk16M,
+      reset_i          => core_ireset_inv,  -- Wishbone sync reset is HI asserted
       avr_adr_i        => core_adr(7 downto 0),
       avr_dbus_i       => core_dbusout,
       iore_i           => core_iorebus(11),
       iowe_i           => core_iowebus(11),
       out_en_o         => buttonled_out_en,
       avr_dbus_o       => buttonled_dbusout,
-      buttons_i        => buttons_i,
-      leds_o           => leds_o,
+--      buttons_i        => buttons_i,
+      buttons_i        => portc(3 downto 0),
+--      leds_o           => leds_o,
+      leds_o           => portc(7 downto 4),
       button_led_int_o => core_irqlines(11));
+
+  io_port_out(11)    <= buttonled_dbusout;
+  io_port_out_en(11) <= buttonled_out_en;
+
 end generate BUTTON_LED_CORE_GEN;
 
 BUTTON_LED_CORE_NOGEN: if (not CImplButtonLED) generate
@@ -925,6 +943,31 @@ BUTTON_LED_CORE_NOGEN: if (not CImplButtonLED) generate
   core_irqlines(11)  <= '0';
 end generate BUTTON_LED_CORE_NOGEN;
 
+-- *******************************************************************************************************      
+-- Triple DES Core (added 08.17.2011)
+-- *******************************************************************************************************      
+TDES_CORE_GEN: if (CImplTDES) generate
+  tdes_avrtop_i : tdes_avrtop
+    port map (
+      clk_i      => clk16M,
+      reset_i    => core_ireset_inv,  -- Wishbone sync reset is HI asserted
+      avr_adr_i  => core_adr(7 downto 0),
+      avr_dbus_i => core_dbusout,
+      iore_i     => core_iorebus(12),
+      iowe_i     => core_iowebus(12),
+      out_en_o   => tdes_out_en,
+      avr_dbus_o => tdes_dbusout,
+      tdes_int_o => core_irqlines(12));
+
+  io_port_out(12)    <= tdes_dbusout;
+  io_port_out_en(12) <= tdes_out_en;
+end generate TDES_CORE_GEN;
+
+TDES_CORE_NOGEN: if (not CImplTDES) generate
+  io_port_out(12)    <= (others => '0');
+  io_port_out_en(12) <= '0';
+  core_irqlines(12)  <= '0';
+end generate TDES_CORE_NOGEN;
 
 -- *******************************************************************************************************      
 -- Arbiter and mux

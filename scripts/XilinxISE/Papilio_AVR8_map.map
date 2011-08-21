@@ -1,25 +1,43 @@
-Release 13.1 Map O.40d (nt64)
+Release 13.1 Map O.40d (nt)
 Xilinx Map Application Log File for Design 'Papilio_AVR8'
 
 Design Information
 ------------------
-Command Line   : map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off
--c 100 -o Papilio_AVR8_map.ncd Papilio_AVR8.ngd Papilio_AVR8.pcf 
+Command Line   : map -intstyle ise -p xc3s500e-vq100-4 -cm area -detail -ir off
+-pr off -c 100 -o Papilio_AVR8_map.ncd Papilio_AVR8.ngd Papilio_AVR8.pcf 
 Target Device  : xc3s500e
 Target Package : vq100
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Tue May 03 17:34:43 2011
+Mapped Date    : Sun Aug 21 19:57:21 2011
 
 Mapping design into LUTs...
 Running directed packing...
 WARNING:Pack:266 - The function generator
-   AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>132 failed to merge with F5
-   multiplexer AVR_Core_Inst/pm_fetch_dec_Inst/I66_cy<8>520_SW1.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux000022 failed to merge with F5 multiplexer
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP1/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux00002_f5.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux000022 failed to merge with F5 multiplexer
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP2/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux00002_f5.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux000022 failed to merge with F5 multiplexer
+   TDES_CORE_GEN.tdes_avrtop_i/Wishbone_TDES_Core_i/tdes_top_i/DESCIPHERTOP3/DES
+   TOP/BLOCKTOP/SBOX/S2/Mrom_SPO_mux00002_f5.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
+WARNING:PhysDesignRules:367 - The signal <sda_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <scl_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <porta<2>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <porta<3>_IBUF> is incomplete. The
@@ -44,39 +62,51 @@ WARNING:PhysDesignRules:367 - The signal <portb<6>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <portb<7>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<2>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<3>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<4>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<5>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<6>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <portd<7>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:   13
+Number of warnings:   23
 Logic Utilization:
-  Number of Slice Flip Flops:           856 out of   9,312    9%
-  Number of 4 input LUTs:             2,287 out of   9,312   24%
+  Number of Slice Flip Flops:         2,423 out of   9,312   26%
+  Number of 4 input LUTs:             5,198 out of   9,312   55%
 Logic Distribution:
-  Number of occupied Slices:          1,492 out of   4,656   32%
-    Number of Slices containing only related logic:   1,492 out of   1,492 100%
-    Number of Slices containing unrelated logic:          0 out of   1,492   0%
+  Number of occupied Slices:          3,434 out of   4,656   73%
+    Number of Slices containing only related logic:   3,434 out of   3,434 100%
+    Number of Slices containing unrelated logic:          0 out of   3,434   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,316 out of   9,312   24%
-    Number used as logic:             2,282
-    Number used as a route-thru:         29
-    Number used as Shift registers:       5
+  Total Number of 4 input LUTs:       5,234 out of   9,312   56%
+    Number used as logic:             5,192
+    Number used as a route-thru:         36
+    Number used as Shift registers:       6
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 52 out of      66   78%
+  Number of bonded IOBs:                 54 out of      66   81%
   Number of RAMB16s:                     10 out of      20   50%
   Number of BUFGMUXs:                     2 out of      24    8%
   Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                3.58
+Average Fanout of Non-Clock Nets:                3.78
 
-Peak Memory Usage:  250 MB
-Total REAL time to MAP completion:  21 secs 
-Total CPU time to MAP completion:   10 secs 
+Peak Memory Usage:  202 MB
+Total REAL time to MAP completion:  23 secs 
+Total CPU time to MAP completion:   19 secs 
 
 NOTES:
 

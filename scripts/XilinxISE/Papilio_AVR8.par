@@ -1,14 +1,14 @@
-Release 13.1 par O.40d (nt64)
+Release 13.1 par O.40d (nt)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-KILLIAN-PC::  Tue May 03 17:35:13 2011
+WIN-EVEHIN441A9::  Sun Aug 21 20:02:52 2011
 
 par -w -intstyle ise -ol high -t 1 Papilio_AVR8_map.ncd Papilio_AVR8.ncd
 Papilio_AVR8.pcf 
 
 
 Constraints file: Papilio_AVR8.pcf.
-Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\13.1\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '3s500e.nph' in environment X:\Xilinx\13.1\ISE_DS\ISE\.
    "Papilio_AVR8" is an NCD, version 3.2, device xc3s500e, package vq100, speed -4
 
 Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
@@ -20,31 +20,31 @@ Device speed data version:  "PRODUCTION 1.27 2011-02-03".
 
 Design Summary Report:
 
- Number of External IOBs                          52 out of 66     78%
+ Number of External IOBs                          54 out of 66     81%
 
-   Number of External Input IOBs                 17
+   Number of External Input IOBs                 29
 
-      Number of External Input IBUFs             17
-        Number of LOCed External Input IBUFs     17 out of 17    100%
-
-
-   Number of External Output IOBs                 3
-
-      Number of External Output IOBs              3
-        Number of LOCed External Output IOBs      3 out of 3     100%
+      Number of External Input IBUFs             29
+        Number of LOCed External Input IBUFs     29 out of 29    100%
 
 
-   Number of External Bidir IOBs                 32
+   Number of External Output IOBs                 7
 
-      Number of External Bidir IOBs              32
-        Number of LOCed External Bidir IOBs      32 out of 32    100%
+      Number of External Output IOBs              7
+        Number of LOCed External Output IOBs      7 out of 7     100%
+
+
+   Number of External Bidir IOBs                 18
+
+      Number of External Bidir IOBs              18
+        Number of LOCed External Bidir IOBs      18 out of 18    100%
 
 
    Number of BUFGMUXs                        2 out of 24      8%
    Number of DCMs                            1 out of 4      25%
    Number of RAMB16s                        10 out of 20     50%
-   Number of Slices                       1492 out of 4656   32%
-      Number of SLICEMs                      4 out of 2328    1%
+   Number of Slices                       3434 out of 4656   73%
+      Number of SLICEMs                      5 out of 2328    1%
 
 
 
@@ -53,9 +53,11 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 8 secs 
-Finished initial Timing Analysis.  REAL time: 9 secs 
+Starting initial Timing Analysis.  REAL time: 10 secs 
+Finished initial Timing Analysis.  REAL time: 12 secs 
 
+WARNING:Par:288 - The signal sda_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal scl_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal porta<2>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal porta<3>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal porta<4>_IBUF has no load.  PAR will not attempt to route this signal.
@@ -68,48 +70,54 @@ WARNING:Par:288 - The signal portb<4>_IBUF has no load.  PAR will not attempt to
 WARNING:Par:288 - The signal portb<5>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal portb<6>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal portb<7>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal portd<2>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal portd<3>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal portd<4>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal portd<5>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal portd<6>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal portd<7>_IBUF has no load.  PAR will not attempt to route this signal.
 
 Starting Placer
-Total REAL time at the beginning of Placer: 9 secs 
-Total CPU  time at the beginning of Placer: 7 secs 
+Total REAL time at the beginning of Placer: 12 secs 
+Total CPU  time at the beginning of Placer: 11 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:2511f10e) REAL time: 12 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:3577acfc) REAL time: 14 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:2511f10e) REAL time: 12 secs 
+Phase 2.7  Design Feasibility Check (Checksum:3577acfc) REAL time: 14 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:2511f10e) REAL time: 12 secs 
+Phase 3.31  Local Placement Optimization (Checksum:3577acfc) REAL time: 14 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:b1a6054e) REAL time: 14 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:2d31ba64) REAL time: 17 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:b1a6054e) REAL time: 15 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:2d31ba64) REAL time: 17 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:b1a6054e) REAL time: 15 secs 
+Phase 6.36  Local Placement Optimization (Checksum:2d31ba64) REAL time: 17 secs 
 
 Phase 7.8  Global Placement
-....................
-......................................
-............................................
-.......
-Phase 7.8  Global Placement (Checksum:c415e92b) REAL time: 36 secs 
+........................
+...................................................................................................................................................
+.................................................................................................................................
+.....................
+Phase 7.8  Global Placement (Checksum:117e4bda) REAL time: 1 mins 13 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:c415e92b) REAL time: 36 secs 
+Phase 8.5  Local Placement Optimization (Checksum:117e4bda) REAL time: 1 mins 14 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:c5cb855c) REAL time: 48 secs 
+Phase 9.18  Placement Optimization (Checksum:628d48cd) REAL time: 1 mins 31 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:c5cb855c) REAL time: 48 secs 
+Phase 10.5  Local Placement Optimization (Checksum:628d48cd) REAL time: 1 mins 31 secs 
 
-Total REAL time to Placer completion: 49 secs 
-Total CPU  time to Placer completion: 43 secs 
+Total REAL time to Placer completion: 1 mins 32 secs 
+Total CPU  time to Placer completion: 1 mins 20 secs 
 Writing design to file Papilio_AVR8.ncd
 
 
@@ -117,26 +125,26 @@ Writing design to file Papilio_AVR8.ncd
 Starting Router
 
 
-Phase  1  : 10767 unrouted;      REAL time: 1 mins 1 secs 
+Phase  1  : 24074 unrouted;      REAL time: 1 mins 43 secs 
 
-Phase  2  : 10126 unrouted;      REAL time: 1 mins 2 secs 
+Phase  2  : 22524 unrouted;      REAL time: 1 mins 44 secs 
 
-Phase  3  : 2724 unrouted;      REAL time: 1 mins 7 secs 
+Phase  3  : 6708 unrouted;      REAL time: 1 mins 50 secs 
 
-Phase  4  : 2724 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 8 secs 
+Phase  4  : 6708 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 51 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 15 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 59 secs 
 
 Updating file: Papilio_AVR8.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 20 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 5 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 22 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 7 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 26 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 12 secs 
 
-Total REAL time to Router completion: 1 mins 26 secs 
-Total CPU time to Router completion: 1 mins 17 secs 
+Total REAL time to Router completion: 2 mins 12 secs 
+Total CPU time to Router completion: 2 mins 
 
 Partition Implementation Status
 -------------------------------
@@ -154,7 +162,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|              clk16M | BUFGMUX_X1Y10| No   |  565 |  0.084     |  0.201      |
+|              clk16M | BUFGMUX_X1Y10| No   | 1452 |  0.086     |  0.203      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -173,13 +181,13 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  PERIOD analysis for net "Inst_DCM32to16/C | SETUP       |    13.829ns|    36.482ns|       0|           0
-  LKFX_BUF" derived from  NET "Inst_DCM32to | HOLD        |     0.743ns|            |       0|           0
-  16/CLKIN_IBUFG" PERIOD = 31.25 ns HIGH 50 |             |            |            |        |            
-  %                                         |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
   NET "Inst_DCM32to16/CLKIN_IBUFG" PERIOD = | MINLOWPULSE |    21.250ns|    10.000ns|       0|           0
    31.25 ns HIGH 50%                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PERIOD analysis for net "Inst_DCM32to16/C | SETUP       |    23.181ns|    36.889ns|       0|           0
+  LKFX_BUF" derived from  NET "Inst_DCM32to | HOLD        |     0.750ns|            |       0|           0
+  16/CLKIN_IBUFG" PERIOD = 31.25 ns HIGH 50 |             |            |            |        |            
+  %                                         |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -193,8 +201,8 @@ Derived Constraints for Inst_DCM32to16/CLKIN_IBUFG
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|Inst_DCM32to16/CLKIN_IBUFG     |     31.250ns|     10.000ns|     18.241ns|            0|            0|            0|    418551979|
-| Inst_DCM32to16/CLKFX_BUF      |     62.500ns|     36.482ns|          N/A|            0|            0|    418551979|            0|
+|Inst_DCM32to16/CLKIN_IBUFG     |     31.250ns|     10.000ns|     18.445ns|            0|            0|            0|    233109460|
+| Inst_DCM32to16/CLKFX_BUF      |     62.500ns|     36.889ns|          N/A|            0|            0|    233109460|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -204,19 +212,19 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 12 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 20 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 1 mins 36 secs 
-Total CPU time to PAR completion: 1 mins 25 secs 
+Total REAL time to PAR completion: 2 mins 18 secs 
+Total CPU time to PAR completion: 2 mins 6 secs 
 
-Peak Memory Usage:  306 MB
+Peak Memory Usage:  243 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 14
+Number of warning messages: 22
 Number of info messages: 0
 
 Writing design to file Papilio_AVR8.ncd

@@ -19,29 +19,32 @@
       <SelectedItems>
          <SelectedItem>Papilio_AVR8 - Struct (X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/Papilio_AVR8.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000034d000000020000000000000000000000000000000064ffffffff0000008100000000000000020000034d0000000100000000000000000000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002a8000000020000000000000000000000000000000064ffffffff000000810000000000000002000002a80000000100000000000000000000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Papilio_AVR8 - Struct (X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/Papilio_AVR8.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>Configure Target Device</ClosedNode>
          <ClosedNode>Design Utilities</ClosedNode>
-         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Implement Design/Map/Generate Post-Map Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Back-annotate Pin Locations</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate IBIS Model</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate Post-Place &amp; Route Static Timing</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Generate Programming File</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >4</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000156000000010000000100000000000000000000000064ffffffff000000810000000000000001000001560000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000010f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000010f0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Generate Programming File</CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -79,7 +82,7 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Add Existing Source</CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff000000000000000200000278000000e901000000050100000002</SourceProcessView>
+   <SourceProcessView>000000ff000000000000000200000070000000d501000000050100000002</SourceProcessView>
    <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
@@ -94,17 +97,22 @@
          <ClosedNode>/testbench - behavior X:|Papilio|GadgetFactory-Arduino-Soft-Core-06f1ba4|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/PORTE_COMP - pport - RTL</ClosedNode>
          <ClosedNode>/testbench - behavior X:|Papilio|GadgetFactory-Arduino-Soft-Core-06f1ba4|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/PORTF_COMP - pport - RTL</ClosedNode>
          <ClosedNode>/testbench - behavior X:|Papilio|workarea|Arduino_Soft_Core|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/AVR_Core_Inst - AVR_Core - Struct</ClosedNode>
+         <ClosedNode>/testbench - behavior X:|Papilio|workarea|Arduino_Soft_Core|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/Button_LED_avrtop_inst - Button_LED_avrtop - Struct</ClosedNode>
          <ClosedNode>/testbench - behavior X:|Papilio|workarea|Arduino_Soft_Core|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/I2C_MASTER_INST - i2c_master_avrtop - Struct</ClosedNode>
          <ClosedNode>/testbench - behavior X:|Papilio|workarea|Arduino_Soft_Core|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/JTAGOCDPrgTop_Inst - JTAGOCDPrgTop - RTL</ClosedNode>
          <ClosedNode>/testbench - behavior X:|Papilio|workarea|Arduino_Soft_Core|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/PORTA_COMP - pport - RTL</ClosedNode>
          <ClosedNode>/testbench - behavior X:|Papilio|workarea|Arduino_Soft_Core|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/PORTB_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/testbench - behavior X:|Papilio|workarea|Arduino_Soft_Core|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/PORTC_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/testbench - behavior X:|Papilio|workarea|Arduino_Soft_Core|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/PORTD_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/testbench - behavior X:|Papilio|workarea|Arduino_Soft_Core|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/PORTE_COMP - pport - RTL</ClosedNode>
+         <ClosedNode>/testbench - behavior X:|Papilio|workarea|Arduino_Soft_Core|scripts|XilinxISE|testbench.vhd/uut - Papilio_AVR8 - Struct/PORTF_COMP - pport - RTL</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>testbench - behavior (X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/testbench.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000029d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000029d0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002bc000000020000000000000000000000000200000064ffffffff000000810000000300000002000002bc0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>testbench - behavior (X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/testbench.vhd)</CurrentItem>
    </ItemView>
@@ -114,26 +122,26 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Design Utilities</SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000145000000010000000100000000000000000000000064ffffffff000000810000000000000001000001450000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000166000000010000000100000000000000000000000064ffffffff000000810000000000000001000001660000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Design Utilities</CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Behavioral Check Syntax</SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000156000000010000000100000000000000000000000064ffffffff000000810000000000000001000001560000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000120000000010000000100000000000000000000000064ffffffff000000810000000000000001000001200000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Behavioral Check Syntax</CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_PACKAGE_DECL" guiview="Process" >
       <ClosedNodes>
@@ -160,5 +168,18 @@
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015f000000020000000000000000000000000000000064ffffffff000000810000000000000002000000ef0000000100000000000000700000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>AVRuCPackage.vhd (X:/Papilio/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/CommonPacks/AVRuCPackage.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_XAW" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000177000000010000000100000000000000000000000064ffffffff000000810000000000000001000001770000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
    </ItemView>
 </Project>

@@ -1,291 +1,554 @@
-V3 180
+V3 338
 FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/DCM32to16.vhd 2011/05/03.17:31:04 O.40d
-EN work/DCM32to16 1304465526 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/DCM32to16.vhd \
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/CommonPacks/AVRuCPackage.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/CommonPacks/SynthCtrlPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/alu_avr.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/avr_core.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/AVR_Core_CompPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/bit_processor.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/io_adr_dec.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/io_reg_file.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/pm_fetch_dec.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/reg_file.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGCompPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGDataPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGOCDPrgTop.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGProgrammerPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGTAPCtrlSMPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/OCDProgcp2.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/OCDProgTCK.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/Resync1b_cp2.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/Resync1b_TCK.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/ArbiterAndMux.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/MemAccessCompPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/MemAccessCtrlPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/MemRdMux.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/RAMAdrDcd.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/prog_mem_init.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XDM4Kx8.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XMemCompPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XPM8Kx16.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/portx.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/SynchronizerCompPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/SynchronizerDFF.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/SynchronizerLatch.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/Timer_Counter.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/uart.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/AVR_uC_CompPack.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/external_mux.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/Papilio_AVR8.vhd 2011/05/03.17:30:58 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/RAMDataReg.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/ResetGenerator.vhd 2011/05/03.14:38:14 O.40d
+FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/submodules/papilio_core_template/sources/papilio_core_template.vhd 2011/05/03.14:38:14 O.40d
+FL X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/DCM32to16.vhd 2011/05/11.13:15:53 O.40d
+EN work/DCM32to16 1313925450 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/DCM32to16.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/NUMERIC_STD 1296775759 LB UNISIM \
       PH unisim/VCOMPONENTS 1296775759
-AR work/DCM32to16/BEHAVIORAL 1304465527 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/scripts/XilinxISE/DCM32to16.vhd \
-      EN work/DCM32to16 1304465526 CP BUFG CP IBUFG CP DCM_SP
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/CommonPacks/AVRuCPackage.vhd 2011/05/03.14:38:14 O.40d
-PH work/AVRuCPackage 1304465488 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/CommonPacks/AVRuCPackage.vhd \
+AR work/DCM32to16/BEHAVIORAL 1313925451 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/DCM32to16.vhd \
+      EN work/DCM32to16 1313925450 CP BUFG CP IBUFG CP DCM_SP
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/CommonPacks/AVRuCPackage.vhd 2011/05/11.11:27:50 O.40d
+PH work/AVRuCPackage 1313925404 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/CommonPacks/AVRuCPackage.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
-      PH work/SynthCtrlPack 1304465486
-PB work/AVRuCPackage 1304465489 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/CommonPacks/AVRuCPackage.vhd \
-      PH work/AVRuCPackage 1304465488
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/CommonPacks/SynthCtrlPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/SynthCtrlPack 1304465486 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/CommonPacks/SynthCtrlPack.vhd \
+      PH work/SynthCtrlPack 1313925398
+PB work/AVRuCPackage 1313925405 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/CommonPacks/AVRuCPackage.vhd \
+      PH work/AVRuCPackage 1313925404
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/CommonPacks/SynthCtrlPack.vhd 2011/05/11.11:27:50 O.40d
+PH work/SynthCtrlPack 1313925398 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/CommonPacks/SynthCtrlPack.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/alu_avr.vhd 2011/05/03.14:38:14 O.40d
-EN work/alu_avr 1304465521 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/alu_avr.vhd \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/alu_avr.vhd 2011/05/11.11:27:50 O.40d
+EN work/alu_avr 1313925445 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/alu_avr.vhd \
       PB ieee/std_logic_1164 1296775758
-AR work/alu_avr/rtl 1304465522 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/alu_avr.vhd \
-      EN work/alu_avr 1304465521
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/avr_core.vhd 2011/05/03.14:38:14 O.40d
-EN work/AVR_Core 1304465530 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/avr_core.vhd \
-      PB ieee/std_logic_1164 1296775758 PH work/AVR_Core_CompPack 1304465510
-AR work/avr_core/Struct 1304465531 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/avr_core.vhd \
-      EN work/AVR_Core 1304465530 CP pm_fetch_dec CP reg_file CP bit_processor \
+AR work/alu_avr/rtl 1313925446 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/alu_avr.vhd \
+      EN work/alu_avr 1313925445
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/avr_core.vhd 2011/05/11.11:27:50 O.40d
+EN work/AVR_Core 1313925454 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/avr_core.vhd \
+      PB ieee/std_logic_1164 1296775758 PH work/AVR_Core_CompPack 1313925434
+AR work/avr_core/Struct 1313925455 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/avr_core.vhd \
+      EN work/AVR_Core 1313925454 CP pm_fetch_dec CP reg_file CP bit_processor \
       CP io_adr_dec CP io_reg_file CP alu_avr
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/AVR_Core_CompPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/AVR_Core_CompPack 1304465510 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/AVR_Core_CompPack.vhd \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/AVR_Core_CompPack.vhd 2011/05/11.11:27:50 O.40d
+PH work/AVR_Core_CompPack 1313925434 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/AVR_Core_CompPack.vhd \
       PB ieee/std_logic_1164 1296775758 CD pm_fetch_dec CD alu_avr CD reg_file \
       CD io_reg_file CD bit_processor CD io_adr_dec
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/bit_processor.vhd 2011/05/03.14:38:14 O.40d
-EN work/bit_processor 1304465515 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/bit_processor.vhd \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/bit_processor.vhd 2011/05/11.11:27:50 O.40d
+EN work/bit_processor 1313925439 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/bit_processor.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760
-AR work/bit_processor/RTL 1304465516 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/bit_processor.vhd \
-      EN work/bit_processor 1304465515
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/io_adr_dec.vhd 2011/05/03.14:38:14 O.40d
-EN work/io_adr_dec 1304465517 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/io_adr_dec.vhd \
-      PB ieee/std_logic_1164 1296775758 PB work/AVRuCPackage 1304465489
-AR work/io_adr_dec/RTL 1304465518 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/io_adr_dec.vhd \
-      EN work/io_adr_dec 1304465517
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/io_reg_file.vhd 2011/05/03.14:38:14 O.40d
-EN work/io_reg_file 1304465519 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/io_reg_file.vhd \
+AR work/bit_processor/RTL 1313925440 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/bit_processor.vhd \
+      EN work/bit_processor 1313925439
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/io_adr_dec.vhd 2011/05/11.11:27:50 O.40d
+EN work/io_adr_dec 1313925441 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/io_adr_dec.vhd \
+      PB ieee/std_logic_1164 1296775758 PB work/AVRuCPackage 1313925405
+AR work/io_adr_dec/RTL 1313925442 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/io_adr_dec.vhd \
+      EN work/io_adr_dec 1313925441
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/io_reg_file.vhd 2011/05/11.11:27:50 O.40d
+EN work/io_reg_file 1313925443 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/io_reg_file.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
-      PB work/AVRuCPackage 1304465489
-AR work/io_reg_file/rtl 1304465520 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/io_reg_file.vhd \
-      EN work/io_reg_file 1304465519
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/pm_fetch_dec.vhd 2011/05/03.14:38:14 O.40d
-EN work/pm_fetch_dec 1304465511 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/pm_fetch_dec.vhd \
+      PB work/AVRuCPackage 1313925405
+AR work/io_reg_file/rtl 1313925444 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/io_reg_file.vhd \
+      EN work/io_reg_file 1313925443
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/pm_fetch_dec.vhd 2011/05/11.11:27:50 O.40d
+EN work/pm_fetch_dec 1313925435 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/pm_fetch_dec.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
-      PB work/AVRuCPackage 1304465489
-AR work/pm_fetch_dec/RTL 1304465512 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/pm_fetch_dec.vhd \
-      EN work/pm_fetch_dec 1304465511
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/reg_file.vhd 2011/05/03.14:38:14 O.40d
-EN work/reg_file 1304465513 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/reg_file.vhd \
+      PB work/AVRuCPackage 1313925405
+AR work/pm_fetch_dec/RTL 1313925436 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/pm_fetch_dec.vhd \
+      EN work/pm_fetch_dec 1313925435
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/reg_file.vhd 2011/05/11.11:27:50 O.40d
+EN work/reg_file 1313925437 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/reg_file.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
-      PH work/SynthCtrlPack 1304465486
-AR work/reg_file/RTL 1304465514 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Core/reg_file.vhd \
-      EN work/reg_file 1304465513
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGCompPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/JTAGCompPack 1304465495 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGCompPack.vhd \
+      PH work/SynthCtrlPack 1313925398
+AR work/reg_file/RTL 1313925438 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Core/reg_file.vhd \
+      EN work/reg_file 1313925437
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGCompPack.vhd 2011/05/11.11:27:50 O.40d
+PH work/JTAGCompPack 1313925419 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGCompPack.vhd \
       PB ieee/std_logic_1164 1296775758 CD OCDProgTCK CD OCDProgcp2 CD Resync1b_cp2 \
       CD Resync1b_TCK CD Resync16b_TCK
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGDataPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/JTAGDataPack 1304465491 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGDataPack.vhd \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGDataPack.vhd 2011/05/11.11:27:50 O.40d
+PH work/JTAGDataPack 1313925407 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGDataPack.vhd \
       PB ieee/std_logic_1164 1296775758
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGOCDPrgTop.vhd 2011/05/03.14:38:14 O.40d
-EN work/JTAGOCDPrgTop 1304465546 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGOCDPrgTop.vhd \
-      PB ieee/std_logic_1164 1296775758 PH work/JTAGCompPack 1304465495
-AR work/JTAGOCDPrgTop/RTL 1304465547 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGOCDPrgTop.vhd \
-      EN work/JTAGOCDPrgTop 1304465546 CP OCDProgTCK CP OCDProgcp2 CP Resync1b_cp2 \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGOCDPrgTop.vhd 2011/05/11.11:27:50 O.40d
+EN work/JTAGOCDPrgTop 1313925472 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGOCDPrgTop.vhd \
+      PB ieee/std_logic_1164 1296775758 PH work/JTAGCompPack 1313925419
+AR work/JTAGOCDPrgTop/RTL 1313925473 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGOCDPrgTop.vhd \
+      EN work/JTAGOCDPrgTop 1313925472 CP OCDProgTCK CP OCDProgcp2 CP Resync1b_cp2 \
       CP Resync1b_TCK
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/JTAGPack 1304465487 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGPack.vhd \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGPack.vhd 2011/05/11.11:27:50 O.40d
+PH work/JTAGPack 1313925403 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGPack.vhd \
       PB ieee/std_logic_1164 1296775758
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGProgrammerPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/JTAGProgrammerPack 1304465490 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGProgrammerPack.vhd \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGProgrammerPack.vhd 2011/05/11.11:27:50 O.40d
+PH work/JTAGProgrammerPack 1313925406 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGProgrammerPack.vhd \
       PB ieee/std_logic_1164 1296775758
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGTAPCtrlSMPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/JTAGTAPCtrlSMPack 1304465492 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGTAPCtrlSMPack.vhd \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGTAPCtrlSMPack.vhd 2011/05/11.11:27:50 O.40d
+PH work/JTAGTAPCtrlSMPack 1313925408 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGTAPCtrlSMPack.vhd \
       PB ieee/std_logic_1164 1296775758
-PB work/JTAGTAPCtrlSMPack 1304465493 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/JTAGTAPCtrlSMPack.vhd \
-      PH work/JTAGTAPCtrlSMPack 1304465492
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/OCDProgcp2.vhd 2011/05/03.14:38:14 O.40d
-EN work/OCDProgcp2 1304465498 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/OCDProgcp2.vhd \
+PB work/JTAGTAPCtrlSMPack 1313925409 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/JTAGTAPCtrlSMPack.vhd \
+      PH work/JTAGTAPCtrlSMPack 1313925408
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/OCDProgcp2.vhd 2011/05/11.11:27:50 O.40d
+EN work/OCDProgcp2 1313925422 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/OCDProgcp2.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
-      PH work/JTAGPack 1304465487 PB work/AVRuCPackage 1304465489
-AR work/OCDProgcp2/RTL 1304465499 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/OCDProgcp2.vhd \
-      EN work/OCDProgcp2 1304465498
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/OCDProgTCK.vhd 2011/05/03.14:38:14 O.40d
-EN work/OCDProgTCK 1304465496 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/OCDProgTCK.vhd \
+      PH work/JTAGPack 1313925403 PB work/AVRuCPackage 1313925405
+AR work/OCDProgcp2/RTL 1313925423 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/OCDProgcp2.vhd \
+      EN work/OCDProgcp2 1313925422
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/OCDProgTCK.vhd 2011/05/11.11:27:50 O.40d
+EN work/OCDProgTCK 1313925420 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/OCDProgTCK.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
-      PH work/JTAGPack 1304465487 PH work/JTAGProgrammerPack 1304465490 \
-      PH work/JTAGDataPack 1304465491 PB work/JTAGTAPCtrlSMPack 1304465493
-AR work/OCDProgTCK/RTL 1304465497 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/OCDProgTCK.vhd \
-      EN work/OCDProgTCK 1304465496
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/Resync1b_cp2.vhd 2011/05/03.14:38:14 O.40d
-EN work/Resync1b_cp2 1304465500 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/Resync1b_cp2.vhd \
+      PH work/JTAGPack 1313925403 PH work/JTAGProgrammerPack 1313925406 \
+      PH work/JTAGDataPack 1313925407 PB work/JTAGTAPCtrlSMPack 1313925409
+AR work/OCDProgTCK/RTL 1313925421 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/OCDProgTCK.vhd \
+      EN work/OCDProgTCK 1313925420
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/Resync1b_cp2.vhd 2011/05/11.11:27:50 O.40d
+EN work/Resync1b_cp2 1313925424 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/Resync1b_cp2.vhd \
       PB ieee/std_logic_1164 1296775758
-AR work/Resync1b_cp2/RTL 1304465501 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/Resync1b_cp2.vhd \
-      EN work/Resync1b_cp2 1304465500
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/Resync1b_TCK.vhd 2011/05/03.14:38:14 O.40d
-EN work/Resync1b_TCK 1304465502 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/Resync1b_TCK.vhd \
+AR work/Resync1b_cp2/RTL 1313925425 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/Resync1b_cp2.vhd \
+      EN work/Resync1b_cp2 1313925424
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/Resync1b_TCK.vhd 2011/05/11.11:27:50 O.40d
+EN work/Resync1b_TCK 1313925426 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/Resync1b_TCK.vhd \
       PB ieee/std_logic_1164 1296775758
-AR work/Resync1b_TCK/RTL 1304465503 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/JTAG_OCD_Prg/Resync1b_TCK.vhd \
-      EN work/Resync1b_TCK 1304465502
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/ArbiterAndMux.vhd 2011/05/03.14:38:14 O.40d
-EN work/ArbiterAndMux 1304465550 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/ArbiterAndMux.vhd \
-      PB ieee/std_logic_1164 1296775758 PH work/MemAccessCtrlPack 1304465494
-AR work/ArbiterAndMux/RTL 1304465551 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/ArbiterAndMux.vhd \
-      EN work/ArbiterAndMux 1304465550
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/MemAccessCompPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/MemAccessCompPack 1304465525 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/MemAccessCompPack.vhd \
-      PB ieee/std_logic_1164 1296775758 CD ArbiterAndMux CD MemRdMux CD RAMAdrDcd \
-      PH work/MemAccessCtrlPack 1304465494
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/MemAccessCtrlPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/MemAccessCtrlPack 1304465494 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/MemAccessCtrlPack.vhd \
+AR work/Resync1b_TCK/RTL 1313925427 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/JTAG_OCD_Prg/Resync1b_TCK.vhd \
+      EN work/Resync1b_TCK 1313925426
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/ArbiterAndMux.vhd 2011/05/11.11:27:50 O.40d
+EN work/ArbiterAndMux 1313925482 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/ArbiterAndMux.vhd \
+      PB ieee/std_logic_1164 1296775758 PH work/MemAccessCtrlPack 1313925410
+AR work/ArbiterAndMux/RTL 1313925483 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/ArbiterAndMux.vhd \
+      EN work/ArbiterAndMux 1313925482
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/MemAccessCompPack.vhd 2011/05/11.11:27:50 O.40d
+PH work/MemAccessCompPack 1313925449 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/MemAccessCompPack.vhd \
+      PB ieee/std_logic_1164 1296775758 PH work/MemAccessCtrlPack 1313925410 \
+      CD ArbiterAndMux CD MemRdMux CD RAMAdrDcd
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/MemAccessCtrlPack.vhd 2011/05/11.11:27:50 O.40d
+PH work/MemAccessCtrlPack 1313925410 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/MemAccessCtrlPack.vhd \
       PB ieee/std_logic_1164 1296775758
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/MemRdMux.vhd 2011/05/03.14:38:14 O.40d
-EN work/MemRdMux 1304465552 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/MemRdMux.vhd \
-      PB ieee/std_logic_1164 1296775758 PH work/MemAccessCtrlPack 1304465494
-AR work/MemRdMux/RTL 1304465553 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/MemRdMux.vhd \
-      EN work/MemRdMux 1304465552
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/RAMAdrDcd.vhd 2011/05/03.14:38:14 O.40d
-EN work/RAMAdrDcd 1304465554 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/RAMAdrDcd.vhd \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/MemRdMux.vhd 2011/05/11.11:27:50 O.40d
+EN work/MemRdMux 1313925484 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/MemRdMux.vhd \
+      PB ieee/std_logic_1164 1296775758 PH work/MemAccessCtrlPack 1313925410
+AR work/MemRdMux/RTL 1313925485 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/MemRdMux.vhd \
+      EN work/MemRdMux 1313925484
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/RAMAdrDcd.vhd 2011/05/11.11:27:50 O.40d
+EN work/RAMAdrDcd 1313925486 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/RAMAdrDcd.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
-      PH work/MemAccessCtrlPack 1304465494
-AR work/RAMAdrDcd/RTL 1304465555 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/MemArbAndMux/RAMAdrDcd.vhd \
-      EN work/RAMAdrDcd 1304465554
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/prog_mem_init.vhd 2011/05/03.14:38:14 O.40d
-PH work/prog_mem_init_pkg 1304465504 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/prog_mem_init.vhd \
+      PH work/MemAccessCtrlPack 1313925410
+AR work/RAMAdrDcd/RTL 1313925487 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/MemArbAndMux/RAMAdrDcd.vhd \
+      EN work/RAMAdrDcd 1313925486
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Memory/prog_mem_init.vhd 2011/05/11.11:27:50 O.40d
+PH work/prog_mem_init_pkg 1313925428 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Memory/prog_mem_init.vhd \
       PB ieee/std_logic_1164 1296775758
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XDM4Kx8.vhd 2011/05/03.14:38:14 O.40d
-EN work/XDM4Kx8 1304465542 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XDM4Kx8.vhd \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Memory/XDM4Kx8.vhd 2011/05/11.11:27:50 O.40d
+EN work/XDM4Kx8 1313925468 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Memory/XDM4Kx8.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
-      LB UNISIM PH unisim/VCOMPONENTS 1296775759 PH work/SynthCtrlPack 1304465486
-AR work/XDM4Kx8/RTL 1304465543 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XDM4Kx8.vhd \
-      EN work/XDM4Kx8 1304465542 CP RAMB16_S9
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XMemCompPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/XMemCompPack 1304465524 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XMemCompPack.vhd \
+      PH work/SynthCtrlPack 1313925398 LB UNISIM PH unisim/VCOMPONENTS 1296775759
+AR work/XDM4Kx8/RTL 1313925469 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Memory/XDM4Kx8.vhd \
+      EN work/XDM4Kx8 1313925468 CP RAMB16_S9
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Memory/XMemCompPack.vhd 2011/05/11.11:27:50 O.40d
+PH work/XMemCompPack 1313925448 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Memory/XMemCompPack.vhd \
       PB ieee/std_logic_1164 1296775758 CD XPM16Kx16 CD XDM16Kx8 CD XDM32Kx8 \
       CD XPM4Kx16
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XPM8Kx16.vhd 2011/05/03.14:38:14 O.40d
-EN work/XPM8Kx16 1304465544 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XPM8Kx16.vhd \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Memory/XPM8Kx16.vhd 2011/05/11.11:27:50 O.40d
+EN work/XPM8Kx16 1313925470 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Memory/XPM8Kx16.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
-      LB UNISIM PH unisim/VCOMPONENTS 1296775759 PH work/SynthCtrlPack 1304465486 \
-      PH work/prog_mem_init_pkg 1304465504
-AR work/XPM8Kx16/RTL 1304465545 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Memory/XPM8Kx16.vhd \
-      EN work/XPM8Kx16 1304465544 CP RAMB16_S18
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/portx.vhd 2011/05/03.14:38:14 O.40d
-EN work/pport 1304465536 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/portx.vhd \
-      PB ieee/std_logic_1164 1296775758 PB work/AVRuCPackage 1304465489 \
-      PH work/SynthCtrlPack 1304465486 PH work/SynchronizerCompPack 1304465505
-AR work/pport/RTL 1304465537 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/portx.vhd \
-      EN work/pport 1304465536 CP SynchronizerDFF CP SynchronizerLatch
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/SynchronizerCompPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/SynchronizerCompPack 1304465505 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/SynchronizerCompPack.vhd \
+      PH work/SynthCtrlPack 1313925398 PH work/prog_mem_init_pkg 1313925428 \
+      LB UNISIM PH unisim/VCOMPONENTS 1296775759
+AR work/XPM8Kx16/RTL 1313925471 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Memory/XPM8Kx16.vhd \
+      EN work/XPM8Kx16 1313925470 CP RAMB16_S18
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/AVR2Wishbone_Bridge.vhd 2011/05/11.13:30:00 O.40d
+EN work/AVR2Wishbone_Bridge 1313925413 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/AVR2Wishbone_Bridge.vhd \
+      PB ieee/std_logic_1164 1296775758
+AR work/AVR2Wishbone_Bridge/RTL 1313925414 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/AVR2Wishbone_Bridge.vhd \
+      EN work/AVR2Wishbone_Bridge 1313925413
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/Button_LED_Core/Button_LED_avrtop.vhd 2011/05/16.23:53:39 O.40d
+EN work/Button_LED_avrtop 1313925478 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/Button_LED_Core/Button_LED_avrtop.vhd \
+      PB ieee/std_logic_1164 1296775758
+AR work/Button_LED_avrtop/Struct 1313925479 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/Button_LED_Core/Button_LED_avrtop.vhd \
+      EN work/Button_LED_avrtop 1313925478 CP Wishbone_Button_LED_Core \
+      CP AVR2Wishbone_Bridge
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/Button_LED_Core/Wishbone_Button_LED_Core.vhd 2011/08/21.18:52:17 O.40d
+EN work/Wishbone_Button_LED_Core 1313925415 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/Button_LED_Core/Wishbone_Button_LED_Core.vhd \
+      PB ieee/std_logic_1164 1296775758
+AR work/Wishbone_Button_LED_Core/Rtl 1313925416 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/Button_LED_Core/Wishbone_Button_LED_Core.vhd \
+      EN work/Wishbone_Button_LED_Core 1313925415
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_avrtop.vhd 2011/05/17.00:26:40 O.40d
+EN work/i2c_master_avrtop 1313925476 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_avrtop.vhd \
+      PB ieee/std_logic_1164 1296775758
+AR work/i2c_master_avrtop/Struct 1313925477 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_avrtop.vhd \
+      EN work/i2c_master_avrtop 1313925476 CP i2c_master_top \
+      CP AVR2Wishbone_Bridge
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_bit_ctrl.vhd 2011/05/11.11:27:50 O.40d
+EN work/i2c_master_bit_ctrl 1313925396 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_bit_ctrl.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759
+AR work/i2c_master_bit_ctrl/structural 1313925397 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_bit_ctrl.vhd \
+      EN work/i2c_master_bit_ctrl 1313925396
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_byte_ctrl.vhd 2011/05/11.11:27:50 O.40d
+EN work/i2c_master_byte_ctrl 1313925401 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_byte_ctrl.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759
+AR work/i2c_master_byte_ctrl/structural 1313925402 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_byte_ctrl.vhd \
+      EN work/i2c_master_byte_ctrl 1313925401 CP i2c_master_bit_ctrl
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_top.vhd 2011/05/11.11:27:50 O.40d
+EN work/i2c_master_top 1313925417 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_top.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759
+AR work/i2c_master_top/structural 1313925418 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_top.vhd \
+      EN work/i2c_master_top 1313925417 CP i2c_master_byte_ctrl
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/portx.vhd 2011/05/11.11:27:50 O.40d
+EN work/pport 1313925462 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/portx.vhd \
+      PB ieee/std_logic_1164 1296775758 PB work/AVRuCPackage 1313925405 \
+      PH work/SynthCtrlPack 1313925398 PH work/SynchronizerCompPack 1313925429
+AR work/pport/RTL 1313925463 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/portx.vhd \
+      EN work/pport 1313925462 CP SynchronizerDFF CP SynchronizerLatch
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/SynchronizerCompPack.vhd 2011/05/11.11:27:50 O.40d
+PH work/SynchronizerCompPack 1313925429 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/SynchronizerCompPack.vhd \
       PB ieee/std_logic_1164 1296775758 CD SynchronizerLatch CD SynchronizerDFF
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/SynchronizerDFF.vhd 2011/05/03.14:38:14 O.40d
-EN work/SynchronizerDFF 1304465506 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/SynchronizerDFF.vhd \
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/SynchronizerDFF.vhd 2011/05/11.11:27:50 O.40d
+EN work/SynchronizerDFF 1313925430 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/SynchronizerDFF.vhd \
       PB ieee/std_logic_1164 1296775758
-AR work/SynchronizerDFF/RTL 1304465507 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/SynchronizerDFF.vhd \
-      EN work/SynchronizerDFF 1304465506
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/SynchronizerLatch.vhd 2011/05/03.14:38:14 O.40d
-EN work/SynchronizerLatch 1304465508 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/SynchronizerLatch.vhd \
+AR work/SynchronizerDFF/RTL 1313925431 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/SynchronizerDFF.vhd \
+      EN work/SynchronizerDFF 1313925430
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/SynchronizerLatch.vhd 2011/05/11.11:27:50 O.40d
+EN work/SynchronizerLatch 1313925432 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/SynchronizerLatch.vhd \
       PB ieee/std_logic_1164 1296775758
-AR work/SynchronizerLatch/RTL 1304465509 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/SynchronizerLatch.vhd \
-      EN work/SynchronizerLatch 1304465508
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/Timer_Counter.vhd 2011/05/03.14:38:14 O.40d
-EN work/Timer_Counter 1304465538 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/Timer_Counter.vhd \
-      PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
-      PB work/AVRuCPackage 1304465489
-AR work/Timer_Counter/RTL 1304465539 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/Timer_Counter.vhd \
-      EN work/Timer_Counter 1304465538
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/uart.vhd 2011/05/03.14:38:14 O.40d
-EN work/uart 1304465548 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/uart.vhd \
-      PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
-      PB work/AVRuCPackage 1304465489
-AR work/uart/RTL 1304465549 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/Peripheral/uart.vhd \
-      EN work/uart 1304465548
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/AVR_uC_CompPack.vhd 2011/05/03.14:38:14 O.40d
-PH work/AVR_uC_CompPack 1304465523 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/AVR_uC_CompPack.vhd \
-      PB ieee/std_logic_1164 1296775758 CD pport CD external_mux CD RAMDataReg \
-      CD Timer_Counter CD AVR_Core CD ResetGenerator CD PROM CD DataRAM \
-      CD CPUWaitGenerator CD ClockSwitch CD JTAGOCDPrgTop CD uart CD FrqDiv \
-      PB work/AVRuCPackage 1304465489
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/external_mux.vhd 2011/05/03.14:38:14 O.40d
-EN work/external_mux 1304465534 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/external_mux.vhd \
-      PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
-      PB work/AVRuCPackage 1304465489
-AR work/external_mux/RTL 1304465535 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/external_mux.vhd \
-      EN work/external_mux 1304465534
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/Papilio_AVR8.vhd 2011/05/03.17:30:58 O.40d
-EN work/Papilio_AVR8 1304465556 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/Papilio_AVR8.vhd \
-      PB ieee/std_logic_1164 1296775758 PB work/AVRuCPackage 1304465489 \
-      PH work/AVR_uC_CompPack 1304465523 PH work/SynthCtrlPack 1304465486 \
-      PH work/XMemCompPack 1304465524 PH work/MemAccessCtrlPack 1304465494 \
-      PH work/MemAccessCompPack 1304465525
-AR work/Papilio_AVR8/Struct 1304465557 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/Papilio_AVR8.vhd \
-      EN work/Papilio_AVR8 1304465556 CP DCM32to16 CP papilio_core_template \
-      CP AVR_Core CP RAMDataReg CP external_mux CP pport CP Timer_Counter \
-      CP ResetGenerator CP XDM4Kx8 CP XPM8Kx16 CP JTAGOCDPrgTop CP uart \
-      CP ArbiterAndMux CP MemRdMux CP RAMAdrDcd
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/RAMDataReg.vhd 2011/05/03.14:38:14 O.40d
-EN work/RAMDataReg 1304465532 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/RAMDataReg.vhd \
-      PB ieee/std_logic_1164 1296775758
-AR work/RAMDataReg/RTL 1304465533 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/RAMDataReg.vhd \
-      EN work/RAMDataReg 1304465532
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/ResetGenerator.vhd 2011/05/03.14:38:14 O.40d
-EN work/ResetGenerator 1304465540 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/ResetGenerator.vhd \
-      PB ieee/std_logic_1164 1296775758 PH work/SynthCtrlPack 1304465486
-AR work/ResetGenerator/RTL 1304465541 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/sources/uC/ResetGenerator.vhd \
-      EN work/ResetGenerator 1304465540
-FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/submodules/papilio_core_template/sources/papilio_core_template.vhd 2011/05/03.14:38:14 O.40d
-EN work/papilio_core_template 1304465528 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/submodules/papilio_core_template/sources/papilio_core_template.vhd \
+AR work/SynchronizerLatch/RTL 1313925433 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/SynchronizerLatch.vhd \
+      EN work/SynchronizerLatch 1313925432
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/add_key.vhd 2006/10/28.07:51:29 O.40d
+EN work/add_key 1313925380 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/add_key.vhd \
       PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
       PB ieee/STD_LOGIC_UNSIGNED 1296775760
-AR work/papilio_core_template/Behavioral 1304465529 \
-      FL C:/Users/killian/Downloads/GadgetFactory-Arduino-Soft-Core-v1.6-0-ga7f9bf7/GadgetFactory-Arduino-Soft-Core-06f1ba4/submodules/papilio_core_template/sources/papilio_core_template.vhd \
-      EN work/papilio_core_template 1304465528
+AR work/add_key/Behavioral 1313925381 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/add_key.vhd \
+      EN work/add_key 1313925380
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/add_left.vhd 2006/10/28.07:51:29 O.40d
+EN work/add_left 1313925386 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/add_left.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/add_left/Behavioral 1313925387 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/add_left.vhd \
+      EN work/add_left 1313925386
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/block_top.vhd 2006/10/28.07:51:29 O.40d
+EN work/block_top 1313925388 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/block_top.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/block_top/Behavioral 1313925389 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/block_top.vhd \
+      EN work/block_top 1313925388 CP e_expansion_function CP add_key CP s_box \
+      CP p_box CP add_left
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/des_cipher_top.vhd 2006/10/28.07:51:29 O.40d
+EN work/des_cipher_top 1313925394 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/des_cipher_top.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/des_cipher_top/Behavioral 1313925395 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/des_cipher_top.vhd \
+      EN work/des_cipher_top 1313925394 CP key_schedule CP des_top
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/des_top.vhd 2006/10/28.07:51:29 O.40d
+EN work/des_top 1313925392 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/des_top.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/des_top/Behavioral 1313925393 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/des_top.vhd \
+      EN work/des_top 1313925392 CP block_top
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/e_expansion_function.vhd 2006/10/28.07:51:29 O.40d
+EN work/e_expansion_function 1313925378 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/e_expansion_function.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/e_expansion_function/Behavioral 1313925379 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/e_expansion_function.vhd \
+      EN work/e_expansion_function 1313925378
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/key_schedule.vhd 2006/10/28.07:51:29 O.40d
+EN work/key_schedule 1313925390 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/key_schedule.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/key_schedule/Behavioral 1313925391 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/key_schedule.vhd \
+      EN work/key_schedule 1313925390
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/p_box.vhd 2006/10/28.07:51:29 O.40d
+EN work/p_box 1313925384 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/p_box.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/p_box/Behavioral 1313925385 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/p_box.vhd \
+      EN work/p_box 1313925384
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s1_box.vhd 2006/10/28.07:51:29 O.40d
+EN work/s1_box 1313925362 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s1_box.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/s1_box/Behavioral 1313925363 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s1_box.vhd \
+      EN work/s1_box 1313925362
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s2_box.vhd 2006/10/28.07:51:29 O.40d
+EN work/s2_box 1313925364 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s2_box.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/s2_box/Behavioral 1313925365 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s2_box.vhd \
+      EN work/s2_box 1313925364
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s3_box.vhd 2006/10/28.07:51:29 O.40d
+EN work/s3_box 1313925366 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s3_box.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/s3_box/Behavioral 1313925367 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s3_box.vhd \
+      EN work/s3_box 1313925366
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s4_box.vhd 2006/10/28.07:51:29 O.40d
+EN work/s4_box 1313925368 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s4_box.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/s4_box/Behavioral 1313925369 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s4_box.vhd \
+      EN work/s4_box 1313925368
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s5_box.vhd 2006/10/28.07:51:29 O.40d
+EN work/s5_box 1313925370 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s5_box.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/s5_box/Behavioral 1313925371 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s5_box.vhd \
+      EN work/s5_box 1313925370
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s6_box.vhd 2006/10/28.07:51:29 O.40d
+EN work/s6_box 1313925372 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s6_box.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/s6_box/Behavioral 1313925373 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s6_box.vhd \
+      EN work/s6_box 1313925372
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s7_box.vhd 2006/10/28.07:51:29 O.40d
+EN work/s7_box 1313925374 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s7_box.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/s7_box/Behavioral 1313925375 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s7_box.vhd \
+      EN work/s7_box 1313925374
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s8_box.vhd 2006/10/28.07:51:29 O.40d
+EN work/s8_box 1313925376 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s8_box.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/s8_box/Behavioral 1313925377 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s8_box.vhd \
+      EN work/s8_box 1313925376
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s_box.vhd 2006/10/28.07:51:29 O.40d
+EN work/s_box 1313925382 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s_box.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/s_box/Behavioral 1313925383 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/s_box.vhd \
+      EN work/s_box 1313925382 CP s1_box CP s2_box CP s3_box CP s4_box CP s5_box \
+      CP s6_box CP s7_box CP s8_box
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/tdes_avrtop.vhd 2011/08/17.12:10:06 O.40d
+EN work/tdes_avrtop 1313925480 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/tdes_avrtop.vhd \
+      PB ieee/std_logic_1164 1296775758
+AR work/tdes_avrtop/Struct 1313925481 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/tdes_avrtop.vhd \
+      EN work/tdes_avrtop 1313925480 CP Wishbone_TDES_Core CP AVR2Wishbone_Bridge
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/tdes_top.vhd 2011/08/03.11:23:47 O.40d
+EN work/tdes_top 1313925399 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/tdes_top.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/tdes_top/Behavioral 1313925400 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/tdes_top.vhd \
+      EN work/tdes_top 1313925399 CP des_cipher_top
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/Wishbone_tdes_core.vhd 2011/08/21.19:15:21 O.40d
+EN work/Wishbone_TDES_Core 1313925411 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/Wishbone_tdes_core.vhd \
+      PB ieee/std_logic_1164 1296775758
+AR work/Wishbone_TDES_Core/Rtl 1313925412 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/tdes/Wishbone_tdes_core.vhd \
+      EN work/Wishbone_TDES_Core 1313925411 CP tdes_top
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/Timer_Counter.vhd 2011/05/11.11:27:50 O.40d
+EN work/Timer_Counter 1313925464 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/Timer_Counter.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
+      PB work/AVRuCPackage 1313925405
+AR work/Timer_Counter/RTL 1313925465 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/Timer_Counter.vhd \
+      EN work/Timer_Counter 1313925464
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/uart.vhd 2011/05/11.11:27:50 O.40d
+EN work/uart 1313925474 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/uart.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
+      PB work/AVRuCPackage 1313925405
+AR work/uart/RTL 1313925475 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/uart.vhd \
+      EN work/uart 1313925474
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/Addr_Decoder.vhd 2011/05/11.11:27:50 O.40d
+EN work/Addr_Decoder 1313925456 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/Addr_Decoder.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
+      PH work/SynthCtrlPack 1313925398 PB work/AVRuCPackage 1313925405
+AR work/Addr_Decoder/RTL 1313925457 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/Addr_Decoder.vhd \
+      EN work/Addr_Decoder 1313925456
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/AVR_uC_CompPack.vhd 2011/08/17.12:15:46 O.40d
+PH work/AVR_uC_CompPack 1313925447 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/AVR_uC_CompPack.vhd \
+      PB ieee/std_logic_1164 1296775758 PH work/SynthCtrlPack 1313925398 \
+      PB work/AVRuCPackage 1313925405 CD Addr_Decoder CD i2c_master_avrtop \
+      CD Button_LED_avrtop CD tdes_avrtop CD pport CD external_mux CD RAMDataReg \
+      CD Timer_Counter CD AVR_Core CD ResetGenerator CD PROM CD DataRAM \
+      CD CPUWaitGenerator CD ClockSwitch CD JTAGOCDPrgTop CD uart CD FrqDiv
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/external_mux.vhd 2011/05/11.11:27:50 O.40d
+EN work/external_mux 1313925460 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/external_mux.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
+      PB work/AVRuCPackage 1313925405
+AR work/external_mux/RTL 1313925461 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/external_mux.vhd \
+      EN work/external_mux 1313925460
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/Papilio_AVR8.vhd 2011/08/21.19:10:45 O.40d
+EN work/Papilio_AVR8 1313925488 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/Papilio_AVR8.vhd \
+      PB ieee/std_logic_1164 1296775758 PB work/AVRuCPackage 1313925405 \
+      PH work/AVR_uC_CompPack 1313925447 PH work/SynthCtrlPack 1313925398 \
+      PH work/XMemCompPack 1313925448 PH work/MemAccessCtrlPack 1313925410 \
+      PH work/MemAccessCompPack 1313925449
+AR work/Papilio_AVR8/Struct 1313925489 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/Papilio_AVR8.vhd \
+      EN work/Papilio_AVR8 1313925488 CP DCM32to16 CP papilio_core_template \
+      CP AVR_Core CP Addr_Decoder CP RAMDataReg CP external_mux CP pport \
+      CP Timer_Counter CP ResetGenerator CP XDM4Kx8 CP XPM8Kx16 CP JTAGOCDPrgTop \
+      CP uart CP i2c_master_avrtop CP Button_LED_avrtop CP tdes_avrtop \
+      CP ArbiterAndMux CP MemRdMux CP RAMAdrDcd
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/RAMDataReg.vhd 2011/05/11.11:27:50 O.40d
+EN work/RAMDataReg 1313925458 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/RAMDataReg.vhd \
+      PB ieee/std_logic_1164 1296775758
+AR work/RAMDataReg/RTL 1313925459 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/RAMDataReg.vhd \
+      EN work/RAMDataReg 1313925458
+FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/ResetGenerator.vhd 2011/05/11.11:27:50 O.40d
+EN work/ResetGenerator 1313925466 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/ResetGenerator.vhd \
+      PB ieee/std_logic_1164 1296775758 PH work/SynthCtrlPack 1313925398
+AR work/ResetGenerator/RTL 1313925467 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/sources/uC/ResetGenerator.vhd \
+      EN work/ResetGenerator 1313925466
+FL X:/Papilio/workarea/Arduino_Soft_Core/submodules/papilio_core_template/sources/papilio_core_template.vhd 2011/05/11.11:27:50 O.40d
+EN work/papilio_core_template 1313925452 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/submodules/papilio_core_template/sources/papilio_core_template.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/papilio_core_template/Behavioral 1313925453 \
+      FL X:/Papilio/workarea/Arduino_Soft_Core/submodules/papilio_core_template/sources/papilio_core_template.vhd \
+      EN work/papilio_core_template 1313925452

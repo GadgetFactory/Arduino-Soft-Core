@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;X:/Papilio/workarea/Arduino_Soft_Core/sources/Peripheral/i2c_master/i2c_master_avrtop.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;X:/Papilio/workarea/Arduino_Soft_Core/scripts/XilinxISE/testbench.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

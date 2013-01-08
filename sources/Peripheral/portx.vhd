@@ -26,7 +26,11 @@ entity pport is generic(PPortNum : natural);
                         iore       : in std_logic;
                         iowe       : in std_logic;
                         out_en     : out std_logic; 
+--							--Info							
+--								miso_LOC	  : in integer;
+--								spi_spe    : in std_logic;							
 			            -- External connection
+--							spi_misoi  : out std_logic;							
 			            portx      : out std_logic_vector(7 downto 0);
 			            ddrx       : out std_logic_vector(7 downto 0);
 			            pinx       : in  std_logic_vector(7 downto 0));
@@ -48,6 +52,7 @@ begin
 PORTx_Sel <= '1' when adr=PPortAdrArray(PPortNum).Port_Adr else '0';
 DDRx_Sel  <= '1' when adr=PPortAdrArray(PPortNum).DDR_Adr else '0';	
 PINx_Sel  <= '1' when adr=PPortAdrArray(PPortNum).Pin_Adr else '0';	
+--spi_misoi_Sel  <= '1' when adr=PPortAdrArray(PPortNum).Pin_Adr else '0';
 	
 out_en <= (PORTx_Sel or DDRx_Sel or PINx_Sel) and iore;
 	
@@ -106,6 +111,7 @@ end process;
 
 DBusOutMux:for i in pinx'range generate
 dbus_out(i) <= (PORTx_Int(i) and PORTx_Sel)or(DDRx_Int(i) and DDRx_Sel)or(PINx_Resync(i) and PINx_Sel);
+--spi_misoi <= pinx(i) when miso_Loc = i and spi_spe = '1';
 end generate;	
 
 -- Outputs

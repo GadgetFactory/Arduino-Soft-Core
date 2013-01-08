@@ -50,7 +50,13 @@ entity Timer_Counter is port(
 			                 TC1CmpBIRQ     : out std_logic;
 			                 TC1CmpBIRQ_Ack : in  std_logic;			   
 			                 TC1ICIRQ       : out std_logic;
-			                 TC1ICIRQ_Ack   : in  std_logic
+			                 TC1ICIRQ_Ack   : in  std_logic;
+								  
+								  --Status bits
+								  PWM2bit		  : out std_logic;
+								  PWM0bit			: out std_logic;
+								  PWM10bit			: out std_logic;
+								  PWM11bit			: out std_logic
 							 );
 end Timer_Counter;
 
@@ -938,6 +944,10 @@ out_en <= '1' when ((adr=TCCR0_Address or
 -- end case; 
 --end process;		  
 
+PWM0bit <= PWM0;
+PWM10bit <= PWM10;
+PWM11bit <= PWM11;
+PWM2bit <= PWM2;
 
 -- Synopsys version
 dbus_out <= TCCR0 when (adr=TCCR0_Address) else 

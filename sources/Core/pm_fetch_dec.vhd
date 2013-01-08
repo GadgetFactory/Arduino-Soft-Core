@@ -179,7 +179,8 @@ signal   ram_adr_int         : std_logic_vector (15 downto 0);
 constant const_ram_to_reg    : std_logic_vector := "00000000000";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL PURPOSE REGISTER (R0-R31) 0x00..0x19
 constant const_ram_to_io_a   : std_logic_vector := "00000000001";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL I/O PORT 0x20 0x3F 
 constant const_ram_to_io_b   : std_logic_vector := "00000000010";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL I/O PORT 0x20 0x3F 
-constant const_ram_to_io_c   : std_logic_vector := "0001";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL I/O PORT 0x1000 0x1FFF 
+--constant const_ram_to_io_c   : std_logic_vector := "0001";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL I/O PORT 0x1000 0x1FFF 
+constant const_ram_to_io_c   : std_logic_vector := "0010";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL I/O PORT 0x2000 0x2FFF -> change by Zvonimir Bandic
 constant const_ram_to_io_d   : std_logic_vector := "00100000000";  -- LD/LDS/LDD/ST/STS/STD ADDRESSING GENERAL I/O PORT 0x1000 0x3FFF 
 
 -- LD/LDD/ST/STD SIGNALS

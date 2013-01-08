@@ -78,7 +78,7 @@ ARCHITECTURE behavior OF testbench IS
    signal TDO : std_logic;
 
    -- Clock period definitions
-   constant clk_period : time := 1us;
+   constant clk_period : time := 0.03125us;
  
 BEGIN
  
@@ -116,7 +116,7 @@ BEGIN
 
       -- insert stimulus here 
 		nrst <= '1';
-		portb <= "11111111";
+		portb <= "00011111";
 		portd <= "10101010";
 --		wait for clk_period*10;
 --		nrst <= '0';

@@ -89,7 +89,13 @@ component Timer_Counter is port(
 			                 TC1CmpBIRQ     : out std_logic;
 			                 TC1CmpBIRQ_Ack : in  std_logic;			   
 			                 TC1ICIRQ       : out std_logic;
-			                 TC1ICIRQ_Ack   : in  std_logic
+			                 TC1ICIRQ_Ack   : in  std_logic;
+								  								  
+								  --Status bits
+								  PWM2bit		  : out std_logic;
+								  PWM0bit			: out std_logic;
+								  PWM10bit			: out std_logic;
+								  PWM11bit			: out std_logic
 							 );
 end component;
 

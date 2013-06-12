@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=E:\Papilio\Cores\GadgetFactory_Arduino_Timer_Counter\AVR8_SoftCore_SPI_PinShifting_CustomCore\scripts\XilinxISE\Papilio_AVR8.ncd
-OUTFILE=E:\Papilio\Cores\GadgetFactory_Arduino_Timer_Counter\AVR8_SoftCore_SPI_PinShifting_CustomCore\scripts\XilinxISE\Papilio_AVR8.bit
-FAMILY=Spartan3E
-PART=xc3s500e-4vq100
-WORKINGDIR=E:\Papilio\Cores\GadgetFactory_Arduino_Timer_Counter\AVR8_SoftCore_SPI_PinShifting_CustomCore\scripts\XilinxISE
-LICENSE=ISE
-USER_INFO=204194011_1777487353_210547305_840

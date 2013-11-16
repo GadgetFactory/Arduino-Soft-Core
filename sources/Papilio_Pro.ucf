@@ -1,0 +1,84 @@
+##################################################################################
+## Papilio_Pro.ucf
+##
+## Author: Jack Gassett
+##
+## Details: http://gadgetforge.gadgetfactory.net/gf/project/butterfly_one/
+##
+## Contains assignment and iostandard information for
+## all used pins as well as timing and area constraints for Papilio Pro that uses 32Mhz oscillator.
+##
+##################################################################################
+
+# Crystal Clock - use 32MHz onboard oscillator
+NET "clk" LOC = "P94" | IOSTANDARD = LVCMOS25 | PERIOD = 31.25ns ;
+
+# Adding a Pullup resistors ensures the project will always be running.
+NET "nrst" LOC = "P102" | PULLUP ;
+
+# Wing1 Column A
+NET "porta<0>" LOC = "P48" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#A0
+NET "porta<1>" LOC = "P51" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#A1
+NET "porta<2>" LOC = "P56" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#A2
+NET "porta<3>" LOC = "P58" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#A3
+NET "porta<4>" LOC = "P61" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#A4
+NET "porta<5>" LOC = "P66" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#A5
+NET "porta<6>" LOC = "P67" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#A6
+NET "porta<7>" LOC = "P75" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#A7
+NET "portb<0>" LOC = "P79" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#A8
+NET "portb<1>" LOC = "P81" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ; 	#A9
+NET "portb<2>" LOC = "P83" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#A10
+NET "portb<3>" LOC = "P85" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#A11
+NET "portb<4>" LOC = "P88" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#A12
+NET "portb<5>" LOC = "P93" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#A13
+NET "portb<6>" LOC = "P98" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#A14
+NET "portb<7>" LOC = "P100" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#A15
+
+# Wing1 Column B
+NET "portc<0>" LOC = "P99" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B0
+NET "portc<1>" LOC = "P97" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B1
+NET "portc<2>" LOC = "P92" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B2
+NET "portc<3>" LOC = "P87" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B3
+NET "portc<4>" LOC = "P84" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B4
+NET "portc<5>" LOC = "P82" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B5
+NET "portc<6>" LOC = "P80" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B6
+NET "portc<7>" LOC = "P78" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B7
+NET "portd<0>" LOC = "P74" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B8
+NET "portd<1>" LOC = "P95" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B9
+NET "portd<2>" LOC = "P62" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B10
+NET "portd<3>" LOC = "P59" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B11
+NET "portd<4>" LOC = "P57" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B12
+NET "portd<5>" LOC = "P55" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B13
+NET "portd<6>" LOC = "P50" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B14
+NET "portd<7>" LOC = "P47" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#B15
+
+# Wing2 Column C
+NET "porte<0>" LOC = "P114" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#C0
+NET "porte<1>" LOC = "P115" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#C1
+NET "porte<2>" LOC = "P116" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#C2
+NET "porte<3>" LOC = "P117" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#C3
+NET "porte<4>" LOC = "P118" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#C4
+NET "porte<5>" LOC = "P119" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#C5
+NET "porte<6>" LOC = "P120" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#C6
+NET "porte<7>" LOC = "P121" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#C7
+NET "portf<0>" LOC = "P123" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;  	#C8
+NET "portf<1>" LOC = "P124" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;    #C9
+NET "portf<2>" LOC = "P126" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#C10
+NET "portf<3>" LOC = "P127" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#C11
+NET "portf<4>" LOC = "P131" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#C12
+NET "portf<5>" LOC = "P132" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#C13
+NET "portf<6>" LOC = "P133" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#C14
+NET "portf<7>" LOC = "P134" | IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 8 ;	#C15
+
+## RS232
+NET "rxd"  LOC = "P101" | IOSTANDARD = LVCMOS25 ;
+NET "txd"  LOC = "P105" | IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = SLOW ;
+
+## Prohibit the automatic placement of pins that are connected to VCC or GND for configuration.
+CONFIG PROHIBIT=P144 ;		#HSWAP
+CONFIG PROHIBIT=P69 ;		#M0
+CONFIG PROHIBIT=P60 ;		#M1
+#CONFIG PROHIBIT=P ;		#M2
+#CONFIG PROHIBIT=P ;		#VS0
+#CONFIG PROHIBIT=P ;		#VS1
+#CONFIG PROHIBIT=P ;		#VS2
